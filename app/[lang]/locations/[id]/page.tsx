@@ -6,6 +6,7 @@ import { placeJsonLd, breadcrumbJsonLd } from '../../../../lib/seo';
 import { ShareBar } from '../../../../components/ShareBar';
 import { Footer } from '../../../../components/Footer';
 import { LocationMiniMap } from '../../../../components/LocationMiniMap';
+import { LocationImage } from '../../../../components/LocationImage';
 import { SeoContext } from '../../../../components/SeoContext';
 import { SiteHeader } from '../../../../components/SiteHeader';
 import { getLocationI18n, normalizeLang, LOCALES, loadMessages, asUiText } from '../../../../lib/i18n';
@@ -109,6 +110,10 @@ export default async function Page({ params }: { params: { lang: Lang; id: strin
               {ui.popup.maps}
             </a>
           </div>
+        </div>
+
+        <div className="section">
+          <LocationImage src={loc.image_url} alt={t.name} className="location-hero" />
         </div>
 
         <SeoContext variant="locationDetail" />

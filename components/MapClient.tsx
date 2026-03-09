@@ -2,7 +2,7 @@
 
 import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef } from 'react';
 import type { CategoryMeta, CategoryKey, Lang, Location } from '../lib/types';
-import L from 'leaflet';
+import type * as Leaflet from 'leaflet';
 import { formatTimestampValue, getLocationI18n, useUiText } from '../lib/i18n';
 
 export type MapClientHandle = {
@@ -18,7 +18,7 @@ type MapClientProps = {
   categoryMeta: Record<CategoryKey, CategoryMeta>;
 };
 
-type MarkerWithLoc = L.Marker & { __locId?: string };
+type MarkerWithLoc = Leaflet.Marker & { __locId?: string };
 
 const NYC_CENTER: [number, number] = [40.758, -73.982];
 const PARIS_CENTER: [number, number] = [48.866, 2.316];
@@ -41,7 +41,7 @@ export const MapClient = forwardRef<MapClientHandle, MapClientProps>(
   ({ locations, lang, filteredIds, categoryMeta }, ref) => {
     const ui = useUiText();
     const mapContainerRef = useRef<HTMLDivElement | null>(null);
-    const mapRef = useRef<L.Map | null>(null);
+    const mapRef = useRef<Leaflet.Map | null>(null);
     const markersRef = useRef<Map<string, MarkerWithLoc>>(new Map());
     const hasFitRef = useRef(false);
 
@@ -60,9 +60,12 @@ export const MapClient = forwardRef<MapClientHandle, MapClientProps>(
       const conf = loc.confidence === 'exact' ? ui.popup.exact : ui.popup.approx;
       const meta = categoryMeta[loc.category] || { icon: '📍', color: '#d73f60', label: { es: 'Pin', en: 'Pin' } };
       const t = getLocationI18n(loc, lang);
+      const visualHtml = loc.image_url
+        ? `<div class="popup-image"><img src="${esc(loc.image_url)}" alt="${esc(t.name)}" onerror="this.parentElement.classList.add('is-empty'); this.remove();" /></div>`
+        : `<div class="popup-image is-empty" aria-hidden="true"></div>`;
       return `
         <div class="popup" style="min-width:280px;max-width:340px;">
-          <div class="hero">${meta.icon}</div>
+          ${visualHtml}
           <p><strong>${esc(t.name)}</strong></p>
           <p>${esc(t.scene)}</p>
           <p class="muted"><strong>${esc(ui.popup.timestamp)}:</strong> ${esc(renderTimestamp(loc.timestamp, lang))} · <strong>${esc(ui.popup.city)}:</strong> ${esc(loc.city)}</p>
@@ -81,31 +84,39 @@ export const MapClient = forwardRef<MapClientHandle, MapClientProps>(
 
     useEffect(() => {
       if (!mapContainerRef.current || mapRef.current) return;
-      const map = L.map(mapContainerRef.current, { preferCanvas: true }).setView(NYC_CENTER, 13);
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
-      mapRef.current = map;
+      let disposed = false;
+      let map: Leaflet.Map | null = null;
 
-      locations.forEach((loc) => {
-        const marker = L.marker([loc.lat, loc.lng], {
-          icon: L.divIcon({
-            className: '',
-            html: pinHtml(loc.category),
-            iconSize: [36, 36],
-            iconAnchor: [18, 36],
-            popupAnchor: [0, -30]
-          })
-        }) as MarkerWithLoc;
-        marker.__locId = loc.id;
-        marker.bindPopup(popupHtml(loc), { maxWidth: 360 });
-        marker.addTo(map);
-        markersRef.current.set(loc.id, marker);
+      void import('leaflet').then((L) => {
+        if (disposed || !mapContainerRef.current || mapRef.current) return;
+
+        map = L.map(mapContainerRef.current, { preferCanvas: true }).setView(NYC_CENTER, 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        mapRef.current = map;
+
+        locations.forEach((loc) => {
+          const marker = L.marker([loc.lat, loc.lng], {
+            icon: L.divIcon({
+              className: '',
+              html: pinHtml(loc.category),
+              iconSize: [36, 36],
+              iconAnchor: [18, 36],
+              popupAnchor: [0, -30]
+            })
+          }) as MarkerWithLoc;
+          marker.__locId = loc.id;
+          marker.bindPopup(popupHtml(loc), { maxWidth: 360 });
+          marker.addTo(map!);
+          markersRef.current.set(loc.id, marker);
+        });
       });
 
       return () => {
-        map.remove();
+        disposed = true;
+        map?.remove();
         mapRef.current = null;
         markersRef.current.clear();
       };

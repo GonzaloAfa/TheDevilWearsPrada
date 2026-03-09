@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import type { CategoryKey, Dataset, Lang, Location } from '../lib/types';
 import { CATEGORY_META } from '../lib/categories';
 import { MapClient, type MapClientHandle } from './MapClient';
+import { LocationImage } from './LocationImage';
 import { AdSlot } from './AdSlot';
 import { ShareBar } from './ShareBar';
 import { Footer } from './Footer';
@@ -104,9 +105,7 @@ export function MapPage({ lang, data }: { lang: Lang; data: Dataset }) {
   const adSlotSidebar = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
   const adSlotInline = process.env.NEXT_PUBLIC_ADSENSE_SLOT_INLINE;
   const shareUrl = useMemo(() => {
-    const base =
-      process.env.NEXT_PUBLIC_SITE_URL ||
-      (typeof window !== 'undefined' ? window.location.origin : '');
+    const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
     return `${base}${pathname || ''}`;
   }, [pathname]);
 
@@ -254,23 +253,33 @@ export function MapPage({ lang, data }: { lang: Lang; data: Dataset }) {
               sortedLocations.map((loc) => {
                 const meta = CATEGORY_META[loc.category];
                 const confLabel = loc.confidence === 'exact' ? ui.popup.exact : ui.popup.approx;
+                const hasImage = Boolean(loc.image_url);
                 return (
                   <div
                     key={loc.id}
-                    className="item"
+                    className={`item${hasImage ? ' with-image' : ''}`}
                     onClick={() => mapRef.current?.focusLocation(loc.id, true)}
                   >
-                    <div className="name">{getLocationI18n(loc, lang).name}</div>
-                    <div className="meta">{loc.address}</div>
-                    <div className="meta">
-                      {renderTimestamp(loc.timestamp, lang)} · {getLocationI18n(loc, lang).scene}
-                    </div>
-                    <div>
-                      <span className="pill">
-                        {meta.icon} {getCategoryLabel(meta, lang)}
-                      </span>
-                      <span className="pill">☕ {loc.coffee || 0}</span>
-                      <span className="pill">📍 {confLabel}</span>
+                    {hasImage ? (
+                      <LocationImage
+                        src={loc.image_url}
+                        alt={getLocationI18n(loc, lang).name}
+                        className="thumb"
+                      />
+                    ) : null}
+                    <div className="content">
+                      <div className="name">{getLocationI18n(loc, lang).name}</div>
+                      <div className="meta">{loc.address}</div>
+                      <div className="meta">
+                        {renderTimestamp(loc.timestamp, lang)} · {getLocationI18n(loc, lang).scene}
+                      </div>
+                      <div>
+                        <span className="pill">
+                          {meta.icon} {getCategoryLabel(meta, lang)}
+                        </span>
+                        <span className="pill">☕ {loc.coffee || 0}</span>
+                        <span className="pill">📍 {confLabel}</span>
+                      </div>
                     </div>
                   </div>
                 );

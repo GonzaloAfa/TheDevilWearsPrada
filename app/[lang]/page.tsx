@@ -5,6 +5,7 @@ import type { Lang } from '../../lib/types';
 import { movieJsonLd, faqJsonLd } from '../../lib/seo';
 import { ShareBar } from '../../components/ShareBar';
 import { Footer } from '../../components/Footer';
+import { LocationImage } from '../../components/LocationImage';
 import { CATEGORY_META } from '../../lib/categories';
 import { cityDisplayName, cityHint } from '../../lib/locationUi';
 import { SiteHeader } from '../../components/SiteHeader';
@@ -22,7 +23,7 @@ export async function generateMetadata({
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const title = ui.meta.home.title;
   const description = ui.meta.home.description;
-  const imageUrl = `${baseUrl}/og.svg`;
+  const imageUrl = `${baseUrl}/${lang}/opengraph-image`;
   const languages = Object.fromEntries(
     LOCALES.map((locale) => [locale, `${baseUrl}/${locale}`])
   );
@@ -41,7 +42,12 @@ export async function generateMetadata({
       siteName: ui.title.replace('\n', ' '),
       locale: lang,
       type: 'website',
-      images: [{ url: imageUrl }]
+      images: [{
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+        alt: `${ui.filmTitle} map preview`
+      }]
     },
     twitter: {
       card: 'summary_large_image',
@@ -118,6 +124,11 @@ export default async function Page({ params }: { params: { lang: Lang } }) {
                 href={`/${lang}/locations/${loc.id}`}
                 className="location-card"
               >
+                <LocationImage
+                  src={loc.image_url}
+                  alt={getLocationI18n(loc, lang).name}
+                  className="location-image"
+                />
                 <div className="name">{getLocationI18n(loc, lang).name}</div>
                 <div className="meta">
                   📍 {cityDisplayName(loc.city, lang)}{' '}

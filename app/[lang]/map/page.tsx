@@ -5,7 +5,6 @@ import type { Lang } from '../../../lib/types';
 import { normalizeLang, LOCALES, loadMessages, asUiText } from '../../../lib/i18n';
 
 export const dynamicParams = false;
-export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { DATA } from '../../../data';
 import type { Lang } from '../../../lib/types';
 import { Footer } from '../../../components/Footer';
+import { LocationImage } from '../../../components/LocationImage';
 import { CATEGORY_META } from '../../../lib/categories';
 import { cityDisplayName, cityHint } from '../../../lib/locationUi';
 import { SeoContext } from '../../../components/SeoContext';
@@ -65,6 +66,11 @@ export default async function Page({ params }: { params: { lang: Lang } }) {
                 href={`/${lang}/locations/${loc.id}`}
                 className="location-card"
               >
+                <LocationImage
+                  src={loc.image_url}
+                  alt={getLocationI18n(loc, lang).name}
+                  className="location-image"
+                />
                 <div className="name">{getLocationI18n(loc, lang).name}</div>
                 <div className="meta">
                   📍 {cityDisplayName(loc.city, lang)}{' '}
