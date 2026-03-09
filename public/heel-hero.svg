@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141825" />
+      <stop offset="100%" stop-color="#0b0c11" />
+    </linearGradient>
+    <linearGradient id="shoe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff5675" />
+      <stop offset="55%" stop-color="#d3183d" />
+      <stop offset="100%" stop-color="#7a0e22" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="32" fill="url(#bg)" />
+  <rect x="80" y="80" width="1040" height="640" rx="28" fill="#0f121b" stroke="rgba(255,255,255,0.08)" />
+  <path d="M210 470c140-40 230-90 310-170 70-70 150-86 240-62 88 22 138 78 138 122 0 60-48 100-114 120l-216 62c-70 20-134 58-196 96-70 42-156 66-224 58-74-8-120-44-120-92 0-26 30-54 92-74z" fill="url(#shoe)"/>
+  <path d="M765 566l90 192c10 22-4 44-28 44h-56c-16 0-26-8-32-22l-54-148 80-66z" fill="#6c0b1a"/>
+  <circle cx="845" cy="520" r="14" fill="#ffd1db"/>
+  <text x="140" y="170" font-size="30" font-family="Arial, sans-serif" fill="#f5f7fb">The Devil Wears Prada</text>
+  <text x="140" y="210" font-size="18" font-family="Arial, sans-serif" fill="#aeb6c7">Iconic heel — original artwork for the landing</text>
+</svg>

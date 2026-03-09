@@ -150,7 +150,7 @@ export const UI_TEXT: Record<Lang, UiText> = {
         'Mapa cinematográfico con escenas, timestamps y contexto de producción. También conocido como The Devil Wears Prada.',
       ctaPrimary: 'Ver mapa',
       ctaSecondary: 'Ver locaciones',
-      previewAlt: 'Preview del mapa de locaciones de El Diablo se viste a la moda',
+      previewAlt: 'Imagen icónica del tacón de El Diablo se viste a la moda',
       highlightsTitle: 'Qué encontrarás',
       highlights: [
         {
@@ -309,7 +309,7 @@ export const UI_TEXT: Record<Lang, UiText> = {
         'A cinematic map with scenes, timestamps, and production context for movie fans.',
       ctaPrimary: 'View map',
       ctaSecondary: 'View locations',
-      previewAlt: 'Preview of The Devil Wears Prada locations map',
+      previewAlt: 'Iconic heel image for The Devil Wears Prada',
       highlightsTitle: 'What you will find',
       highlights: [
         {

@@ -92,7 +92,7 @@ export default function Page({ params }: { params: { lang: Lang } }) {
             </div>
           </div>
           <img
-            src="/map-preview.svg"
+            src="/heel-hero.svg"
             alt={ui.landing.previewAlt}
             className="map-preview"
           />
