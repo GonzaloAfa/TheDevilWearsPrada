@@ -1,8 +1,9 @@
-import type { Lang } from '../lib/types';
-import { UI_TEXT } from '../lib/uiText';
+'use client';
 
-export function Footer({ lang }: { lang: Lang }) {
-  const ui = UI_TEXT[lang];
+import { useUiText } from '../lib/i18n';
+
+export function Footer() {
+  const ui = useUiText();
   const donateUrl =
     process.env.NEXT_PUBLIC_DONATE_URL || 'https://buymeacoffee.com/gonzaloo5';
 

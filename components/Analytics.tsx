@@ -15,9 +15,6 @@ export function Analytics() {
 
   useEffect(() => {
     if (!gaId || typeof window === 'undefined' || !window.gtag) return;
-    window.gtag('config', gaId, {
-      page_path: pathname
-    });
     window.gtag('event', 'page_view', {
       page_path: pathname
     });

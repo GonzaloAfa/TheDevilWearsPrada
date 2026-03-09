@@ -1,9 +1,9 @@
 {
   "summary": {
     "title": "The Devil Wears Prada — Cinematic Map Dataset",
-    "pins_total": 27,
-    "exact_count": 17,
-    "approx_count": 10,
+    "pins_total": 35,
+    "exact_count": 26,
+    "approx_count": 9,
     "coffee_events_total": 12,
     "brands_total": 12
   },
@@ -190,12 +190,20 @@
         "es": {
           "name": "New York Mirror office exterior",
           "scene": "Exterior del periódico donde Andy termina trabajando al final.",
-          "production_note": "Identificado como el exterior del New York Mirror."
+          "production_note": "Identificado como el exterior del New York Mirror.",
+          "trivia": [
+            "La redaccion final de Andy se vincula al estilo del New York Sun.",
+            "Este pin funciona mejor como cierre profesional de Andy que como puro exterior de edificio."
+          ]
         },
         "en": {
           "name": "New York Mirror Office Exterior",
           "scene": "Exterior of the newspaper where Andy ends up working.",
-          "production_note": "Identified as the exterior of the New York Mirror."
+          "production_note": "Identified as the exterior of the New York Mirror.",
+          "trivia": [
+            "Andy's final newsroom is tied to the look of the New York Sun.",
+            "This pin works best as Andy's professional ending point, not just a building exterior."
+          ]
         }
       }
     },
@@ -220,12 +228,20 @@
         "es": {
           "name": "Departamento de Andy",
           "scene": "Exterior del departamento de Andy y Nate.",
-          "production_note": "Wikipedia solo acota Lower East Side; esta dirección es la identificación más repetida por guías de filming maps."
+          "production_note": "Wikipedia solo acota Lower East Side; esta dirección es la identificación más repetida por guías de filming maps.",
+          "trivia": [
+            "El arranque del Lower East Side puede desglosarse en micro-locaciones cercanas como 254 Broome Street.",
+            "Sirve para contrastar la rutina previa a Runway con el mundo de lujo que viene despues."
+          ]
         },
         "en": {
           "name": "Andy's Apartment",
           "scene": "Exterior of Andy and Nate's apartment.",
-          "production_note": "Wikipedia only specifies the Lower East Side; this address is the most repeated by filming map guides."
+          "production_note": "Wikipedia only specifies the Lower East Side; this address is the most repeated by filming map guides.",
+          "trivia": [
+            "The Lower East Side opening can be broken into nearby micro-locations such as 254 Broome Street.",
+            "It helps contrast Andy's pre-Runway routine with the luxury world that follows."
+          ]
         }
       }
     },
@@ -536,12 +552,20 @@
         "es": {
           "name": "The St. Regis New York",
           "scene": "Escena vulnerable de Miranda sobre su matrimonio.",
-          "production_note": "IMDb ubica allí la tearful Miranda Priestly scene."
+          "production_note": "IMDb ubica allí la tearful Miranda Priestly scene.",
+          "trivia": [
+            "La escena vulnerable de Miranda se asocia al St. Regis, con referencias especificas al King Cole Bar y a una suite presidencial.",
+            "Es un buen ejemplo de una locacion real que concentra varios subespacios sin necesidad de multiplicar pins."
+          ]
         },
         "en": {
           "name": "The St. Regis New York",
           "scene": "Miranda's vulnerable scene about her marriage.",
-          "production_note": "IMDb places the tearful Miranda Priestly scene here."
+          "production_note": "IMDb places the tearful Miranda Priestly scene here.",
+          "trivia": [
+            "Miranda's vulnerable hotel scene is tied to the St. Regis, with references to the King Cole Bar and a presidential suite.",
+            "It is a good example of one real location covering several sub-spaces without multiplying pins."
+          ]
         }
       }
     },
@@ -549,29 +573,37 @@
       "id": "philadelphia-hotel",
       "category": "hotel",
       "city": "New York",
-      "lat": 40.757604,
-      "lng": -73.989071,
-      "address": "145 West 44th Street area, Times Square, New York, NY",
+      "lat": 40.759245,
+      "lng": -73.985334,
+      "address": "1567 Broadway, Times Square, New York, NY",
       "timestamp": "01:27:20",
       "coffee": 0,
       "brands": [],
-      "confidence": "approx",
+      "confidence": "exact",
       "sources": [
-        "IMDb filming locations",
-        "Kinoafisha"
+        "Movie-Locations",
+        "Giggster filming guide"
       ],
       "image_url": "",
       "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Christian+hotel+scene",
       "i18n": {
         "es": {
           "name": "Philadelphia Hotel (doble del hotel de París)",
-          "scene": "Andy despierta en la habitación de Christian 'en París' (filmado en NYC).",
-          "production_note": "IMDb lista Philadelphia Hotel, Times Square, para esa escena."
+          "scene": "Andy despierta en la habitacion de Christian en una escena parisina filmada realmente en Times Square.",
+          "production_note": "Movie-Locations y una guia de rodaje ubican este doble del hotel parisino en el W New York - Times Square.",
+          "trivia": [
+            "La pelicula vende este beat como Paris, pero la referencia de locacion lo ubica en Times Square.",
+            "Es uno de los mejores ejemplos del truco geografico NYC-haciendose-pasar-por-Paris."
+          ]
         },
         "en": {
           "name": "Philadelphia Hotel (double for the Paris hotel)",
-          "scene": "Andy wakes up in Christian's hotel room 'in Paris' (shot in NYC).",
-          "production_note": "IMDb lists the Philadelphia Hotel, Times Square, for that scene."
+          "scene": "Andy wakes up in Christian's room in a Paris beat that was actually filmed in Times Square.",
+          "production_note": "Movie-Locations and a filming guide place this Paris hotel double at the W New York - Times Square.",
+          "trivia": [
+            "The film sells this beat as Paris, but location references place it in Times Square.",
+            "It is one of the clearest NYC-standing-in-for-Paris geography tricks in the movie."
+          ]
         }
       }
     },
@@ -752,13 +784,21 @@
       "i18n": {
         "es": {
           "name": "Bryant Park / Midtown montage point",
-          "scene": "Punto visual de Midtown para el recorrido de oficina/moda.",
-          "production_note": "Punto de ambiente para reforzar el recorrido cinemático en Manhattan."
+          "scene": "Punto editorial de Midtown para el recorrido de oficina/moda; no una locacion confirmada frame a frame.",
+          "production_note": "Se mantiene como punto curado del mapa; Wikipedia menciona Bryant Park como locacion buscada pero no asegurada para rodaje.",
+          "trivia": [
+            "Bryant Park aparece mejor como punto editorial que como locacion confirmada en pantalla.",
+            "Las notas de produccion mencionan que el equipo quiso filmar en Bryant Park y en MoMA, pero no obtuvo permisos."
+          ]
         },
         "en": {
           "name": "Bryant Park / Midtown Montage Point",
-          "scene": "Midtown visual point for the office/fashion run.",
-          "production_note": "Ambient point to reinforce the cinematic route in Manhattan."
+          "scene": "Editorial Midtown point for the office/fashion route, not a frame-by-frame confirmed location.",
+          "production_note": "Kept as a curated map point; Wikipedia mentions Bryant Park as a desired location but not a secured filming spot.",
+          "trivia": [
+            "Bryant Park works better as an editorial route point than as a confirmed on-screen location.",
+            "Production notes say the crew wanted Bryant Park and MoMA but could not secure filming permission."
+          ]
         }
       }
     },
@@ -854,6 +894,308 @@
           "name": "Fontaine des Fleuves, Place de la Concorde",
           "scene": "Andy throws her phone into the water at the end of her Paris arc.",
           "production_note": "IMDb explicitly identifies the closing fountain in Paris."
+        }
+      }
+    },
+    {
+      "id": "hermes-boutique",
+      "category": "fashion",
+      "city": "New York",
+      "lat": 40.765621,
+      "lng": -73.970111,
+      "address": "690 Madison Avenue, Upper East Side, New York, NY",
+      "timestamp": "01:16:40",
+      "coffee": 0,
+      "brands": [
+        "Hermès"
+      ],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes",
+        "On the Set of New York"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Emily+Hermes+accident",
+      "i18n": {
+        "es": {
+          "name": "Hermès Boutique",
+          "scene": "Boutique ligada al recado de Emily y al trayecto que desemboca en su accidente.",
+          "production_note": "Wikipedia y las guias callejeras sitúan Hermès, Madison y East 62nd dentro de la secuencia del encargo.",
+          "trivia": [
+            "El mundo de las marcas reales se cruza aqui con una de las escenas mas crueles para Emily.",
+            "Es un pin muy util para conectar lujo, recados y caos logístico."
+          ]
+        },
+        "en": {
+          "name": "Hermès Boutique",
+          "scene": "Boutique tied to Emily's errand and the route that leads into her accident.",
+          "production_note": "Wikipedia and street-level guides place Hermès, Madison and East 62nd inside the errand sequence.",
+          "trivia": [
+            "The world of real brands collides here with one of Emily's roughest scenes.",
+            "It is a very useful pin for connecting luxury, errands and logistics chaos."
+          ]
+        }
+      }
+    },
+    {
+      "id": "lenox-hill-hospital",
+      "category": "event",
+      "city": "New York",
+      "lat": 40.773643,
+      "lng": -73.960862,
+      "address": "100 East 77th Street, Upper East Side, New York, NY",
+      "timestamp": "01:18:20",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Emily+hospital",
+      "i18n": {
+        "es": {
+          "name": "Lenox Hill Hospital",
+          "scene": "Hospital al que llevan a Emily despues del accidente antes del viaje a Paris.",
+          "production_note": "Wikipedia lo enumera entre las locaciones exactas del tramo final neoyorquino.",
+          "trivia": [
+            "Narrativamente es el punto que despeja el camino para que Andy vaya a Paris.",
+            "Sirve como pivote entre el mundo corporativo y el quiebre personal de Emily."
+          ]
+        },
+        "en": {
+          "name": "Lenox Hill Hospital",
+          "scene": "Hospital where Emily is taken after the accident before the trip to Paris.",
+          "production_note": "Wikipedia lists it among the exact New York locations in the late-film stretch.",
+          "trivia": [
+            "Narratively, this is the point that clears the path for Andy to go to Paris.",
+            "It works as a pivot between the corporate machine and Emily's personal collapse."
+          ]
+        }
+      }
+    },
+    {
+      "id": "labsinthe",
+      "category": "restaurant",
+      "city": "New York",
+      "lat": 40.766122,
+      "lng": -73.961201,
+      "address": "227 East 67th Street, Upper East Side, New York, NY",
+      "timestamp": "01:30:10",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Movie-Locations"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Paris+dinner+Christian",
+      "i18n": {
+        "es": {
+          "name": "Labsinthe",
+          "scene": "Cena de Andy y Christian vendida como Paris, aunque la locacion real esta en Manhattan.",
+          "production_note": "Movie-Locations identifica este restaurante neoyorquino como doble de la cena parisina.",
+          "trivia": [
+            "Otra escena parisina que en realidad fortalece el mapa oculto de Nueva York.",
+            "Buen candidato para un tag de fake-Paris dentro del dataset."
+          ]
+        },
+        "en": {
+          "name": "Labsinthe",
+          "scene": "Andy and Christian's dinner sold as Paris even though the real location is in Manhattan.",
+          "production_note": "Movie-Locations identifies this New York restaurant as the stand-in for the Paris dinner.",
+          "trivia": [
+            "Another Paris scene that actually strengthens the hidden New York map.",
+            "A strong candidate for a fake-Paris tag inside the dataset."
+          ]
+        }
+      }
+    },
+    {
+      "id": "central-park-west-paris",
+      "category": "street",
+      "city": "New York",
+      "lat": 40.779273,
+      "lng": -73.973877,
+      "address": "West 77th Street & Central Park West, Manhattan, New York, NY",
+      "timestamp": "01:24:10",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Movie-Locations"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Paris+arrival+New+York",
+      "i18n": {
+        "es": {
+          "name": "West 77th & Central Park West (falso Paris)",
+          "scene": "Cruce neoyorquino usado como beat de llegada a Paris antes de Fashion Week.",
+          "production_note": "Movie-Locations lo destaca como uno de los trucos de geografia mas claros del tramo parisino.",
+          "trivia": [
+            "Es uno de esos puntos que vuelven mas divertida la experiencia del mapa que la de la propia pelicula.",
+            "Sirve para mostrar que la geografia del film es tan editorial como la revista Runway."
+          ]
+        },
+        "en": {
+          "name": "West 77th & Central Park West (fake Paris)",
+          "scene": "New York intersection used as a Paris arrival beat before Fashion Week.",
+          "production_note": "Movie-Locations highlights it as one of the clearest geography cheats in the Paris stretch.",
+          "trivia": [
+            "It is one of those points that makes the map more playful than the film itself.",
+            "It shows that the movie's geography is as editorially constructed as Runway magazine."
+          ]
+        }
+      }
+    },
+    {
+      "id": "mayrose-cafe",
+      "category": "restaurant",
+      "city": "New York",
+      "lat": 40.739577,
+      "lng": -73.9894,
+      "address": "920 Broadway, Flatiron, New York, NY",
+      "timestamp": "01:43:30",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Movie-Locations"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Nate+final+cafe",
+      "i18n": {
+        "es": {
+          "name": "Mayrose Cafe",
+          "scene": "Cafe vinculado al reencuentro final entre Andy y Nate tras el regreso de Paris.",
+          "production_note": "Movie-Locations lo ubica como el beat cotidiano que reequilibra la pelicula antes del cierre laboral.",
+          "trivia": [
+            "Despues de tanto lujo y backstage, el cierre sentimental vuelve a una direccion muy terrenal.",
+            "Es un buen contrapunto con el final profesional del New York Mirror."
+          ]
+        },
+        "en": {
+          "name": "Mayrose Cafe",
+          "scene": "Cafe tied to Andy and Nate's final reunion after the return from Paris.",
+          "production_note": "Movie-Locations places it as the everyday beat that rebalances the movie before the career ending.",
+          "trivia": [
+            "After all the luxury and backstage access, the emotional close returns to a very grounded address.",
+            "It works as a good counterpoint to the professional ending at the New York Mirror."
+          ]
+        }
+      }
+    },
+    {
+      "id": "greene-street-book",
+      "category": "street",
+      "city": "New York",
+      "lat": 40.723444,
+      "lng": -74.000954,
+      "address": "71 Greene Street, SoHo, New York, NY",
+      "timestamp": "01:07:25",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes",
+        "On the Set of New York"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+book+Greene+Street",
+      "i18n": {
+        "es": {
+          "name": "71 Greene Street",
+          "scene": "Punto callejero asociado a la entrega del Book y a la cadena de mandados de Andy en SoHo.",
+          "production_note": "Las guias neoyorquinas lo listan como uno de los bloques exactos que el montaje suele esconder.",
+          "trivia": [
+            "Este tipo de pin convierte una gran secuencia de recados en geografia visitable.",
+            "Ayuda a reemplazar corredores genericos por Manhattan real."
+          ]
+        },
+        "en": {
+          "name": "71 Greene Street",
+          "scene": "Street point tied to delivering the Book and Andy's errand chain in SoHo.",
+          "production_note": "New York guides list it as one of the exact blocks usually hidden inside the montage.",
+          "trivia": [
+            "This kind of pin turns a big errand sequence into visitable geography.",
+            "It helps replace generic corridor markers with real Manhattan blocks."
+          ]
+        }
+      }
+    },
+    {
+      "id": "broome-bakery",
+      "category": "restaurant",
+      "city": "New York",
+      "lat": 40.718206,
+      "lng": -73.98992,
+      "address": "254 Broome Street, Lower East Side, New York, NY",
+      "timestamp": "00:08:20",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes",
+        "On the Set of New York"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Broome+Street+bakery",
+      "i18n": {
+        "es": {
+          "name": "254 Broome Street bakery",
+          "scene": "Storefront del Lower East Side usado en el arranque del mundo previo a Runway.",
+          "production_note": "Wikipedia lo enumera entre las direcciones exactas del eje Broome Street.",
+          "trivia": [
+            "Queda lo bastante cerca del departamento de Andy como para enriquecer su rutina de barrio.",
+            "Es una micro-locacion pequena pero muy util si quieres un mapa mas cinemático y menos turistico."
+          ]
+        },
+        "en": {
+          "name": "254 Broome Street bakery",
+          "scene": "Lower East Side storefront used in the opening stretch of Andy's pre-Runway world.",
+          "production_note": "Wikipedia lists it among the exact addresses on the Broome Street axis.",
+          "trivia": [
+            "It sits close enough to Andy's apartment to enrich her neighborhood routine.",
+            "It is a small micro-location, but very useful if you want a more cinematic and less touristy map."
+          ]
+        }
+      }
+    },
+    {
+      "id": "hudson-n-moore",
+      "category": "street",
+      "city": "New York",
+      "lat": 40.719851,
+      "lng": -74.008495,
+      "address": "Hudson Street & North Moore Street, Tribeca, New York, NY",
+      "timestamp": "00:24:10",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes",
+        "On the Set of New York"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Hudson+North+Moore",
+      "i18n": {
+        "es": {
+          "name": "Hudson & North Moore",
+          "scene": "Cruce de Tribeca listado entre los puntos callejeros exactos de la primera etapa del film.",
+          "production_note": "On the Set of New York lo incluye como una de las direcciones concretas que afilan el mapa peatonal.",
+          "trivia": [
+            "Ayuda a conectar Bubby's con el Manhattan de trayectos reales, no solo de interiores.",
+            "Es ideal para sustituir tramos demasiado amplios por cruces visitables."
+          ]
+        },
+        "en": {
+          "name": "Hudson & North Moore",
+          "scene": "Tribeca intersection listed among the exact street points from the film's first act.",
+          "production_note": "On the Set of New York includes it as one of the concrete addresses that sharpen the walking map.",
+          "trivia": [
+            "It helps connect Bubby's to a Manhattan of real routes, not just interiors.",
+            "It is ideal for replacing overly broad areas with visitable intersections."
+          ]
         }
       }
     }

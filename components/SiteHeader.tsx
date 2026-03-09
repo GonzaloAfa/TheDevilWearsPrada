@@ -1,7 +1,9 @@
-import Link from 'next/link';
+'use client';
+
+import { useRouter } from 'next/navigation';
 import type { Lang } from '../lib/types';
-import { UI_TEXT } from '../lib/uiText';
-import { LANG_OPTIONS, langPath } from '../lib/i18n';
+import { langPath, getLocaleMeta, LOCALES } from '../lib/i18n';
+import { useUiText } from '../lib/i18n';
 
 type SiteHeaderProps = {
   lang: Lang;
@@ -10,7 +12,8 @@ type SiteHeaderProps = {
 };
 
 export function SiteHeader({ lang, showLanguageSwitch = false, pathSuffix }: SiteHeaderProps) {
-  const ui = UI_TEXT[lang];
+  const ui = useUiText();
+  const router = useRouter();
 
   return (
     <div className="site-header">
@@ -22,23 +25,27 @@ export function SiteHeader({ lang, showLanguageSwitch = false, pathSuffix }: Sit
       </div>
       {showLanguageSwitch ? (
         <div className="lang-switch" aria-label={ui.languageLabel}>
-          {LANG_OPTIONS.map((option) => {
-            const href = langPath(option.code, pathSuffix || '');
-            const isActive = option.code === lang;
-            return (
-              <Link
-                key={option.code}
-                href={href}
-                className={`chip lang-chip${isActive ? ' active' : ''}`}
-                aria-current={isActive ? 'page' : undefined}
-              >
-                <span className="flag" aria-hidden="true">
-                  {option.flag}
-                </span>
-                <span>{option.label}</span>
-              </Link>
-            );
-          })}
+          <label className="sr-only" htmlFor="lang-select">
+            {ui.languageLabel}
+          </label>
+          <select
+            id="lang-select"
+            className="lang-select"
+            value={lang}
+            onChange={(event) => {
+              const next = event.target.value as Lang;
+              router.push(langPath(next, pathSuffix || ''));
+            }}
+          >
+            {LOCALES.map((locale) => {
+              const meta = getLocaleMeta(locale);
+              return (
+                <option key={locale} value={locale}>
+                  {meta.flag} {meta.name}
+                </option>
+              );
+            })}
+          </select>
         </div>
       ) : null}
     </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useUiText } from '../lib/i18n';
 
 declare global {
   interface Window {
@@ -11,14 +12,10 @@ declare global {
 type ShareBarProps = {
   url: string;
   title: string;
-  labels: {
-    title: string;
-    copy: string;
-    copied: string;
-  };
 };
 
-export function ShareBar({ url, title, labels }: ShareBarProps) {
+export function ShareBar({ url, title }: ShareBarProps) {
+  const labels = useUiText().share;
   const [copied, setCopied] = useState(false);
 
   const encodedUrl = encodeURIComponent(url);

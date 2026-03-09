@@ -1,0 +1,191 @@
+{
+  "filmTitle": "Der Teufel trägt Prada",
+  "title": "Der Teufel trägt Prada\nDrehort-Karte",
+  "subtitle": "Interaktive Karte der Drehorte und Szenen",
+  "introTitle": "Über den Film und die Karte",
+  "introBody": [
+    "Erkunde New York und Paris über die ikonischsten Drehorte von Der Teufel trägt Prada.",
+    "Entdecke Szenen, Marken und Schlüsselmomente mit einer Karte für Filmfans."
+  ],
+  "stats": {
+    "pins": "Pins sichtbar",
+    "coffee": "Miranda-Kaffees",
+    "exact": "Exakt",
+    "approx": "Ungefähr"
+  },
+  "searchPlaceholder": "Ort, Szene, Marke oder Adresse suchen",
+  "buttons": {
+    "tour": "🧭 Tour",
+    "stop": "⏸ Stopp",
+    "fit": "🗺 Alles anzeigen",
+    "nyc": "NYC",
+    "paris": "Paris"
+  },
+  "sections": {
+    "categories": "Kategorien",
+    "timeline": "Kaffee-Timeline",
+    "pins": "Pins"
+  },
+  "empty": "Keine Ergebnisse.",
+  "notesTitle": "Dataset-Hinweise",
+  "notes": [
+    "Exakte Drehorte stammen aus Produktionsunterlagen oder Tabellen, die in mehreren Quellen auftauchen.",
+    "Ungefähre Orte stehen für Montagen, Bereiche oder erzählerisch wichtige Punkte.",
+    "Der Kaffee-Zähler ist eine kuratierte Lesart, um ein erzählerisches Motiv hervorzuheben."
+  ],
+  "popup": {
+    "timestamp": "Timecode",
+    "city": "Stadt",
+    "address": "Adresse",
+    "confidence": "Genauigkeit",
+    "coffee": "Kaffee",
+    "exact": "exakt",
+    "approx": "ungefähr",
+    "noBrands": "Keine Marken",
+    "maps": "In Maps öffnen",
+    "clip": "Clip suchen"
+  },
+  "languageSwitch": "DE",
+  "languageLabel": "Sprache",
+  "map": {
+    "panelTitle": "Kartenpanel",
+    "panelCollapse": "Panel ausblenden",
+    "panelExpand": "Panel anzeigen",
+    "shareTitle": "Diese Karte teilen",
+    "shareText": "Drehort-Karte von Der Teufel trägt Prada"
+  },
+  "share": {
+    "title": "Teilen",
+    "copy": "Link kopieren",
+    "copied": "Link kopiert"
+  },
+  "footer": {
+    "donateText": "Wenn dir die Karte gefällt, kannst du uns einen Kaffee spendieren.",
+    "donateCta": "Einen Kaffee spendieren"
+  },
+  "landing": {
+    "heroTitle": "Entdecke die Drehorte von Der Teufel trägt Prada",
+    "heroSubtitle": "Filmkarte mit Szenen, Timecodes und Produktionskontext. Auch bekannt als The Devil Wears Prada.",
+    "ctaPrimary": "Karte ansehen",
+    "ctaSecondary": "Drehorte ansehen",
+    "previewAlt": "Ikonisches High-Heel-Bild aus Der Teufel trägt Prada",
+    "highlightsTitle": "Was dich erwartet",
+    "highlights": [
+      {
+        "icon": "🗺️",
+        "title": "Reale Drehorte",
+        "description": "Genaue und ungefähre Adressen mit Produktionsnotizen."
+      },
+      {
+        "icon": "🎬",
+        "title": "Schlüsselmomente",
+        "description": "Szenen, Timecodes und erzählerischer Kontext auf der Karte."
+      },
+      {
+        "icon": "🗽",
+        "title": "New York und Paris",
+        "description": "Zwei Städte, die für die Ästhetik des Films zentral sind."
+      }
+    ],
+    "topLocationsTitle": "Hervorgehobene Drehorte",
+    "faqTitle": "Häufige Fragen",
+    "faq": [
+      {
+        "q": "Sind die Drehorte real?",
+        "a": "Ja. Die Karte kombiniert bestätigte und ungefähre Adressen mit Produktionsquellen."
+      },
+      {
+        "q": "Wo wurde das Runway-HQ gedreht?",
+        "a": "In Midtown Manhattan, mit Außenaufnahmen am 1221 Avenue of the Americas."
+      },
+      {
+        "q": "Gibt es Szenen in Paris?",
+        "a": "Ja. Die Karte zeigt wichtige Orte der Paris Fashion Week und das Finale."
+      },
+      {
+        "q": "Enthält die Karte exakte Adressen?",
+        "a": "Ja, wenn sie durch Produktionsquellen bestätigt sind. Andernfalls sind sie als ungefähr markiert."
+      },
+      {
+        "q": "Warum gibt es „ungefähr“-Orte?",
+        "a": "Einige Szenen wurden im Studio oder als Montage gedreht; daher ist nur ein repräsentativer Bereich kartierbar."
+      },
+      {
+        "q": "Kann ich alle Drehorte besuchen?",
+        "a": "Außenorte sind besuchbar. Manche Innenräume sind Sets oder privat."
+      },
+      {
+        "q": "Wo wurde die Museumsgala-Szene gedreht?",
+        "a": "Außen am American Museum of Natural History, innen in Foley Square."
+      },
+      {
+        "q": "Was bedeutet die Kaffee-Timeline?",
+        "a": "Eine narrative Lesart der Momente, in denen Kaffee das Tempo der Geschichte bestimmt."
+      },
+      {
+        "q": "Wird die Karte aktualisiert?",
+        "a": "Ja. Wir ergänzen Quellen und korrigieren Details, wenn präzisere Angaben erscheinen."
+      }
+    ]
+  },
+  "seoContext": {
+    "locations": {
+      "title": "Kontext der Filmkarte",
+      "body": "Diese Liste ist Teil der Filmkarte zu Der Teufel trägt Prada (The Devil Wears Prada). Entdecke Szenen, Adressen und Produktionskontext.",
+      "cta": "Zur Karte"
+    },
+    "locationDetail": {
+      "title": "Drehort auf der Karte",
+      "body": "Dieser Ort gehört zur Karte von Der Teufel trägt Prada (The Devil Wears Prada). Sieh dir die vollständige Karte für verbundene Szenen an.",
+      "cta": "Gesamte Karte ansehen"
+    },
+    "city": {
+      "title": "Stadt auf der Karte",
+      "body": "Diese Drehorte sind mit der Karte von Der Teufel trägt Prada verbunden. Entdecke die komplette Route auf der Karte.",
+      "cta": "Karte erkunden"
+    },
+    "faq": {
+      "title": "Über die Filmkarte",
+      "body": "Diese FAQ beantwortet Fragen zur Karte von Der Teufel trägt Prada und wie sie erstellt wurde.",
+      "cta": "Karte ansehen"
+    }
+  },
+  "labels": {
+    "viewAllFaqs": "Alle Fragen ansehen",
+    "locationsTitle": "Drehorte",
+    "locationsDescription": "Alle Drehorte des Films in einer Liste.",
+    "cityTitle": "Drehorte in {city}",
+    "cityDescription": "Schlüsselorte des Films in {city}.",
+    "notFoundTitle": "Drehort nicht gefunden",
+    "backToList": "Zurück zur Liste",
+    "sceneLabel": "Szene",
+    "productionLabel": "Produktionsnotizen",
+    "mapLocationLabel": "Kartenposition",
+    "breadcrumbHome": "Start",
+    "breadcrumbLocations": "Drehorte",
+    "breadcrumbCities": "Städte",
+    "triviaLabel": "Trivia"
+  },
+  "meta": {
+    "home": {
+      "title": "Der Teufel trägt Prada — Filmkarte",
+      "description": "Entdecke Drehorte, Szenen und Schlüsselmomente von Der Teufel trägt Prada auf einer interaktiven Karte."
+    },
+    "map": {
+      "title": "Drehort-Karte — Der Teufel trägt Prada",
+      "description": "Erkunde die interaktive Karte mit Szenen und Drehorten von Der Teufel trägt Prada."
+    },
+    "locations": {
+      "title": "Drehorte — Der Teufel trägt Prada",
+      "description": "Vollständige Liste der Drehorte und Szenen von Der Teufel trägt Prada."
+    },
+    "faq": {
+      "title": "FAQ — Der Teufel trägt Prada",
+      "description": "Häufige Fragen zur Karte und zum Film."
+    },
+    "city": {
+      "title": "Drehorte in {city} — Der Teufel trägt Prada",
+      "description": "Ein Rundgang zu den Drehorten des Films in {city}."
+    }
+  }
+}

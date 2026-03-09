@@ -1,0 +1,191 @@
+{
+  "filmTitle": "Le Diable s'habille en Prada",
+  "title": "Le Diable s'habille en Prada\nCarte des lieux",
+  "subtitle": "Carte interactive des lieux et scènes du film",
+  "introTitle": "À propos du film et de la carte",
+  "introBody": [
+    "Parcourez New York et Paris à travers les lieux les plus iconiques du Diable s'habille en Prada.",
+    "Explorez les scènes, marques et moments clés avec une carte pensée pour les fans du film."
+  ],
+  "stats": {
+    "pins": "Pins visibles",
+    "coffee": "Cafés de Miranda",
+    "exact": "Exactes",
+    "approx": "Approx"
+  },
+  "searchPlaceholder": "Rechercher un lieu, une scène, une marque ou une adresse",
+  "buttons": {
+    "tour": "🧭 Tour",
+    "stop": "⏸ Pause",
+    "fit": "🗺 Tout voir",
+    "nyc": "NYC",
+    "paris": "Paris"
+  },
+  "sections": {
+    "categories": "Catégories",
+    "timeline": "Timeline des cafés",
+    "pins": "Pins"
+  },
+  "empty": "Aucun résultat.",
+  "notesTitle": "Notes du dataset",
+  "notes": [
+    "Les lieux exacts proviennent de fiches de production ou de tableaux répétés par plusieurs sources.",
+    "Les lieux “approx” représentent des montages, zones ou points utiles au récit cinématographique.",
+    "Le compteur de cafés est une lecture éditoriale pour souligner un motif narratif."
+  ],
+  "popup": {
+    "timestamp": "Timecode",
+    "city": "Ville",
+    "address": "Adresse",
+    "confidence": "Confiance",
+    "coffee": "Café",
+    "exact": "exacte",
+    "approx": "approximative",
+    "noBrands": "Aucune marque",
+    "maps": "Ouvrir dans Maps",
+    "clip": "Rechercher le clip"
+  },
+  "languageSwitch": "FR",
+  "languageLabel": "Langue",
+  "map": {
+    "panelTitle": "Panneau de la carte",
+    "panelCollapse": "Masquer le panneau",
+    "panelExpand": "Afficher le panneau",
+    "shareTitle": "Partager cette carte",
+    "shareText": "Carte des lieux du Diable s'habille en Prada"
+  },
+  "share": {
+    "title": "Partager",
+    "copy": "Copier le lien",
+    "copied": "Lien copié"
+  },
+  "footer": {
+    "donateText": "Si la carte te plaît, tu peux nous offrir un café.",
+    "donateCta": "Offrir un café"
+  },
+  "landing": {
+    "heroTitle": "Explorez les lieux du Diable s'habille en Prada",
+    "heroSubtitle": "Carte cinématographique avec scènes, timecodes et contexte de production. Aussi connu comme The Devil Wears Prada.",
+    "ctaPrimary": "Voir la carte",
+    "ctaSecondary": "Voir les lieux",
+    "previewAlt": "Image iconique du talon du Diable s'habille en Prada",
+    "highlightsTitle": "Ce que vous trouverez",
+    "highlights": [
+      {
+        "icon": "🗺️",
+        "title": "Lieux réels",
+        "description": "Adresses exactes et approximatives avec notes de production."
+      },
+      {
+        "icon": "🎬",
+        "title": "Moments clés",
+        "description": "Scènes, timecodes et narration reliés à la carte."
+      },
+      {
+        "icon": "🗽",
+        "title": "New York et Paris",
+        "description": "Deux villes essentielles à l'esthétique du film."
+      }
+    ],
+    "topLocationsTitle": "Lieux en vedette",
+    "faqTitle": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "Les lieux sont-ils réels ?",
+        "a": "Oui. La carte combine adresses confirmées et approximatives avec sources de production."
+      },
+      {
+        "q": "Où a été filmé le siège de Runway ?",
+        "a": "À Midtown Manhattan, avec des extérieurs au 1221 Avenue of the Americas."
+      },
+      {
+        "q": "Y a-t-il des scènes à Paris ?",
+        "a": "Oui. La carte inclut des points clés de la Paris Fashion Week et la fin du film."
+      },
+      {
+        "q": "La carte inclut-elle des adresses exactes ?",
+        "a": "Oui, lorsqu'elles sont confirmées par des sources de production. Sinon elles sont marquées comme approximatives."
+      },
+      {
+        "q": "Pourquoi certains lieux sont “approx” ?",
+        "a": "Certaines scènes ont été tournées en studio ou en montage, on ne peut cartographier qu'une zone représentative."
+      },
+      {
+        "q": "Puis-je visiter tous les lieux ?",
+        "a": "Les lieux extérieurs sont visitables. Certains intérieurs sont des décors ou des lieux privés."
+      },
+      {
+        "q": "Où a été tournée la scène du gala du musée ?",
+        "a": "L'extérieur était à l'American Museum of Natural History et l'intérieur a été tourné à Foley Square."
+      },
+      {
+        "q": "Que signifie la timeline des cafés ?",
+        "a": "C'est une lecture narrative des moments où le café rythme l'histoire."
+      },
+      {
+        "q": "La carte sera-t-elle mise à jour ?",
+        "a": "Oui. Nous ajoutons des références et corrigeons les données quand des sources plus précises apparaissent."
+      }
+    ]
+  },
+  "seoContext": {
+    "locations": {
+      "title": "Contexte de la carte du film",
+      "body": "Cette liste fait partie de la carte cinématographique du Diable s'habille en Prada (The Devil Wears Prada). Explorez scènes, adresses et contexte de production.",
+      "cta": "Aller à la carte"
+    },
+    "locationDetail": {
+      "title": "Lieu sur la carte",
+      "body": "Ce lieu appartient à la carte du Diable s'habille en Prada (The Devil Wears Prada). Consultez la carte complète pour les scènes liées.",
+      "cta": "Voir la carte complète"
+    },
+    "city": {
+      "title": "Ville sur la carte",
+      "body": "Ces lieux se connectent à la carte du Diable s'habille en Prada. Explorez l'itinéraire complet sur la carte.",
+      "cta": "Explorer la carte"
+    },
+    "faq": {
+      "title": "À propos de la carte du film",
+      "body": "Cette FAQ répond aux questions sur la carte du Diable s'habille en Prada et sa construction.",
+      "cta": "Voir la carte"
+    }
+  },
+  "labels": {
+    "viewAllFaqs": "Voir toutes les questions",
+    "locationsTitle": "Lieux",
+    "locationsDescription": "Tous les lieux du film en une seule liste.",
+    "cityTitle": "Lieux à {city}",
+    "cityDescription": "Points clés du film à {city}.",
+    "notFoundTitle": "Lieu introuvable",
+    "backToList": "Retour à la liste",
+    "sceneLabel": "Scène",
+    "productionLabel": "Notes de production",
+    "mapLocationLabel": "Localisation sur la carte",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbLocations": "Lieux",
+    "breadcrumbCities": "Villes",
+    "triviaLabel": "Anecdotes"
+  },
+  "meta": {
+    "home": {
+      "title": "Le Diable s'habille en Prada — Carte cinématographique",
+      "description": "Explorez les lieux, scènes et moments clés du Diable s'habille en Prada sur une carte interactive."
+    },
+    "map": {
+      "title": "Carte des lieux — Le Diable s'habille en Prada",
+      "description": "Explorez la carte interactive avec scènes et lieux du Diable s'habille en Prada."
+    },
+    "locations": {
+      "title": "Lieux — Le Diable s'habille en Prada",
+      "description": "Liste complète des lieux et scènes du Diable s'habille en Prada."
+    },
+    "faq": {
+      "title": "FAQ — Le Diable s'habille en Prada",
+      "description": "Questions fréquentes sur la carte et le film."
+    },
+    "city": {
+      "title": "Lieux à {city} — Le Diable s'habille en Prada",
+      "description": "Un parcours des lieux du film à {city}."
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "filmTitle": "O Diabo Veste Prada",
+  "title": "O Diabo Veste Prada\nMapa de locações",
+  "subtitle": "Mapa interativo de locações e cenas do filme",
+  "introTitle": "Sobre o filme e o mapa",
+  "introBody": [
+    "Passeie por Nova York e Paris pelas locações mais icônicas de O Diabo Veste Prada.",
+    "Explore cenas, marcas e momentos-chave com um mapa feito para fãs do filme."
+  ],
+  "stats": {
+    "pins": "Pins visíveis",
+    "coffee": "Cafés da Miranda",
+    "exact": "Exatas",
+    "approx": "Aprox"
+  },
+  "searchPlaceholder": "Buscar locação, cena, marca ou endereço",
+  "buttons": {
+    "tour": "🧭 Tour",
+    "stop": "⏸ Pausar",
+    "fit": "🗺 Ver tudo",
+    "nyc": "NYC",
+    "paris": "Paris"
+  },
+  "sections": {
+    "categories": "Categorias",
+    "timeline": "Linha do tempo de cafés",
+    "pins": "Pins"
+  },
+  "empty": "Sem resultados.",
+  "notesTitle": "Notas do dataset",
+  "notes": [
+    "As locações exatas vêm de fichas de produção ou tabelas repetidas por várias fontes.",
+    "As locações “aprox” representam montagens, áreas ou pontos úteis para o relato cinematográfico.",
+    "O contador de cafés é uma leitura curada para destacar um recurso narrativo do filme."
+  ],
+  "popup": {
+    "timestamp": "Timestamp",
+    "city": "Cidade",
+    "address": "Endereço",
+    "confidence": "Confiança",
+    "coffee": "Café",
+    "exact": "exata",
+    "approx": "aproximada",
+    "noBrands": "Sem marcas",
+    "maps": "Abrir no Maps",
+    "clip": "Buscar clipe"
+  },
+  "languageSwitch": "PT",
+  "languageLabel": "Idioma",
+  "map": {
+    "panelTitle": "Painel do mapa",
+    "panelCollapse": "Ocultar painel",
+    "panelExpand": "Mostrar painel",
+    "shareTitle": "Compartilhe este mapa",
+    "shareText": "Mapa de locações de O Diabo Veste Prada"
+  },
+  "share": {
+    "title": "Compartilhar",
+    "copy": "Copiar link",
+    "copied": "Link copiado"
+  },
+  "footer": {
+    "donateText": "Se você curte o mapa, pode nos pagar um café.",
+    "donateCta": "Doar um café"
+  },
+  "landing": {
+    "heroTitle": "Explore as locações de O Diabo Veste Prada",
+    "heroSubtitle": "Mapa cinematográfico com cenas, timestamps e contexto de produção. Também conhecido como The Devil Wears Prada.",
+    "ctaPrimary": "Ver mapa",
+    "ctaSecondary": "Ver locações",
+    "previewAlt": "Imagem icônica do salto de O Diabo Veste Prada",
+    "highlightsTitle": "O que você vai encontrar",
+    "highlights": [
+      {
+        "icon": "🗺️",
+        "title": "Locações reais",
+        "description": "Endereços exatos e aproximados com notas de produção."
+      },
+      {
+        "icon": "🎬",
+        "title": "Momentos-chave",
+        "description": "Cenas, timestamps e narrativa conectada ao mapa."
+      },
+      {
+        "icon": "🗽",
+        "title": "Nova York e Paris",
+        "description": "Duas cidades essenciais para a estética do filme."
+      }
+    ],
+    "topLocationsTitle": "Locações em destaque",
+    "faqTitle": "Perguntas frequentes",
+    "faq": [
+      {
+        "q": "As locações são reais?",
+        "a": "Sim. O mapa combina endereços confirmados e aproximados com fontes de produção."
+      },
+      {
+        "q": "Onde foi filmado o HQ da Runway?",
+        "a": "Em Midtown Manhattan, com exteriores no 1221 Avenue of the Americas."
+      },
+      {
+        "q": "Há cenas em Paris?",
+        "a": "Sim. O mapa inclui pontos-chave da Paris Fashion Week e o final do filme."
+      },
+      {
+        "q": "O mapa inclui endereços exatos?",
+        "a": "Sim, quando confirmados por fontes de produção. O restante é marcado como aproximado."
+      },
+      {
+        "q": "Por que há locações “aprox”?",
+        "a": "Porque algumas cenas foram filmadas em sets ou montagens e só é possível mapear uma área representativa."
+      },
+      {
+        "q": "Posso visitar todas as locações?",
+        "a": "Locações externas são visitáveis. Algumas internas são sets ou espaços privados."
+      },
+      {
+        "q": "Onde foi filmada a cena do benefício do museu?",
+        "a": "O exterior foi no American Museum of Natural History e o interior foi filmado em Foley Square."
+      },
+      {
+        "q": "O que significa a linha do tempo de cafés?",
+        "a": "É uma leitura narrativa dos momentos em que o café define o ritmo da história."
+      },
+      {
+        "q": "O mapa será atualizado com novas fontes?",
+        "a": "Sim. Adicionamos referências e corrigimos dados quando surgem fontes mais precisas."
+      }
+    ]
+  },
+  "seoContext": {
+    "locations": {
+      "title": "Contexto do mapa do filme",
+      "body": "Esta lista faz parte do mapa cinematográfico de O Diabo Veste Prada (The Devil Wears Prada). Explore cenas, endereços e contexto de produção.",
+      "cta": "Ir ao mapa"
+    },
+    "locationDetail": {
+      "title": "Locação no mapa",
+      "body": "Esta locação faz parte do mapa de O Diabo Veste Prada (The Devil Wears Prada). Veja o mapa completo para cenas conectadas.",
+      "cta": "Ver mapa completo"
+    },
+    "city": {
+      "title": "Cidade no mapa",
+      "body": "Estas locações se conectam ao mapa de O Diabo Veste Prada. Explore a rota completa no mapa.",
+      "cta": "Explorar mapa"
+    },
+    "faq": {
+      "title": "Sobre o mapa do filme",
+      "body": "Este FAQ responde perguntas sobre o mapa de O Diabo Veste Prada e como foi construído.",
+      "cta": "Ver mapa"
+    }
+  },
+  "labels": {
+    "viewAllFaqs": "Ver todas as perguntas",
+    "locationsTitle": "Locações",
+    "locationsDescription": "Todas as locações do filme em uma única lista.",
+    "cityTitle": "Locações em {city}",
+    "cityDescription": "Pontos-chave do filme em {city}.",
+    "notFoundTitle": "Locação não encontrada",
+    "backToList": "Voltar à lista",
+    "sceneLabel": "Cena",
+    "productionLabel": "Notas de produção",
+    "mapLocationLabel": "Localização no mapa",
+    "breadcrumbHome": "Início",
+    "breadcrumbLocations": "Locações",
+    "breadcrumbCities": "Cidades",
+    "triviaLabel": "Curiosidades"
+  },
+  "meta": {
+    "home": {
+      "title": "O Diabo Veste Prada — Mapa Cinematográfico",
+      "description": "Explore locações, cenas e momentos-chave de O Diabo Veste Prada (The Devil Wears Prada) em um mapa interativo."
+    },
+    "map": {
+      "title": "Mapa de locações — O Diabo Veste Prada",
+      "description": "Explore o mapa interativo com cenas e locações de O Diabo Veste Prada (The Devil Wears Prada)."
+    },
+    "locations": {
+      "title": "Locações — O Diabo Veste Prada",
+      "description": "Lista completa de locações e cenas de O Diabo Veste Prada (The Devil Wears Prada)."
+    },
+    "faq": {
+      "title": "FAQ — O Diabo Veste Prada",
+      "description": "Perguntas frequentes sobre o mapa e o filme O Diabo Veste Prada (The Devil Wears Prada)."
+    },
+    "city": {
+      "title": "Locações em {city} — O Diabo Veste Prada",
+      "description": "Um tour pelas locações de O Diabo Veste Prada em {city}."
+    }
+  }
+}

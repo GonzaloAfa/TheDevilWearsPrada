@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { DATA } from '../../data';
-import { UI_TEXT } from '../../lib/uiText';
 import type { Lang } from '../../lib/types';
 import { movieJsonLd, faqJsonLd } from '../../lib/seo';
 import { ShareBar } from '../../components/ShareBar';
@@ -9,7 +8,7 @@ import { Footer } from '../../components/Footer';
 import { CATEGORY_META } from '../../lib/categories';
 import { cityDisplayName, cityHint } from '../../lib/locationUi';
 import { SiteHeader } from '../../components/SiteHeader';
-import { getCategoryLabel, getLocationI18n, normalizeLang } from '../../lib/i18n';
+import { getCategoryLabel, getLocationI18n, normalizeLang, LOCALES, loadMessages, asUiText } from '../../lib/i18n';
 
 export const dynamicParams = false;
 
@@ -19,31 +18,22 @@ export async function generateMetadata({
   params: { lang: Lang };
 }): Promise<Metadata> {
   const lang = normalizeLang(params.lang);
-  const ui = UI_TEXT[lang];
+  const ui = asUiText(await loadMessages(lang));
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const title = lang === 'en'
-    ? 'The Devil Wears Prada — Cinematic Map'
-    : lang === 'pt'
-      ? 'O Diabo Veste Prada — Mapa Cinematográfico'
-      : 'El Diablo se viste a la moda — Mapa Cinematográfico';
-  const description = lang === 'en'
-    ? 'Explore locations, scenes, and key moments from The Devil Wears Prada in an interactive map.'
-    : lang === 'pt'
-      ? 'Explore locações, cenas e momentos-chave de O Diabo Veste Prada (The Devil Wears Prada) em um mapa interativo.'
-      : 'Explora locaciones, escenas y momentos clave de El Diablo se viste a la moda (The Devil Wears Prada) en un mapa interactivo.';
+  const title = ui.meta.home.title;
+  const description = ui.meta.home.description;
   const imageUrl = `${baseUrl}/og.svg`;
+  const languages = Object.fromEntries(
+    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}`])
+  );
 
   return {
     title,
     description,
-      alternates: {
-        canonical: `${baseUrl}/${lang}`,
-        languages: {
-          es: `${baseUrl}/es`,
-          en: `${baseUrl}/en`,
-          pt: `${baseUrl}/pt`
-        }
-      },
+    alternates: {
+      canonical: `${baseUrl}/${lang}`,
+      languages
+    },
     openGraph: {
       title,
       description,
@@ -62,9 +52,9 @@ export async function generateMetadata({
   };
 }
 
-export default function Page({ params }: { params: { lang: Lang } }) {
+export default async function Page({ params }: { params: { lang: Lang } }) {
   const lang = normalizeLang(params.lang);
-  const ui = UI_TEXT[lang];
+  const ui = asUiText(await loadMessages(lang));
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const topLocations = DATA.locations.slice(0, 6);
   const shareUrl = `${baseUrl}/${lang}`;
@@ -72,7 +62,11 @@ export default function Page({ params }: { params: { lang: Lang } }) {
   const locationsPath = `/${lang}/locations`;
   const faqPath = `/${lang}/faq`;
 
-  const movieLd = movieJsonLd(baseUrl, lang);
+  const movieLd = movieJsonLd(baseUrl, lang, {
+    name: ui.filmTitle,
+    alternateName: lang === 'es' ? 'The Devil Wears Prada' : 'El Diablo se viste a la moda',
+    description: ui.meta.home.description
+  });
   const faqLd = faqJsonLd(baseUrl, lang, ui.landing.faq);
 
   return (
@@ -92,7 +86,7 @@ export default function Page({ params }: { params: { lang: Lang } }) {
               </Link>
             </div>
             <div style={{ marginTop: 16 }}>
-              <ShareBar url={shareUrl} title={ui.landing.heroTitle} labels={ui.share} />
+              <ShareBar url={shareUrl} title={ui.landing.heroTitle} />
             </div>
           </div>
           <div className="hero-emoji" role="img" aria-label={ui.landing.previewAlt}>
@@ -150,12 +144,12 @@ export default function Page({ params }: { params: { lang: Lang } }) {
           ))}
           <div style={{ marginTop: 14 }}>
             <Link href={faqPath} className="cta-secondary">
-              {lang === 'en' ? 'View all FAQs' : lang === 'pt' ? 'Ver todas as perguntas' : 'Ver todas las preguntas'}
+              {ui.labels.viewAllFaqs}
             </Link>
           </div>
         </div>
 
-        <Footer lang={lang} />
+        <Footer />
       </div>
 
       <div className="sticky-cta">

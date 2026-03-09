@@ -1,13 +1,13 @@
 import type { MetadataRoute } from 'next';
 import { DATA } from '../data';
+import { LOCALES } from '../lib/i18n';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const now = new Date();
-  const langs = ['es', 'en', 'pt'] as const;
   const routes: string[] = [];
 
-  langs.forEach((lang) => {
+  LOCALES.forEach((lang) => {
     routes.push(`/${lang}`);
     routes.push(`/${lang}/map`);
     routes.push(`/${lang}/locations`);

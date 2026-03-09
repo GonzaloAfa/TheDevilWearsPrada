@@ -1,0 +1,153 @@
+{
+  "locations": {
+    "runway-hq": {
+      "name": "Elias-Clarke / Runway HQ",
+      "scene": "Plans extérieurs du bâtiment Elias-Clarke; Andy arrive au bureau et plusieurs entrées/sorties.",
+      "production_note": "Wikipedia indique que le 1221 Avenue of the Americas a servi pour les extérieurs et le lobby d'Elias-Clarke."
+    },
+    "runway-lobby": {
+      "name": "Lobby d'Elias-Clarke",
+      "scene": "Plans d'entrée et lobby corporatif.",
+      "production_note": "Le lobby faisait partie de la vraie location selon la section filming de Wikipedia."
+    },
+    "runway-cafeteria": {
+      "name": "Cafétéria / cantine de Runway",
+      "scene": "Cafétéria utilisée pour les scènes de l'équipe de Runway.",
+      "production_note": "Wikipedia indique que la cafétéria d'Elias-Clarke est celle de l'immeuble Reuters."
+    },
+    "runway-office-corridors": {
+      "name": "Couloirs de Runway / Fox Building",
+      "scene": "Couloirs du monde éditorial et passages de l'immeuble.",
+      "production_note": "Wikipedia signale qu'une partie des bureaux a été filmée dans les couloirs du Fox Building voisin et une partie en studio."
+    },
+    "silvercup-studios": {
+      "name": "Silvercup Studios",
+      "scene": "Décors intérieurs de bureau et de production.",
+      "production_note": "Souvent cité comme studio de tournage."
+    },
+    "mirror-office": {
+      "name": "Extérieur du bureau du New York Mirror",
+      "scene": "Extérieur du journal où Andy finit par travailler.",
+      "production_note": "Identifié comme l'extérieur du New York Mirror."
+    },
+    "andys-apartment": {
+      "name": "Appartement d'Andy",
+      "scene": "Extérieur de l'appartement d'Andy et Nate.",
+      "production_note": "Wikipedia ne précise que Lower East Side; cette adresse est la plus citée par les guides de tournage."
+    },
+    "bubbys": {
+      "name": "Bubby's Tribeca",
+      "scene": "Dîner de groupe avec Nate, Lily et Doug; aussi associé au travail de Nate dans des guides de locations.",
+      "production_note": "IMDb et Wikipedia le listent comme la première grande scène de groupe au restaurant."
+    },
+    "smith-wollensky": {
+      "name": "Smith & Wollensky",
+      "scene": "Andy va chercher le steak / déjeuner de Miranda.",
+      "production_note": "Wikipedia dit que le steakhouse et sa cuisine ont été utilisés."
+    },
+    "craft": {
+      "name": "Craft",
+      "scene": "Andy dîne avec son père.",
+      "production_note": "Listé par plusieurs guides de locations comme le dîner avec son père."
+    },
+    "coffee-shop-union-square": {
+      "name": "The Coffee Shop",
+      "scene": "Lieu cité par des guides de fans pour une réunion nocturne avec Nate et des amis.",
+      "production_note": "Cette adresse provient de guides de repères/tours de fans, pas de la fiche de production principale."
+    },
+    "james-holt-loft": {
+      "name": "Loft / studio de James Holt",
+      "scene": "Andy entre dans le monde de la mode et croise Christian Thompson.",
+      "production_note": "Wikipedia mentionne que le studio de Holt est un loft utilisé par un vrai designer."
+    },
+    "calvin-klein-showroom": {
+      "name": "Showroom Calvin Klein (scène supprimée)",
+      "scene": "Showroom mentionné dans les notes de production et les scènes supprimées.",
+      "production_note": "Wikipedia indique que le showroom de Calvin Klein a été utilisé dans des scènes supprimées, sans adresse précise."
+    },
+    "miranda-townhouse": {
+      "name": "Townhouse de Miranda",
+      "scene": "Andy remet 'the book' et le pressing à la maison de Miranda.",
+      "production_note": "Adresse largement citée dans les guides de lieux de tournage."
+    },
+    "natural-history-exterior": {
+      "name": "Extérieur du benefit du musée",
+      "scene": "Extérieur de l'événement caritatif où Andy remplace Emily.",
+      "production_note": "Wikipedia dit que l'extérieur du benefit a été filmé au AMNH."
+    },
+    "foley-square-interior": {
+      "name": "Intérieur du benefit du musée (doublure de lieu)",
+      "scene": "Intérieur utilisé pour le benefit du musée.",
+      "production_note": "Wikipedia précise que l'intérieur était le lobby de l'un des tribunaux de Foley Square."
+    },
+    "st-regis": {
+      "name": "The St. Regis New York",
+      "scene": "Scène vulnérable de Miranda sur son mariage.",
+      "production_note": "IMDb situe là la scène émouvante de Miranda Priestly."
+    },
+    "philadelphia-hotel": {
+      "name": "Philadelphia Hotel (doublure de l'hôtel de Paris)",
+      "scene": "Andy se réveille dans la chambre de Christian 'à Paris' (tourné à NYC).",
+      "production_note": "IMDb liste le Philadelphia Hotel, Times Square, pour cette scène."
+    },
+    "spring-station": {
+      "name": "Station Spring Street",
+      "scene": "Andy prend le métro pour aller au travail.",
+      "production_note": "Wikipedia identifie Spring Street comme station de départ."
+    },
+    "51st-station": {
+      "name": "Station 51st Street",
+      "scene": "Andy sort du métro près de Runway.",
+      "production_note": "Wikipedia identifie 51st Street comme station d'arrivée."
+    },
+    "gapstow-bridge": {
+      "name": "Gapstow Bridge",
+      "scene": "Point visuel iconique de Central Park lié aux promenades et à la vie personnelle.",
+      "production_note": "Sélection éditoriale pour la carte; utile comme point de parcours cinématographique."
+    },
+    "fifth-avenue": {
+      "name": "Fifth Avenue - montage relooking",
+      "scene": "Montage de transformation fashion d'Andy.",
+      "production_note": "Point éditorial pour représenter le montage à Midtown, pas une confirmation d'un plan exact."
+    },
+    "madison-avenue": {
+      "name": "Madison Avenue - montage boutiques",
+      "scene": "Montage des looks d'Andy et passage par les boutiques.",
+      "production_note": "Point ajouté comme représentation géographique du montage mode."
+    },
+    "bryant-park": {
+      "name": "Bryant Park / point de montage Midtown",
+      "scene": "Point visuel de Midtown pour le parcours bureau/mode.",
+      "production_note": "Point d'ambiance pour renforcer le parcours cinématographique à Manhattan."
+    },
+    "west-13th-9th": {
+      "name": "9th Ave & West 13th St",
+      "scene": "Lieu de rue signalé par spotters/fans.",
+      "production_note": "Ce n'est pas un lieu principal des fiches officielles; on le maintient comme approximatif."
+    },
+    "palais-galliera": {
+      "name": "Palais Galliera",
+      "scene": "Extérieur associé à la Fashion Week de Paris.",
+      "production_note": "IMDb situe l'extérieur de Paris ici."
+    },
+    "concorde-fountain": {
+      "name": "Fontaine des Fleuves, place de la Concorde",
+      "scene": "Andy jette son téléphone à l'eau à la fin de son arc à Paris.",
+      "production_note": "IMDb identifie explicitement la fontaine de la scène finale à Paris."
+    }
+  },
+  "coffee_events": {
+    "runway-hq@00:12:00": { "label": "Premier aller-retour café chez Runway" },
+    "runway-hq@00:15:10": { "label": "Arrivée de Miranda, café prêt" },
+    "runway-cafeteria@00:18:30": { "label": "Café dans la routine interne de Runway" },
+    "runway-office-corridors@00:24:00": { "label": "Montage de tâches / café au bureau" },
+    "smith-wollensky@00:31:30": { "label": "Lunch run + exigences de Miranda" },
+    "madison-avenue@00:39:30": { "label": "Montage de transformation avec mission café" },
+    "fifth-avenue@00:40:15": { "label": "Autre beat du montage à Midtown" },
+    "silvercup-studios@00:55:00": { "label": "Journée intense sur les sets/bureaux" },
+    "silvercup-studios@01:02:00": { "label": "Préparatifs avant Paris" },
+    "miranda-townhouse@01:07:10": { "label": "Routine de Miranda dans son townhouse" },
+    "st-regis@01:22:00": { "label": "Hôtel de Miranda" },
+    "palais-galliera@01:24:30": { "label": "Fashion Week à Paris" }
+  }
+}

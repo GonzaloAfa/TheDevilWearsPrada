@@ -2,9 +2,8 @@
 
 import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef } from 'react';
 import type { CategoryMeta, CategoryKey, Lang, Location } from '../lib/types';
-import type { UiText } from '../lib/uiText';
 import L from 'leaflet';
-import { getLocationI18n } from '../lib/i18n';
+import { formatTimestampValue, getLocationI18n, useUiText } from '../lib/i18n';
 
 export type MapClientHandle = {
   focusLocation: (id: string, openPopup?: boolean) => void;
@@ -17,7 +16,6 @@ type MapClientProps = {
   lang: Lang;
   filteredIds: string[];
   categoryMeta: Record<CategoryKey, CategoryMeta>;
-  ui: UiText;
 };
 
 type MarkerWithLoc = L.Marker & { __locId?: string };
@@ -36,16 +34,12 @@ function esc(value: string = '') {
 }
 
 function renderTimestamp(timestamp: string, lang: Lang) {
-  if (!timestamp) return lang === 'en' ? 'N/A' : lang === 'pt' ? 'S/D' : 'N/D';
-  if (timestamp === 'varios') return lang === 'en' ? 'various' : lang === 'pt' ? 'vários' : 'varios';
-  if (timestamp === 'escena eliminada') {
-    return lang === 'en' ? 'deleted scene' : lang === 'pt' ? 'cena deletada' : 'escena eliminada';
-  }
-  return timestamp;
+  return formatTimestampValue(timestamp, lang);
 }
 
 export const MapClient = forwardRef<MapClientHandle, MapClientProps>(
-  ({ locations, lang, filteredIds, categoryMeta, ui }, ref) => {
+  ({ locations, lang, filteredIds, categoryMeta }, ref) => {
+    const ui = useUiText();
     const mapContainerRef = useRef<HTMLDivElement | null>(null);
     const mapRef = useRef<L.Map | null>(null);
     const markersRef = useRef<Map<string, MarkerWithLoc>>(new Map());

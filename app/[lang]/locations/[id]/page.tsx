@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { DATA } from '../../../../data';
-import { UI_TEXT } from '../../../../lib/uiText';
 import type { Lang } from '../../../../lib/types';
 import { placeJsonLd, breadcrumbJsonLd } from '../../../../lib/seo';
 import { ShareBar } from '../../../../components/ShareBar';
@@ -9,12 +8,12 @@ import { Footer } from '../../../../components/Footer';
 import { LocationMiniMap } from '../../../../components/LocationMiniMap';
 import { SeoContext } from '../../../../components/SeoContext';
 import { SiteHeader } from '../../../../components/SiteHeader';
-import { getLocationI18n, normalizeLang } from '../../../../lib/i18n';
+import { getLocationI18n, normalizeLang, LOCALES, loadMessages, asUiText } from '../../../../lib/i18n';
 
 export const dynamicParams = false;
 
 export const generateStaticParams = async () => {
-  return DATA.locations.map((loc) => ({ id: loc.id }));
+  return LOCALES.flatMap((lang) => DATA.locations.map((loc) => ({ lang, id: loc.id })));
 };
 
 export async function generateMetadata({
@@ -24,35 +23,30 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const lang = normalizeLang(params.lang);
   const loc = DATA.locations.find((l) => l.id === params.id);
+  const ui = asUiText(await loadMessages(lang));
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const imageUrl = `${baseUrl}/og.svg`;
 
   if (!loc) {
     return {
-      title: lang === 'en' ? 'Location not found' : lang === 'pt' ? 'Locação não encontrada' : 'Locación no encontrada'
+      title: ui.labels.notFoundTitle
     };
   }
 
   const t = getLocationI18n(loc, lang);
-  const title =
-    lang === 'en'
-      ? `${t.name} — The Devil Wears Prada`
-      : lang === 'pt'
-        ? `${t.name} — O Diabo Veste Prada`
-        : `${t.name} — El Diablo se viste a la moda`;
+  const title = `${t.name} — ${ui.filmTitle}`;
   const description = t.scene;
+  const languages = Object.fromEntries(
+    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}/locations/${loc.id}`])
+  );
 
   return {
     title,
     description,
-      alternates: {
-        canonical: `${baseUrl}/${lang}/locations/${loc.id}`,
-        languages: {
-          es: `${baseUrl}/es/locations/${loc.id}`,
-          en: `${baseUrl}/en/locations/${loc.id}`,
-          pt: `${baseUrl}/pt/locations/${loc.id}`
-        }
-      },
+    alternates: {
+      canonical: `${baseUrl}/${lang}/locations/${loc.id}`,
+      languages
+    },
     openGraph: {
       title,
       description,
@@ -63,9 +57,9 @@ export async function generateMetadata({
   };
 }
 
-export default function Page({ params }: { params: { lang: Lang; id: string } }) {
+export default async function Page({ params }: { params: { lang: Lang; id: string } }) {
   const lang = normalizeLang(params.lang);
-  const ui = UI_TEXT[lang];
+  const ui = asUiText(await loadMessages(lang));
   const loc = DATA.locations.find((l) => l.id === params.id);
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
@@ -74,9 +68,9 @@ export default function Page({ params }: { params: { lang: Lang; id: string } })
       <div className="landing">
         <div className="container">
           <div className="section">
-            <h1>{lang === 'en' ? 'Location not found' : lang === 'pt' ? 'Locação não encontrada' : 'Locación no encontrada'}</h1>
+            <h1>{ui.labels.notFoundTitle}</h1>
             <Link href={`/${lang}/locations`} className="cta-secondary">
-              {lang === 'en' ? 'Back to list' : lang === 'pt' ? 'Voltar à lista' : 'Volver al listado'}
+              {ui.labels.backToList}
             </Link>
           </div>
         </div>
@@ -88,8 +82,8 @@ export default function Page({ params }: { params: { lang: Lang; id: string } })
   const shareUrl = `${baseUrl}/${lang}/locations/${loc.id}`;
   const placeLd = placeJsonLd(baseUrl, lang, loc);
   const breadcrumbs = breadcrumbJsonLd(baseUrl, lang, [
-    { name: lang === 'en' ? 'Home' : lang === 'pt' ? 'Início' : 'Inicio', path: `/${lang}` },
-    { name: lang === 'en' ? 'Locations' : lang === 'pt' ? 'Locações' : 'Locaciones', path: `/${lang}/locations` },
+    { name: ui.labels.breadcrumbHome, path: `/${lang}` },
+    { name: ui.labels.breadcrumbLocations, path: `/${lang}/locations` },
     { name: t.name, path: `/${lang}/locations/${loc.id}` }
   ]);
 
@@ -117,15 +111,29 @@ export default function Page({ params }: { params: { lang: Lang; id: string } })
           </div>
         </div>
 
-        <SeoContext lang={lang} variant="locationDetail" />
+        <SeoContext variant="locationDetail" />
 
         <div className="section">
-          <div className="name">{lang === 'en' ? 'Scene' : lang === 'pt' ? 'Cena' : 'Escena'}</div>
+          <div className="name">{ui.labels.sceneLabel}</div>
           <div className="meta">{t.scene}</div>
           <div className="name" style={{ marginTop: 16 }}>
-            {lang === 'en' ? 'Production notes' : lang === 'pt' ? 'Notas de produção' : 'Notas de producción'}
+            {ui.labels.productionLabel}
           </div>
           <div className="meta">{t.production_note}</div>
+          {t.trivia?.length ? (
+            <>
+              <div className="name" style={{ marginTop: 16 }}>
+                {ui.labels.triviaLabel}
+              </div>
+              <div className="meta">
+                {t.trivia.map((item) => (
+                  <div key={item} style={{ marginBottom: 8 }}>
+                    - {item}
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : null}
           <div className="name" style={{ marginTop: 16 }}>
             {ui.popup.timestamp}
           </div>
@@ -134,22 +142,22 @@ export default function Page({ params }: { params: { lang: Lang; id: string } })
 
         <div className="section">
           <div className="name" style={{ marginBottom: 12 }}>
-            {lang === 'en' ? 'Map location' : lang === 'pt' ? 'Localização no mapa' : 'Ubicación en el mapa'}
+            {ui.labels.mapLocationLabel}
           </div>
           <LocationMiniMap lat={loc.lat} lng={loc.lng} label={t.name} />
         </div>
 
         <div className="section">
-          <ShareBar url={shareUrl} title={t.name} labels={ui.share} />
+          <ShareBar url={shareUrl} title={t.name} />
         </div>
 
         <div className="section">
           <Link href={`/${lang}/locations`} className="cta-secondary">
-            {lang === 'es' ? 'Volver al listado' : 'Back to list'}
+            {ui.labels.backToList}
           </Link>
         </div>
 
-        <Footer lang={lang} />
+        <Footer />
       </div>
 
       <script

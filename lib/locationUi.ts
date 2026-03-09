@@ -10,7 +10,8 @@ export function cityDisplayName(city: string, lang: Lang) {
 }
 
 export function cityHint(city: string, lang: Lang) {
-  const mapLabel = lang === 'en' ? '🗺️ Map' : '🗺️ Mapa';
+  const mapLabel =
+    lang === 'en' ? '🗺️ Map' : lang === 'fr' ? '🗺️ Carte' : lang === 'de' ? '🗺️ Karte' : '🗺️ Mapa';
   if (city === 'New York') {
     return mapLabel;
   }

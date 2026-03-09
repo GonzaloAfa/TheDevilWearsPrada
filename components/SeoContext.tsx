@@ -1,11 +1,17 @@
+'use client';
+
 import Link from 'next/link';
-import type { Lang } from '../lib/types';
-import { UI_TEXT } from '../lib/uiText';
+import { useParams } from 'next/navigation';
+
+import { normalizeLang, useUiText } from '../lib/i18n';
 
 type Variant = 'locations' | 'locationDetail' | 'city' | 'faq';
 
-export function SeoContext({ lang, variant }: { lang: Lang; variant: Variant }) {
-  const ui = UI_TEXT[lang].seoContext[variant];
+export function SeoContext({ variant }: { variant: Variant }) {
+  const params = useParams();
+  const lang = normalizeLang(String(params?.lang || ''));
+  const text = useUiText();
+  const ui = text.seoContext[variant];
   return (
     <div className="section">
       <div className="name">{ui.title}</div>
@@ -15,7 +21,7 @@ export function SeoContext({ lang, variant }: { lang: Lang; variant: Variant }) 
           {ui.cta}
         </Link>
         <Link href={`/${lang}`} className="cta-secondary">
-          {lang === 'es' ? 'Volver al inicio' : 'Back to home'}
+          {text.labels.breadcrumbHome}
         </Link>
       </div>
     </div>

@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import { UI_TEXT } from '../../../lib/uiText';
 import type { Lang } from '../../../lib/types';
 import { faqJsonLd } from '../../../lib/seo';
 import { Footer } from '../../../components/Footer';
 import { SeoContext } from '../../../components/SeoContext';
 import { SiteHeader } from '../../../components/SiteHeader';
-import { normalizeLang } from '../../../lib/i18n';
+import { normalizeLang, LOCALES, loadMessages, asUiText } from '../../../lib/i18n';
 
 export const dynamicParams = false;
 
@@ -15,34 +14,26 @@ export async function generateMetadata({
   params: { lang: Lang };
 }): Promise<Metadata> {
   const lang = normalizeLang(params.lang);
+  const ui = asUiText(await loadMessages(lang));
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const title = lang === 'en'
-    ? 'FAQ — The Devil Wears Prada'
-    : lang === 'pt'
-      ? 'FAQ — O Diabo Veste Prada'
-      : 'FAQ — El Diablo se viste a la moda';
-  const description = lang === 'en'
-    ? 'Frequently asked questions about the map and the film.'
-    : lang === 'pt'
-      ? 'Perguntas frequentes sobre o mapa e o filme O Diabo Veste Prada (The Devil Wears Prada).'
-      : 'Preguntas frecuentes sobre el mapa y la película El Diablo se viste a la moda (The Devil Wears Prada).';
+  const title = ui.meta.faq.title;
+  const description = ui.meta.faq.description;
+  const languages = Object.fromEntries(
+    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}/faq`])
+  );
   return {
     title,
     description,
     alternates: {
       canonical: `${baseUrl}/${lang}/faq`,
-      languages: {
-        es: `${baseUrl}/es/faq`,
-        en: `${baseUrl}/en/faq`,
-        pt: `${baseUrl}/pt/faq`
-      }
+      languages
     }
   };
 }
 
-export default function Page({ params }: { params: { lang: Lang } }) {
+export default async function Page({ params }: { params: { lang: Lang } }) {
   const lang = normalizeLang(params.lang);
-  const ui = UI_TEXT[lang];
+  const ui = asUiText(await loadMessages(lang));
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const faqLd = faqJsonLd(baseUrl, lang, ui.landing.faq);
 
@@ -60,9 +51,9 @@ export default function Page({ params }: { params: { lang: Lang } }) {
           ))}
         </div>
 
-        <SeoContext lang={lang} variant="faq" />
+        <SeoContext variant="faq" />
 
-        <Footer lang={lang} />
+        <Footer />
       </div>
 
       <script

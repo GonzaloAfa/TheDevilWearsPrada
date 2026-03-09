@@ -1,18 +1,17 @@
 import type { Lang, Location } from './types';
 import { getLocationI18n } from './i18n';
 
-export function movieJsonLd(baseUrl: string, lang: Lang) {
-  const description = lang === 'en'
-    ? 'Interactive map of locations, scenes, and key moments from The Devil Wears Prada.'
-    : lang === 'pt'
-      ? 'Mapa interativo de locações, cenas e momentos-chave de O Diabo Veste Prada (The Devil Wears Prada).'
-      : 'Mapa interactivo de locaciones, escenas y momentos clave de El Diablo se viste a la moda (The Devil Wears Prada).';
+export function movieJsonLd(
+  baseUrl: string,
+  lang: Lang,
+  movie: { name: string; alternateName?: string; description: string }
+) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Movie',
-    name: lang === 'en' ? 'The Devil Wears Prada' : lang === 'pt' ? 'O Diabo Veste Prada' : 'El Diablo se viste a la moda',
-    alternateName: lang === 'en' ? 'El Diablo se viste a la moda' : 'The Devil Wears Prada',
-    description,
+    name: movie.name,
+    alternateName: movie.alternateName,
+    description: movie.description,
     url: `${baseUrl}/${lang}`
   };
 }

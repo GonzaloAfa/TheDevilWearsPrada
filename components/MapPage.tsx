@@ -4,35 +4,31 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { CategoryKey, Dataset, Lang, Location } from '../lib/types';
-import type { UiText } from '../lib/uiText';
 import { CATEGORY_META } from '../lib/categories';
 import { MapClient, type MapClientHandle } from './MapClient';
 import { AdSlot } from './AdSlot';
 import { ShareBar } from './ShareBar';
 import { Footer } from './Footer';
 import { SiteHeader } from './SiteHeader';
-import { getCategoryLabel, getCoffeeLabel, getLocationI18n } from '../lib/i18n';
+import {
+  formatTimestampValue,
+  getCategoryLabel,
+  getCoffeeLabel,
+  getLocationI18n,
+  getLocationSearchText,
+  useUiText
+} from '../lib/i18n';
 
 const ALL_CATEGORIES = Object.keys(CATEGORY_META) as CategoryKey[];
 
 function renderTimestamp(timestamp: string, lang: Lang) {
-  if (!timestamp) return lang === 'en' ? 'N/A' : lang === 'pt' ? 'S/D' : 'N/D';
-  if (timestamp === 'varios') return lang === 'en' ? 'various' : lang === 'pt' ? 'vários' : 'varios';
-  if (timestamp === 'escena eliminada') {
-    return lang === 'en' ? 'deleted scene' : lang === 'pt' ? 'cena deletada' : 'escena eliminada';
-  }
-  return timestamp;
+  return formatTimestampValue(timestamp, lang);
 }
 
 function matchSearch(loc: Location, query: string) {
   if (!query) return true;
   const haystack = [
-    loc.i18n.es.name,
-    loc.i18n.es.scene,
-    loc.i18n.es.production_note,
-    loc.i18n.en.name,
-    loc.i18n.en.scene,
-    loc.i18n.en.production_note,
+    getLocationSearchText(loc),
     loc.address,
     loc.city,
     loc.category,
@@ -43,7 +39,8 @@ function matchSearch(loc: Location, query: string) {
   return haystack.includes(query);
 }
 
-export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiText }) {
+export function MapPage({ lang, data }: { lang: Lang; data: Dataset }) {
+  const ui = useUiText();
   const [search, setSearch] = useState('');
   const [activeCats, setActiveCats] = useState<Set<CategoryKey>>(
     () => new Set(ALL_CATEGORIES)
@@ -162,7 +159,7 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
         </div>
 
         <div className="card">
-          <ShareBar url={shareUrl} title={ui.map.shareText} labels={ui.share} />
+          <ShareBar url={shareUrl} title={ui.map.shareText} />
         </div>
 
         <div className="card">
@@ -295,7 +292,7 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
           ))}
         </div>
 
-        <Footer lang={lang} />
+        <Footer />
         </div>
       </aside>
 
@@ -306,7 +303,6 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
           lang={lang}
           filteredIds={filteredIds}
           categoryMeta={CATEGORY_META}
-          ui={ui}
         />
       </main>
     </div>

@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { DATA } from '../../../../data';
-import { UI_TEXT } from '../../../../lib/uiText';
 import type { Lang } from '../../../../lib/types';
 import { breadcrumbJsonLd } from '../../../../lib/seo';
 import { Footer } from '../../../../components/Footer';
@@ -9,11 +8,18 @@ import { CATEGORY_META } from '../../../../lib/categories';
 import { cityDisplayName, cityHint } from '../../../../lib/locationUi';
 import { SeoContext } from '../../../../components/SeoContext';
 import { SiteHeader } from '../../../../components/SiteHeader';
-import { getCategoryLabel, getLocationI18n, normalizeLang } from '../../../../lib/i18n';
+import {
+  getCategoryLabel,
+  getLocationI18n,
+  normalizeLang,
+  LOCALES,
+  loadMessages,
+  asUiText
+} from '../../../../lib/i18n';
 
 const CITY_MAP = {
-  nyc: { name: 'New York', labelEs: 'Nueva York', labelEn: 'New York', labelPt: 'Nova York' },
-  paris: { name: 'Paris', labelEs: 'París', labelEn: 'Paris', labelPt: 'Paris' }
+  nyc: { name: 'New York' },
+  paris: { name: 'Paris' }
 } as const;
 
 type CityKey = keyof typeof CITY_MAP;
@@ -21,7 +27,9 @@ type CityKey = keyof typeof CITY_MAP;
 export const dynamicParams = false;
 
 export const generateStaticParams = async () => {
-  return (['nyc', 'paris'] as CityKey[]).map((city) => ({ city }));
+  return LOCALES.flatMap((lang) =>
+    (['nyc', 'paris'] as CityKey[]).map((city) => ({ lang, city }))
+  );
 };
 
 export async function generateMetadata({
@@ -31,43 +39,35 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const lang = normalizeLang(params.lang);
   const cityInfo = CITY_MAP[params.city];
+  const ui = asUiText(await loadMessages(lang));
+  const cityLabel = cityDisplayName(cityInfo.name, lang);
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const title =
-    lang === 'en'
-      ? `Locations in ${cityInfo.labelEn} — The Devil Wears Prada`
-      : lang === 'pt'
-        ? `Locações em ${cityInfo.labelPt} — O Diabo Veste Prada`
-        : `Locaciones en ${cityInfo.labelEs} — El Diablo se viste a la moda`;
-  const description =
-    lang === 'en'
-      ? `A tour of the film’s locations in ${cityInfo.labelEn}.`
-      : lang === 'pt'
-        ? `Um tour pelas locações do filme em ${cityInfo.labelPt}.`
-        : `Recorrido por las locaciones de El Diablo se viste a la moda (The Devil Wears Prada) en ${cityInfo.labelEs}.`;
+  const title = ui.meta.city.title.replace('{city}', cityLabel);
+  const description = ui.meta.city.description.replace('{city}', cityLabel);
+  const languages = Object.fromEntries(
+    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}/cities/${params.city}`])
+  );
   return {
     title,
     description,
     alternates: {
       canonical: `${baseUrl}/${lang}/cities/${params.city}`,
-      languages: {
-        es: `${baseUrl}/es/cities/${params.city}`,
-        en: `${baseUrl}/en/cities/${params.city}`,
-        pt: `${baseUrl}/pt/cities/${params.city}`
-      }
+      languages
     }
   };
 }
 
-export default function Page({ params }: { params: { lang: Lang; city: CityKey } }) {
+export default async function Page({ params }: { params: { lang: Lang; city: CityKey } }) {
   const lang = normalizeLang(params.lang);
-  const ui = UI_TEXT[lang];
+  const ui = asUiText(await loadMessages(lang));
   const cityInfo = CITY_MAP[params.city];
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const cityLabel = cityDisplayName(cityInfo.name, lang);
   const locations = DATA.locations.filter((loc) => loc.city === cityInfo.name);
 
   const breadcrumbs = breadcrumbJsonLd(baseUrl, lang, [
-    { name: lang === 'en' ? 'Home' : lang === 'pt' ? 'Início' : 'Inicio', path: `/${lang}` },
-    { name: lang === 'en' ? 'Cities' : lang === 'pt' ? 'Cidades' : 'Ciudades', path: `/${lang}/cities/${params.city}` }
+    { name: ui.labels.breadcrumbHome, path: `/${lang}` },
+    { name: ui.labels.breadcrumbCities, path: `/${lang}/cities/${params.city}` }
   ]);
 
   return (
@@ -75,23 +75,11 @@ export default function Page({ params }: { params: { lang: Lang; city: CityKey }
       <div className="container">
         <SiteHeader lang={lang} showLanguageSwitch pathSuffix={`/cities/${params.city}`} />
         <div className="section">
-          <h1>
-            {lang === 'en'
-              ? `Locations in ${cityInfo.labelEn}`
-              : lang === 'pt'
-                ? `Locações em ${cityInfo.labelPt}`
-                : `Locaciones en ${cityInfo.labelEs}`}
-          </h1>
-          <p className="meta">
-            {lang === 'en'
-              ? `Key film points in ${cityInfo.labelEn}.`
-              : lang === 'pt'
-                ? `Pontos-chave do filme em ${cityInfo.labelPt}.`
-                : `Puntos clave del film en ${cityInfo.labelEs}.`}
-          </p>
+          <h1>{ui.labels.cityTitle.replace('{city}', cityLabel)}</h1>
+          <p className="meta">{ui.labels.cityDescription.replace('{city}', cityLabel)}</p>
         </div>
 
-        <SeoContext lang={lang} variant="city" />
+        <SeoContext variant="city" />
 
         <div className="section">
           <div className="location-grid">
@@ -123,7 +111,7 @@ export default function Page({ params }: { params: { lang: Lang; city: CityKey }
           </Link>
         </div>
 
-        <Footer lang={lang} />
+        <Footer />
       </div>
 
       <script

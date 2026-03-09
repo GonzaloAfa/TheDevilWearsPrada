@@ -1,0 +1,191 @@
+{
+  "filmTitle": "The Devil Wears Prada",
+  "title": "The Devil Wears Prada\nLocation Map",
+  "subtitle": "Interactive map of film locations and scenes",
+  "introTitle": "About the film map",
+  "introBody": [
+    "Walk through New York and Paris via the most iconic locations from The Devil Wears Prada.",
+    "Explore scenes, brands, and key moments with a map built for film fans."
+  ],
+  "stats": {
+    "pins": "Pins visible",
+    "coffee": "Miranda coffees",
+    "exact": "Exact",
+    "approx": "Approx"
+  },
+  "searchPlaceholder": "Search location, scene, brand, or address",
+  "buttons": {
+    "tour": "🧭 Tour",
+    "stop": "⏸ Stop",
+    "fit": "🗺 Fit all",
+    "nyc": "NYC",
+    "paris": "Paris"
+  },
+  "sections": {
+    "categories": "Categories",
+    "timeline": "Coffee timeline",
+    "pins": "Pins"
+  },
+  "empty": "No results.",
+  "notesTitle": "Dataset notes",
+  "notes": [
+    "Exact locations come from production records or tables repeated across sources.",
+    "Approximate locations represent montages, areas, or narrative points.",
+    "The coffee counter is a curated reading to highlight a narrative motif."
+  ],
+  "popup": {
+    "timestamp": "Timestamp",
+    "city": "City",
+    "address": "Address",
+    "confidence": "Confidence",
+    "coffee": "Coffee",
+    "exact": "exact",
+    "approx": "approximate",
+    "noBrands": "No brands",
+    "maps": "Open in Maps",
+    "clip": "Search clip"
+  },
+  "languageSwitch": "EN",
+  "languageLabel": "Language",
+  "map": {
+    "panelTitle": "Map panel",
+    "panelCollapse": "Hide panel",
+    "panelExpand": "Show panel",
+    "shareTitle": "Share this map",
+    "shareText": "Locations map of The Devil Wears Prada"
+  },
+  "share": {
+    "title": "Share",
+    "copy": "Copy link",
+    "copied": "Link copied"
+  },
+  "footer": {
+    "donateText": "If you like the map, you can buy us a coffee.",
+    "donateCta": "Buy a coffee"
+  },
+  "landing": {
+    "heroTitle": "Explore The Devil Wears Prada locations",
+    "heroSubtitle": "Cinematic map with scenes, timestamps, and production context. Also known as El Diablo se viste a la moda.",
+    "ctaPrimary": "View map",
+    "ctaSecondary": "View locations",
+    "previewAlt": "Iconic heel image from The Devil Wears Prada",
+    "highlightsTitle": "What you will find",
+    "highlights": [
+      {
+        "icon": "🗺️",
+        "title": "Real locations",
+        "description": "Exact and approximate addresses with production notes."
+      },
+      {
+        "icon": "🎬",
+        "title": "Key moments",
+        "description": "Scenes, timestamps, and narrative context tied to the map."
+      },
+      {
+        "icon": "🗽",
+        "title": "New York and Paris",
+        "description": "Two cities essential to the film’s visual identity."
+      }
+    ],
+    "topLocationsTitle": "Featured locations",
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "Are the locations real?",
+        "a": "Yes. The map combines confirmed and approximate addresses with sources."
+      },
+      {
+        "q": "Where was the Runway HQ filmed?",
+        "a": "In Midtown Manhattan, with exteriors at 1221 Avenue of the Americas."
+      },
+      {
+        "q": "Are there scenes in Paris?",
+        "a": "Yes. The map includes key Paris Fashion Week and finale locations."
+      },
+      {
+        "q": "Does the map include exact addresses?",
+        "a": "Yes, when they are confirmed by production sources. Otherwise they are marked as approximate."
+      },
+      {
+        "q": "Why are some locations “approx”?",
+        "a": "Some scenes were shot on sets or montages, so only a representative area can be mapped."
+      },
+      {
+        "q": "Can I visit all the locations?",
+        "a": "Exterior locations are visitable. Some interiors are sets or private spaces."
+      },
+      {
+        "q": "Where was the museum benefit scene filmed?",
+        "a": "The exterior was at the American Museum of Natural History, and the interior was shot in Foley Square."
+      },
+      {
+        "q": "What does the coffee timeline mean?",
+        "a": "It is a narrative reading of moments where coffee sets the pace of the story."
+      },
+      {
+        "q": "Will the map be updated with new sources?",
+        "a": "Yes. We add references and correct details when more precise sources appear."
+      }
+    ]
+  },
+  "seoContext": {
+    "locations": {
+      "title": "Film map context",
+      "body": "This list is part of the cinematic map for The Devil Wears Prada (El Diablo se viste a la moda). Explore scenes, addresses, and production context.",
+      "cta": "Go to map"
+    },
+    "locationDetail": {
+      "title": "Location on the map",
+      "body": "This location belongs to the map of The Devil Wears Prada (El Diablo se viste a la moda). See the full map for connected scenes.",
+      "cta": "View full map"
+    },
+    "city": {
+      "title": "City on the map",
+      "body": "These locations connect to the map of The Devil Wears Prada. Explore the full route on the map.",
+      "cta": "Explore map"
+    },
+    "faq": {
+      "title": "About the film map",
+      "body": "This FAQ answers questions about the map of The Devil Wears Prada and how it was built.",
+      "cta": "View map"
+    }
+  },
+  "labels": {
+    "viewAllFaqs": "View all FAQs",
+    "locationsTitle": "Locations",
+    "locationsDescription": "All film locations in one list.",
+    "cityTitle": "Locations in {city}",
+    "cityDescription": "Key film points in {city}.",
+    "notFoundTitle": "Location not found",
+    "backToList": "Back to list",
+    "sceneLabel": "Scene",
+    "productionLabel": "Production notes",
+    "mapLocationLabel": "Map location",
+    "breadcrumbHome": "Home",
+    "breadcrumbLocations": "Locations",
+    "breadcrumbCities": "Cities",
+    "triviaLabel": "Trivia"
+  },
+  "meta": {
+    "home": {
+      "title": "The Devil Wears Prada — Cinematic Map",
+      "description": "Explore locations, scenes, and key moments from The Devil Wears Prada in an interactive map."
+    },
+    "map": {
+      "title": "Locations Map — The Devil Wears Prada",
+      "description": "Explore the interactive map with scenes and locations from The Devil Wears Prada."
+    },
+    "locations": {
+      "title": "Locations — The Devil Wears Prada",
+      "description": "Complete list of locations and scenes from The Devil Wears Prada."
+    },
+    "faq": {
+      "title": "FAQ — The Devil Wears Prada",
+      "description": "Frequently asked questions about the map and the film."
+    },
+    "city": {
+      "title": "Locations in {city} — The Devil Wears Prada",
+      "description": "A tour of the film’s locations in {city}."
+    }
+  }
+}
