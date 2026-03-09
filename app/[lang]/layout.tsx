@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import type { Lang } from '../../lib/types';
+import { Analytics } from '../../components/Analytics';
 
 export const generateStaticParams = async () => [{ lang: 'es' }, { lang: 'en' }];
 
@@ -41,6 +42,7 @@ gtag('config', '${gaId}');`}
         </>
       ) : null}
       {children}
+      <Analytics />
     </>
   );
 }

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141825" />
+      <stop offset="100%" stop-color="#0b0c11" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect x="80" y="80" width="1040" height="640" rx="28" fill="#0f121b" stroke="rgba(255,255,255,0.08)" />
+  <circle cx="260" cy="220" r="44" fill="#d73f60" />
+  <circle cx="430" cy="280" r="36" fill="#f3d08a" />
+  <circle cx="650" cy="210" r="28" fill="#4f79ff" />
+  <circle cx="840" cy="320" r="40" fill="#46bea7" />
+  <circle cx="320" cy="520" r="34" fill="#ff8c5a" />
+  <circle cx="720" cy="520" r="30" fill="#d56dff" />
+  <text x="120" y="150" font-size="28" font-family="Arial, sans-serif" fill="#f5f7fb">Cinematic Map Preview</text>
+  <text x="120" y="190" font-size="18" font-family="Arial, sans-serif" fill="#aeb6c7">NYC + Paris locations from The Devil Wears Prada</text>
+</svg>

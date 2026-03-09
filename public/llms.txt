@@ -1,0 +1,21 @@
+The Devil Wears Prada — Cinematic Map
+An interactive map of filming locations, scenes, and key moments from The Devil Wears Prada.
+
+Primary pages:
+- /es
+- /en
+- /es/map
+- /en/map
+- /es/locations
+- /en/locations
+- /es/faq
+- /en/faq
+
+Cities:
+- /es/cities/nyc
+- /en/cities/nyc
+- /es/cities/paris
+- /en/cities/paris
+
+Locations:
+Each location has a page at /{lang}/locations/{id}

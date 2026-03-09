@@ -2,11 +2,13 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import type { CategoryKey, Dataset, Lang, Location } from '../lib/types';
 import type { UiText } from '../lib/uiText';
 import { CATEGORY_META } from '../lib/categories';
 import { MapClient, type MapClientHandle } from './MapClient';
 import { AdSlot } from './AdSlot';
+import { ShareBar } from './ShareBar';
 
 const ALL_CATEGORIES = Object.keys(CATEGORY_META) as CategoryKey[];
 
@@ -42,8 +44,10 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
     () => new Set(ALL_CATEGORIES)
   );
   const [tourRunning, setTourRunning] = useState(false);
+  const [panelOpen, setPanelOpen] = useState(true);
   const mapRef = useRef<MapClientHandle | null>(null);
   const tourIndexRef = useRef(0);
+  const pathname = usePathname();
 
   const filteredLocations = useMemo(() => {
     const query = search.trim().toLowerCase();
@@ -96,13 +100,30 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
   };
 
   const otherLang = lang === 'es' ? 'en' : 'es';
-  const languagePath = `/${otherLang}`;
+  const languagePath = `/${otherLang}/map`;
   const adSlotSidebar = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
   const adSlotInline = process.env.NEXT_PUBLIC_ADSENSE_SLOT_INLINE;
+  const shareUrl = useMemo(() => {
+    const base =
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      (typeof window !== 'undefined' ? window.location.origin : '');
+    return `${base}${pathname || ''}`;
+  }, [pathname]);
 
   return (
     <div id="app">
-      <aside id="sidebar">
+      <aside id="sidebar" className={panelOpen ? '' : 'sidebar-collapsed'}>
+        <div className="sheet-handle">
+          <div className="small">{ui.map.panelTitle}</div>
+          <button
+            className="secondary"
+            onClick={() => setPanelOpen((prev) => !prev)}
+            style={{ padding: '6px 10px' }}
+          >
+            {panelOpen ? ui.map.panelCollapse : ui.map.panelExpand}
+          </button>
+        </div>
+        <div className="sidebar-content">
         <div className="header">
           <div className="badge">👠</div>
           <div>
@@ -141,6 +162,10 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
               <div className="v">{stats.approx}</div>
             </div>
           </div>
+        </div>
+
+        <div className="card">
+          <ShareBar url={shareUrl} title={ui.map.shareText} labels={ui.share} />
         </div>
 
         <div className="card">
@@ -271,6 +296,7 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
               - {note}
             </div>
           ))}
+        </div>
         </div>
       </aside>
 

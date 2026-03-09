@@ -41,6 +41,30 @@ export type UiText = {
   };
   languageSwitch: string;
   languageLabel: string;
+  map: {
+    panelTitle: string;
+    panelCollapse: string;
+    panelExpand: string;
+    shareTitle: string;
+    shareText: string;
+  };
+  share: {
+    title: string;
+    copy: string;
+    copied: string;
+  };
+  landing: {
+    heroTitle: string;
+    heroSubtitle: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    previewAlt: string;
+    highlightsTitle: string;
+    highlights: { title: string; description: string }[];
+    topLocationsTitle: string;
+    faqTitle: string;
+    faq: { q: string; a: string }[];
+  };
 };
 
 export const UI_TEXT: Record<Lang, UiText> = {
@@ -69,7 +93,7 @@ export const UI_TEXT: Record<Lang, UiText> = {
     sections: {
       categories: 'Categorías',
       timeline: 'Timeline de cafés',
-      pins: 'Pins',
+      pins: 'Pins'
     },
     empty: 'No hay resultados.',
     notesTitle: 'Notas del dataset',
@@ -91,7 +115,58 @@ export const UI_TEXT: Record<Lang, UiText> = {
       clip: 'Buscar clip'
     },
     languageSwitch: 'EN',
-    languageLabel: 'Idioma'
+    languageLabel: 'Idioma',
+    map: {
+      panelTitle: 'Panel del mapa',
+      panelCollapse: 'Ocultar panel',
+      panelExpand: 'Mostrar panel',
+      shareTitle: 'Comparte este mapa',
+      shareText: 'Mapa de locaciones de The Devil Wears Prada'
+    },
+    share: {
+      title: 'Compartir',
+      copy: 'Copiar link',
+      copied: 'Link copiado'
+    },
+    landing: {
+      heroTitle: 'Explora las locaciones de The Devil Wears Prada',
+      heroSubtitle:
+        'Mapa cinematográfico con escenas, timestamps y contexto de producción para fans de la película.',
+      ctaPrimary: 'Ver mapa',
+      ctaSecondary: 'Ver locaciones',
+      previewAlt: 'Preview del mapa de locaciones de The Devil Wears Prada',
+      highlightsTitle: 'Qué encontrarás',
+      highlights: [
+        {
+          title: 'Locaciones reales',
+          description: 'Direcciones exactas y aproximadas con notas de producción.'
+        },
+        {
+          title: 'Momentos clave',
+          description: 'Escenas, timestamps y narrativa conectada al mapa.'
+        },
+        {
+          title: 'Nueva York y París',
+          description: 'Dos ciudades esenciales para la estética del film.'
+        }
+      ],
+      topLocationsTitle: 'Locaciones destacadas',
+      faqTitle: 'Preguntas frecuentes',
+      faq: [
+        {
+          q: '¿Las locaciones son reales?',
+          a: 'Sí. El mapa combina direcciones confirmadas y aproximadas con fuentes de producción.'
+        },
+        {
+          q: '¿Dónde se filmó el HQ de Runway?',
+          a: 'En Midtown Manhattan, con exteriores del 1221 Avenue of the Americas.'
+        },
+        {
+          q: '¿Hay escenas en París?',
+          a: 'Sí. El mapa incluye puntos clave de Paris Fashion Week y el final de la película.'
+        }
+      ]
+    }
   },
   en: {
     title: 'The Devil Wears Prada\nCinematic Map v2',
@@ -118,7 +193,7 @@ export const UI_TEXT: Record<Lang, UiText> = {
     sections: {
       categories: 'Categories',
       timeline: 'Coffee timeline',
-      pins: 'Pins',
+      pins: 'Pins'
     },
     empty: 'No results.',
     notesTitle: 'Dataset notes',
@@ -140,6 +215,57 @@ export const UI_TEXT: Record<Lang, UiText> = {
       clip: 'Search clip'
     },
     languageSwitch: 'ES',
-    languageLabel: 'Language'
+    languageLabel: 'Language',
+    map: {
+      panelTitle: 'Map panel',
+      panelCollapse: 'Hide panel',
+      panelExpand: 'Show panel',
+      shareTitle: 'Share this map',
+      shareText: 'The Devil Wears Prada locations map'
+    },
+    share: {
+      title: 'Share',
+      copy: 'Copy link',
+      copied: 'Link copied'
+    },
+    landing: {
+      heroTitle: 'Explore the locations of The Devil Wears Prada',
+      heroSubtitle:
+        'A cinematic map with scenes, timestamps, and production context for movie fans.',
+      ctaPrimary: 'View map',
+      ctaSecondary: 'View locations',
+      previewAlt: 'Preview of The Devil Wears Prada locations map',
+      highlightsTitle: 'What you will find',
+      highlights: [
+        {
+          title: 'Real-world locations',
+          description: 'Exact and approximate addresses with production notes.'
+        },
+        {
+          title: 'Key moments',
+          description: 'Scenes, timestamps, and narrative context tied to the map.'
+        },
+        {
+          title: 'New York and Paris',
+          description: 'Two cities essential to the film’s visual identity.'
+        }
+      ],
+      topLocationsTitle: 'Featured locations',
+      faqTitle: 'Frequently asked questions',
+      faq: [
+        {
+          q: 'Are the locations real?',
+          a: 'Yes. The map combines confirmed and approximate addresses with sources.'
+        },
+        {
+          q: 'Where was the Runway HQ filmed?',
+          a: 'In Midtown Manhattan, with exteriors at 1221 Avenue of the Americas.'
+        },
+        {
+          q: 'Are there scenes in Paris?',
+          a: 'Yes. The map includes key Paris Fashion Week and finale locations.'
+        }
+      ]
+    }
   }
 };
