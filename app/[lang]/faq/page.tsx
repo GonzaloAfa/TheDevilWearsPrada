@@ -5,6 +5,7 @@ import { faqJsonLd } from '../../../lib/seo';
 import { Footer } from '../../../components/Footer';
 import { SeoContext } from '../../../components/SeoContext';
 import { SiteHeader } from '../../../components/SiteHeader';
+import { normalizeLang } from '../../../lib/i18n';
 
 export const dynamicParams = false;
 
@@ -13,14 +14,18 @@ export async function generateMetadata({
 }: {
   params: { lang: Lang };
 }): Promise<Metadata> {
-  const lang = params.lang === 'en' ? 'en' : 'es';
+  const lang = normalizeLang(params.lang);
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const title = lang === 'es'
-    ? 'FAQ — El Diablo se viste a la moda'
-    : 'FAQ — The Devil Wears Prada';
-  const description = lang === 'es'
-    ? 'Preguntas frecuentes sobre el mapa y la película El Diablo se viste a la moda (The Devil Wears Prada).'
-    : 'Frequently asked questions about the map and the film.';
+  const title = lang === 'en'
+    ? 'FAQ — The Devil Wears Prada'
+    : lang === 'pt'
+      ? 'FAQ — O Diabo Veste Prada'
+      : 'FAQ — El Diablo se viste a la moda';
+  const description = lang === 'en'
+    ? 'Frequently asked questions about the map and the film.'
+    : lang === 'pt'
+      ? 'Perguntas frequentes sobre o mapa e o filme O Diabo Veste Prada (The Devil Wears Prada).'
+      : 'Preguntas frecuentes sobre el mapa y la película El Diablo se viste a la moda (The Devil Wears Prada).';
   return {
     title,
     description,
@@ -28,14 +33,15 @@ export async function generateMetadata({
       canonical: `${baseUrl}/${lang}/faq`,
       languages: {
         es: `${baseUrl}/es/faq`,
-        en: `${baseUrl}/en/faq`
+        en: `${baseUrl}/en/faq`,
+        pt: `${baseUrl}/pt/faq`
       }
     }
   };
 }
 
 export default function Page({ params }: { params: { lang: Lang } }) {
-  const lang = params.lang === 'en' ? 'en' : 'es';
+  const lang = normalizeLang(params.lang);
   const ui = UI_TEXT[lang];
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const faqLd = faqJsonLd(baseUrl, lang, ui.landing.faq);
@@ -43,7 +49,7 @@ export default function Page({ params }: { params: { lang: Lang } }) {
   return (
     <div className="landing">
       <div className="container">
-        <SiteHeader lang={lang} showLanguageSwitch switchHref={`/${lang === 'es' ? 'en' : 'es'}/faq`} />
+        <SiteHeader lang={lang} showLanguageSwitch pathSuffix="/faq" />
         <div className="section">
           <h1>{ui.landing.faqTitle}</h1>
           {ui.landing.faq.map((item) => (

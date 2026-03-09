@@ -4,6 +4,7 @@ import { forwardRef, useEffect, useImperativeHandle, useMemo, useRef } from 'rea
 import type { CategoryMeta, CategoryKey, Lang, Location } from '../lib/types';
 import type { UiText } from '../lib/uiText';
 import L from 'leaflet';
+import { getLocationI18n } from '../lib/i18n';
 
 export type MapClientHandle = {
   focusLocation: (id: string, openPopup?: boolean) => void;
@@ -35,9 +36,11 @@ function esc(value: string = '') {
 }
 
 function renderTimestamp(timestamp: string, lang: Lang) {
-  if (!timestamp) return lang === 'es' ? 'N/D' : 'N/A';
-  if (timestamp === 'varios') return lang === 'es' ? 'varios' : 'various';
-  if (timestamp === 'escena eliminada') return lang === 'es' ? 'escena eliminada' : 'deleted scene';
+  if (!timestamp) return lang === 'en' ? 'N/A' : lang === 'pt' ? 'S/D' : 'N/D';
+  if (timestamp === 'varios') return lang === 'en' ? 'various' : lang === 'pt' ? 'vários' : 'varios';
+  if (timestamp === 'escena eliminada') {
+    return lang === 'en' ? 'deleted scene' : lang === 'pt' ? 'cena deletada' : 'escena eliminada';
+  }
   return timestamp;
 }
 
@@ -62,7 +65,7 @@ export const MapClient = forwardRef<MapClientHandle, MapClientProps>(
       const srcs = (loc.sources || []).map((s) => `<span class="tag">📚 ${esc(s)}</span>`).join('');
       const conf = loc.confidence === 'exact' ? ui.popup.exact : ui.popup.approx;
       const meta = categoryMeta[loc.category] || { icon: '📍', color: '#d73f60', label: { es: 'Pin', en: 'Pin' } };
-      const t = loc.i18n[lang];
+      const t = getLocationI18n(loc, lang);
       return `
         <div class="popup" style="min-width:280px;max-width:340px;">
           <div class="hero">${meta.icon}</div>

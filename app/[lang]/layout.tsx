@@ -1,8 +1,9 @@
 import Script from 'next/script';
 import type { Lang } from '../../lib/types';
 import { Analytics } from '../../components/Analytics';
+import { LANGS } from '../../lib/i18n';
 
-export const generateStaticParams = async () => [{ lang: 'es' }, { lang: 'en' }];
+export const generateStaticParams = async () => LANGS.map((lang) => ({ lang }));
 
 export default function LangLayout({
   children,
@@ -12,7 +13,7 @@ export default function LangLayout({
   params: { lang: Lang };
 }) {
   const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
-  const gaId = process.env.NEXT_PUBLIC_GA4_ID;
+  const gaId = process.env.NEXT_PUBLIC_GA4_ID || 'G-Q1033JG9JM';
 
   return (
     <>

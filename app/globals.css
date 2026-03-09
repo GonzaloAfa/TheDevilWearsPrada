@@ -359,6 +359,19 @@ a {
   width: 100%;
 }
 
+.hero-emoji {
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: radial-gradient(circle at 30% 20%, rgba(215, 63, 96, 0.2), rgba(12, 13, 18, 0.8));
+  box-shadow: var(--shadow);
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(4rem, 12vw, 10rem);
+}
+
 .mini-map {
   height: 220px;
   width: 100%;
@@ -458,16 +471,41 @@ a {
   gap: 12px;
 }
 
-.site-header-icon {
+.site-header-emoji {
   width: 44px;
   height: 44px;
   border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: linear-gradient(180deg, rgba(215, 63, 96, 0.25), rgba(123, 15, 35, 0.35));
+  border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
 
 .site-header-title {
   font-size: 1.3rem;
   font-weight: 800;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.lang-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.lang-chip .flag {
+  font-size: 1rem;
 }
 
 .share-bar {

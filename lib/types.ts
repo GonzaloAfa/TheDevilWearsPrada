@@ -1,4 +1,4 @@
-export type Lang = 'es' | 'en';
+export type Lang = 'es' | 'en' | 'pt';
 
 export type Dataset = {
   summary: {
@@ -31,6 +31,7 @@ export type Location = {
   i18n: {
     es: LocationI18n;
     en: LocationI18n;
+    pt?: LocationI18n;
   };
 };
 
@@ -46,6 +47,7 @@ export type CoffeeEvent = {
   i18n: {
     es: { label: string };
     en: { label: string };
+    pt?: { label: string };
   };
 };
 
@@ -69,5 +71,6 @@ export type CategoryMeta = {
   label: {
     es: string;
     en: string;
+    pt?: string;
   };
 };

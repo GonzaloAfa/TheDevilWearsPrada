@@ -11,7 +11,7 @@ declare global {
 
 export function Analytics() {
   const pathname = usePathname();
-  const gaId = process.env.NEXT_PUBLIC_GA4_ID;
+  const gaId = process.env.NEXT_PUBLIC_GA4_ID || 'G-Q1033JG9JM';
 
   useEffect(() => {
     if (!gaId || typeof window === 'undefined' || !window.gtag) return;

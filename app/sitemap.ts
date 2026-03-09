@@ -4,7 +4,7 @@ import { DATA } from '../data';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const now = new Date();
-  const langs = ['es', 'en'] as const;
+  const langs = ['es', 'en', 'pt'] as const;
   const routes: string[] = [];
 
   langs.forEach((lang) => {

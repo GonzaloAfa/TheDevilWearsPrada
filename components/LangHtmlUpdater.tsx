@@ -8,7 +8,7 @@ export function LangHtmlUpdater() {
 
   useEffect(() => {
     if (typeof document === 'undefined') return;
-    const nextLang = pathname?.startsWith('/en') ? 'en' : 'es';
+    const nextLang = pathname?.startsWith('/en') ? 'en' : pathname?.startsWith('/pt') ? 'pt' : 'es';
     document.documentElement.lang = nextLang;
   }, [pathname]);
 

@@ -11,13 +11,16 @@ import { AdSlot } from './AdSlot';
 import { ShareBar } from './ShareBar';
 import { Footer } from './Footer';
 import { SiteHeader } from './SiteHeader';
+import { getCategoryLabel, getCoffeeLabel, getLocationI18n } from '../lib/i18n';
 
 const ALL_CATEGORIES = Object.keys(CATEGORY_META) as CategoryKey[];
 
 function renderTimestamp(timestamp: string, lang: Lang) {
-  if (!timestamp) return lang === 'es' ? 'N/D' : 'N/A';
-  if (timestamp === 'varios') return lang === 'es' ? 'varios' : 'various';
-  if (timestamp === 'escena eliminada') return lang === 'es' ? 'escena eliminada' : 'deleted scene';
+  if (!timestamp) return lang === 'en' ? 'N/A' : lang === 'pt' ? 'S/D' : 'N/D';
+  if (timestamp === 'varios') return lang === 'en' ? 'various' : lang === 'pt' ? 'vários' : 'varios';
+  if (timestamp === 'escena eliminada') {
+    return lang === 'en' ? 'deleted scene' : lang === 'pt' ? 'cena deletada' : 'escena eliminada';
+  }
   return timestamp;
 }
 
@@ -72,7 +75,7 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
     return [...filteredLocations].sort((a, b) => {
       const city = a.city.localeCompare(b.city);
       if (city) return city;
-      return a.i18n[lang].name.localeCompare(b.i18n[lang].name);
+      return getLocationI18n(a, lang).name.localeCompare(getLocationI18n(b, lang).name);
     });
   }, [filteredLocations, lang]);
 
@@ -101,8 +104,6 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
     });
   };
 
-  const otherLang = lang === 'es' ? 'en' : 'es';
-  const languagePath = `/${otherLang}/map`;
   const adSlotSidebar = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
   const adSlotInline = process.env.NEXT_PUBLIC_ADSENSE_SLOT_INLINE;
   const shareUrl = useMemo(() => {
@@ -127,7 +128,7 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
         </div>
         <div className="sidebar-content">
         <div className="header" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
-          <SiteHeader lang={lang} showLanguageSwitch switchHref={languagePath} />
+          <SiteHeader lang={lang} showLanguageSwitch pathSuffix="/map" />
           <div>
             <h1>{ui.title.split('\n').map((line, idx) => (
               <span key={idx}>
@@ -214,7 +215,7 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
                   className={`chip ${active ? 'active' : ''}`}
                   onClick={() => toggleCategory(cat)}
                 >
-                  {meta.icon} {meta.label[lang]}
+                  {meta.icon} {getCategoryLabel(meta, lang)}
                 </div>
               );
             })}
@@ -235,8 +236,8 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
                   <div>
                     <strong>#{idx + 1}</strong> · {evt.ts} · ☕
                   </div>
-                  <div className="meta">{evt.i18n[lang].label}</div>
-                  <div className="meta">{loc ? loc.i18n[lang].name : ''}</div>
+                  <div className="meta">{getCoffeeLabel(evt, lang)}</div>
+                  <div className="meta">{loc ? getLocationI18n(loc, lang).name : ''}</div>
                 </div>
               );
             })}
@@ -262,14 +263,14 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
                     className="item"
                     onClick={() => mapRef.current?.focusLocation(loc.id, true)}
                   >
-                    <div className="name">{loc.i18n[lang].name}</div>
+                    <div className="name">{getLocationI18n(loc, lang).name}</div>
                     <div className="meta">{loc.address}</div>
                     <div className="meta">
-                      {renderTimestamp(loc.timestamp, lang)} · {loc.i18n[lang].scene}
+                      {renderTimestamp(loc.timestamp, lang)} · {getLocationI18n(loc, lang).scene}
                     </div>
                     <div>
                       <span className="pill">
-                        {meta.icon} {meta.label[lang]}
+                        {meta.icon} {getCategoryLabel(meta, lang)}
                       </span>
                       <span className="pill">☕ {loc.coffee || 0}</span>
                       <span className="pill">📍 {confLabel}</span>

@@ -1,16 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#d73f60"/>
-      <stop offset="100%" stop-color="#6e1b34"/>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#da2e52" />
+      <stop offset="100%" stop-color="#611327" />
     </linearGradient>
-    <linearGradient id="shoe" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ff4d6d"/>
-      <stop offset="100%" stop-color="#b3122a"/>
+    <linearGradient id="shoe" x1="24" y1="56" x2="108" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6a86" />
+      <stop offset="55%" stop-color="#d21c43" />
+      <stop offset="100%" stop-color="#7b0f23" />
+    </linearGradient>
+    <linearGradient id="heel" x1="82" y1="78" x2="108" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#b3122a" />
+      <stop offset="100%" stop-color="#4f0714" />
     </linearGradient>
   </defs>
-  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
-  <path d="M26 74c18-6 28-12 38-22 8-8 16-10 26-8 9 2 14 7 14 12 0 6-5 10-12 12l-26 8c-7 2-14 6-20 10-6 4-14 6-20 5-7-1-12-5-12-10 0-3 4-6 12-7z" fill="url(#shoe)"/>
-  <path d="M88 76l10 22c1 3-1 6-4 6h-6c-2 0-3-1-4-3l-6-16 10-3z" fill="#8a0f22"/>
-  <circle cx="98" cy="68" r="4" fill="#ffd1db"/>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#tile)" />
+  <path
+    d="M20 78C34 72 50 64 66 56C80 49 95 49 104 56C112 62 110 70 100 72L88 74C78 76 68 82 58 86C46 92 32 94 24 90C18 88 16 82 20 78Z"
+    fill="url(#shoe)"
+  />
+  <path
+    d="M90 76L104 110C106 114 104 118 100 118H92C88 118 86 115 85 112L78 86L90 76Z"
+    fill="url(#heel)"
+  />
+  <path
+    d="M32 84C48 76 66 70 84 68"
+    stroke="rgba(255,255,255,0.35)"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
 </svg>

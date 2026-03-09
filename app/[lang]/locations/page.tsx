@@ -8,6 +8,7 @@ import { CATEGORY_META } from '../../../lib/categories';
 import { cityDisplayName, cityHint } from '../../../lib/locationUi';
 import { SeoContext } from '../../../components/SeoContext';
 import { SiteHeader } from '../../../components/SiteHeader';
+import { getCategoryLabel, getLocationI18n, normalizeLang } from '../../../lib/i18n';
 
 export const dynamicParams = false;
 
@@ -16,25 +17,30 @@ export async function generateMetadata({
 }: {
   params: { lang: Lang };
 }): Promise<Metadata> {
-  const lang = params.lang === 'en' ? 'en' : 'es';
+  const lang = normalizeLang(params.lang);
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const title = lang === 'es'
-    ? 'Locaciones — El Diablo se viste a la moda'
-    : 'Locations — The Devil Wears Prada';
-  const description = lang === 'es'
-    ? 'Listado completo de locaciones y escenas de El Diablo se viste a la moda (The Devil Wears Prada).'
-    : 'Complete list of locations and scenes from The Devil Wears Prada.';
+  const title = lang === 'en'
+    ? 'Locations — The Devil Wears Prada'
+    : lang === 'pt'
+      ? 'Locações — O Diabo Veste Prada'
+      : 'Locaciones — El Diablo se viste a la moda';
+  const description = lang === 'en'
+    ? 'Complete list of locations and scenes from The Devil Wears Prada.'
+    : lang === 'pt'
+      ? 'Lista completa de locações e cenas de O Diabo Veste Prada (The Devil Wears Prada).'
+      : 'Listado completo de locaciones y escenas de El Diablo se viste a la moda (The Devil Wears Prada).';
   const imageUrl = `${baseUrl}/og.svg`;
   return {
     title,
     description,
-    alternates: {
-      canonical: `${baseUrl}/${lang}/locations`,
-      languages: {
-        es: `${baseUrl}/es/locations`,
-        en: `${baseUrl}/en/locations`
-      }
-    },
+      alternates: {
+        canonical: `${baseUrl}/${lang}/locations`,
+        languages: {
+          es: `${baseUrl}/es/locations`,
+          en: `${baseUrl}/en/locations`,
+          pt: `${baseUrl}/pt/locations`
+        }
+      },
     openGraph: {
       title,
       description,
@@ -46,19 +52,21 @@ export async function generateMetadata({
 }
 
 export default function Page({ params }: { params: { lang: Lang } }) {
-  const lang = params.lang === 'en' ? 'en' : 'es';
+  const lang = normalizeLang(params.lang);
   const ui = UI_TEXT[lang];
 
   return (
     <div className="landing">
       <div className="container">
-        <SiteHeader lang={lang} showLanguageSwitch switchHref={`/${lang === 'es' ? 'en' : 'es'}/locations`} />
+        <SiteHeader lang={lang} showLanguageSwitch pathSuffix="/locations" />
         <div className="section">
-          <h1>{lang === 'es' ? 'Locaciones' : 'Locations'}</h1>
+          <h1>{lang === 'en' ? 'Locations' : lang === 'pt' ? 'Locações' : 'Locaciones'}</h1>
           <p className="meta">
-            {lang === 'es'
-              ? 'Todas las locaciones de la película en un solo listado.'
-              : 'All film locations in one list.'}
+            {lang === 'en'
+              ? 'All film locations in one list.'
+              : lang === 'pt'
+                ? 'Todas as locações do filme em uma única lista.'
+                : 'Todas las locaciones de la película en un solo listado.'}
           </p>
         </div>
 
@@ -72,15 +80,15 @@ export default function Page({ params }: { params: { lang: Lang } }) {
                 href={`/${lang}/locations/${loc.id}`}
                 className="location-card"
               >
-                <div className="name">{loc.i18n[lang].name}</div>
+                <div className="name">{getLocationI18n(loc, lang).name}</div>
                 <div className="meta">
                   📍 {cityDisplayName(loc.city, lang)}{' '}
                   {cityHint(loc.city, lang) ? `· ${cityHint(loc.city, lang)}` : ''}
                 </div>
-                <div className="meta">{loc.i18n[lang].scene}</div>
+                <div className="meta">{getLocationI18n(loc, lang).scene}</div>
                 <div style={{ marginTop: 8 }}>
                   <span className="pill">
-                    {CATEGORY_META[loc.category].icon} {CATEGORY_META[loc.category].label[lang]}
+                    {CATEGORY_META[loc.category].icon} {getCategoryLabel(CATEGORY_META[loc.category], lang)}
                   </span>
                 </div>
               </Link>

@@ -3,6 +3,7 @@ import { DATA } from '../../../data';
 import { MapPage } from '../../../components/MapPage';
 import { UI_TEXT } from '../../../lib/uiText';
 import type { Lang } from '../../../lib/types';
+import { normalizeLang } from '../../../lib/i18n';
 
 export const dynamicParams = false;
 export const dynamic = 'force-dynamic';
@@ -12,27 +13,32 @@ export async function generateMetadata({
 }: {
   params: { lang: Lang };
 }): Promise<Metadata> {
-  const lang = params.lang === 'en' ? 'en' : 'es';
+  const lang = normalizeLang(params.lang);
   const ui = UI_TEXT[lang];
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const title = lang === 'es'
-    ? 'Mapa de locaciones — El Diablo se viste a la moda'
-    : 'Locations Map — The Devil Wears Prada';
-  const description = lang === 'es'
-    ? 'Explora el mapa interactivo con escenas y locaciones de El Diablo se viste a la moda (The Devil Wears Prada).'
-    : 'Explore the interactive map with scenes and locations from The Devil Wears Prada.';
+  const title = lang === 'en'
+    ? 'Locations Map — The Devil Wears Prada'
+    : lang === 'pt'
+      ? 'Mapa de locações — O Diabo Veste Prada'
+      : 'Mapa de locaciones — El Diablo se viste a la moda';
+  const description = lang === 'en'
+    ? 'Explore the interactive map with scenes and locations from The Devil Wears Prada.'
+    : lang === 'pt'
+      ? 'Explore o mapa interativo com cenas e locações de O Diabo Veste Prada (The Devil Wears Prada).'
+      : 'Explora el mapa interactivo con escenas y locaciones de El Diablo se viste a la moda (The Devil Wears Prada).';
   const imageUrl = `${baseUrl}/og.svg`;
 
   return {
     title,
     description,
-    alternates: {
-      canonical: `${baseUrl}/${lang}/map`,
-      languages: {
-        es: `${baseUrl}/es/map`,
-        en: `${baseUrl}/en/map`
-      }
-    },
+      alternates: {
+        canonical: `${baseUrl}/${lang}/map`,
+        languages: {
+          es: `${baseUrl}/es/map`,
+          en: `${baseUrl}/en/map`,
+          pt: `${baseUrl}/pt/map`
+        }
+      },
     openGraph: {
       title,
       description,
@@ -52,6 +58,6 @@ export async function generateMetadata({
 }
 
 export default function Page({ params }: { params: { lang: Lang } }) {
-  const lang = params.lang === 'en' ? 'en' : 'es';
+  const lang = normalizeLang(params.lang);
   return <MapPage lang={lang} data={DATA} ui={UI_TEXT[lang]} />;
 }
