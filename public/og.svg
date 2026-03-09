@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#131621" />
+      <stop offset="100%" stop-color="#0c0d12" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d73f60" />
+      <stop offset="100%" stop-color="#f3d08a" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="80" y="80" width="1040" height="470" rx="32" fill="#0f121b" stroke="rgba(255,255,255,0.08)" />
+  <circle cx="180" cy="195" r="48" fill="url(#accent)" />
+  <text x="170" y="210" text-anchor="middle" font-size="48" font-family="Arial, sans-serif" fill="#ffffff">👠</text>
+  <text x="260" y="200" font-size="42" font-family="Arial, sans-serif" fill="#f5f7fb">The Devil Wears Prada</text>
+  <text x="260" y="250" font-size="28" font-family="Arial, sans-serif" fill="#aeb6c7">Cinematic Map v2</text>
+  <text x="260" y="330" font-size="22" font-family="Arial, sans-serif" fill="#aeb6c7">Interactive map of the film’s locations and scenes.</text>
+  <text x="260" y="365" font-size="22" font-family="Arial, sans-serif" fill="#aeb6c7">Explore NYC & Paris highlights from The Devil Wears Prada.</text>
+</svg>

@@ -1,0 +1,1021 @@
+{
+  "summary": {
+    "title": "The Devil Wears Prada — Cinematic Map Dataset",
+    "pins_total": 27,
+    "exact_count": 17,
+    "approx_count": 10,
+    "coffee_events_total": 12,
+    "brands_total": 12
+  },
+  "locations": [
+    {
+      "id": "runway-hq",
+      "category": "office",
+      "city": "New York",
+      "lat": 40.759396,
+      "lng": -73.9823,
+      "address": "1221 Avenue of the Americas, Manhattan, New York, NY",
+      "timestamp": "00:10:45",
+      "coffee": 2,
+      "brands": [
+        "Prada",
+        "Chanel"
+      ],
+      "confidence": "exact",
+      "sources": [
+        "IMDb filming locations",
+        "Wikipedia production notes",
+        "LatLong locations table"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Andy+first+day+Runway",
+      "i18n": {
+        "es": {
+          "name": "Elias-Clarke / Runway HQ",
+          "scene": "Exteriores del edificio de Elias-Clarke; Andy llega a la oficina y varias entradas/salidas del trabajo.",
+          "production_note": "Wikipedia reporta que 1221 Avenue of the Americas se usó para exteriores y lobby de Elias-Clarke."
+        },
+        "en": {
+          "name": "Elias-Clarke / Runway HQ",
+          "scene": "Exterior shots of the Elias-Clarke building; Andy arrives at the office and multiple entrances/exits.",
+          "production_note": "Wikipedia reports that 1221 Avenue of the Americas was used for Elias-Clarke exteriors and lobby."
+        }
+      }
+    },
+    {
+      "id": "runway-lobby",
+      "category": "office",
+      "city": "New York",
+      "lat": 40.759396,
+      "lng": -73.9823,
+      "address": "1221 Avenue of the Americas, Manhattan, New York, NY",
+      "timestamp": "00:11:10",
+      "coffee": 0,
+      "brands": [
+        "Prada"
+      ],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Runway+lobby",
+      "i18n": {
+        "es": {
+          "name": "Lobby de Elias-Clarke",
+          "scene": "Tomas de ingreso y lobby corporativo.",
+          "production_note": "El lobby fue parte de la locación real según la sección de filming en Wikipedia."
+        },
+        "en": {
+          "name": "Elias-Clarke Lobby",
+          "scene": "Entrance shots and corporate lobby.",
+          "production_note": "The lobby was part of the real location according to Wikipedia's filming section."
+        }
+      }
+    },
+    {
+      "id": "runway-cafeteria",
+      "category": "office",
+      "city": "New York",
+      "lat": 40.75668,
+      "lng": -73.986755,
+      "address": "3 Times Square (Reuters Building), Manhattan, New York, NY",
+      "timestamp": "00:19:00",
+      "coffee": 1,
+      "brands": [
+        "Prada",
+        "Calvin Klein"
+      ],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes",
+        "LatLong locations table",
+        "Kinoafisha"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+cafeteria+scene",
+      "i18n": {
+        "es": {
+          "name": "Cafetería / canteen de Runway",
+          "scene": "Cafetería usada para escenas del equipo de Runway.",
+          "production_note": "Wikipedia indica que la cafetería de Elias-Clarke es la del edificio Reuters."
+        },
+        "en": {
+          "name": "Runway Cafeteria / Canteen",
+          "scene": "Cafeteria used for Runway team scenes.",
+          "production_note": "Wikipedia indicates the Elias-Clarke cafeteria is in the Reuters Building."
+        }
+      }
+    },
+    {
+      "id": "runway-office-corridors",
+      "category": "office",
+      "city": "New York",
+      "lat": 40.75984,
+      "lng": -73.98402,
+      "address": "Área vecina al Fox Building, Midtown Manhattan, New York, NY",
+      "timestamp": "00:12:30",
+      "coffee": 1,
+      "brands": [
+        "Prada",
+        "Chanel"
+      ],
+      "confidence": "approx",
+      "sources": [
+        "Wikipedia production notes"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+office+corridors",
+      "i18n": {
+        "es": {
+          "name": "Corredores de Runway / Fox Building",
+          "scene": "Corredores del mundo editorial y pasillos del edificio.",
+          "production_note": "Wikipedia señala que parte de las oficinas se filmaron en corredores del edificio Fox vecino y parte en sets."
+        },
+        "en": {
+          "name": "Runway Corridors / Fox Building",
+          "scene": "Editorial world corridors and building hallways.",
+          "production_note": "Wikipedia notes some office corridors were filmed in the neighboring Fox Building and some on sets."
+        }
+      }
+    },
+    {
+      "id": "silvercup-studios",
+      "category": "studio",
+      "city": "New York",
+      "lat": 40.75148,
+      "lng": -73.943756,
+      "address": "42-22 22nd Street, Long Island City, Queens, NY",
+      "timestamp": "varios",
+      "coffee": 2,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "LatLong locations table",
+        "Kinoafisha"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Silvercup+Studios",
+      "i18n": {
+        "es": {
+          "name": "Silvercup Studios",
+          "scene": "Sets interiores de oficina y producción.",
+          "production_note": "Recurrentemente citado como estudio del rodaje."
+        },
+        "en": {
+          "name": "Silvercup Studios",
+          "scene": "Interior office and production sets.",
+          "production_note": "Frequently cited as a primary filming studio."
+        }
+      }
+    },
+    {
+      "id": "mirror-office",
+      "category": "media",
+      "city": "New York",
+      "lat": 40.715187,
+      "lng": -74.008049,
+      "address": "Cary Building, 105 Chambers Street, Manhattan, New York, NY",
+      "timestamp": "01:44:30",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "LatLong locations table",
+        "Kinoafisha"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+ending+newspaper+office",
+      "i18n": {
+        "es": {
+          "name": "New York Mirror office exterior",
+          "scene": "Exterior del periódico donde Andy termina trabajando al final.",
+          "production_note": "Identificado como el exterior del New York Mirror."
+        },
+        "en": {
+          "name": "New York Mirror Office Exterior",
+          "scene": "Exterior of the newspaper where Andy ends up working.",
+          "production_note": "Identified as the exterior of the New York Mirror."
+        }
+      }
+    },
+    {
+      "id": "andys-apartment",
+      "category": "apartment",
+      "city": "New York",
+      "lat": 40.721347,
+      "lng": -73.992983,
+      "address": "252 Broome Street, Lower East Side, New York, NY",
+      "timestamp": "00:08:00",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes",
+        "Movie maps / fan guides"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Andy+apartment",
+      "i18n": {
+        "es": {
+          "name": "Departamento de Andy",
+          "scene": "Exterior del departamento de Andy y Nate.",
+          "production_note": "Wikipedia solo acota Lower East Side; esta dirección es la identificación más repetida por guías de filming maps."
+        },
+        "en": {
+          "name": "Andy's Apartment",
+          "scene": "Exterior of Andy and Nate's apartment.",
+          "production_note": "Wikipedia only specifies the Lower East Side; this address is the most repeated by filming map guides."
+        }
+      }
+    },
+    {
+      "id": "bubbys",
+      "category": "restaurant",
+      "city": "New York",
+      "lat": 40.719807,
+      "lng": -74.008408,
+      "address": "120 Hudson Street, Tribeca, New York, NY",
+      "timestamp": "00:23:45",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "IMDb filming locations",
+        "Wikipedia production notes",
+        "LatLong locations table"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Bubby%27s+scene",
+      "i18n": {
+        "es": {
+          "name": "Bubby's Tribeca",
+          "scene": "Cena grupal con Nate, Lily y Doug; también asociado al trabajo de Nate en guías de locaciones.",
+          "production_note": "IMDb y Wikipedia lo listan como locación de la primera gran escena grupal en restaurante."
+        },
+        "en": {
+          "name": "Bubby's Tribeca",
+          "scene": "Group dinner with Nate, Lily, and Doug; also tied to Nate's chef job in location guides.",
+          "production_note": "IMDb and Wikipedia list it as the restaurant in the first big group scene."
+        }
+      }
+    },
+    {
+      "id": "smith-wollensky",
+      "category": "restaurant",
+      "city": "New York",
+      "lat": 40.755276,
+      "lng": -73.970985,
+      "address": "797 3rd Avenue, New York, NY",
+      "timestamp": "00:31:30",
+      "coffee": 1,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes",
+        "LatLong locations table",
+        "Kinoafisha"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Smith+and+Wollensky",
+      "i18n": {
+        "es": {
+          "name": "Smith & Wollensky",
+          "scene": "Andy busca el steak/lunch de Miranda.",
+          "production_note": "Wikipedia dice que se usó el steakhouse y también su cocina."
+        },
+        "en": {
+          "name": "Smith & Wollensky",
+          "scene": "Andy picks up Miranda's steak/lunch.",
+          "production_note": "Wikipedia says the steakhouse and its kitchen were used."
+        }
+      }
+    },
+    {
+      "id": "craft",
+      "category": "restaurant",
+      "city": "New York",
+      "lat": 40.73814,
+      "lng": -73.988754,
+      "address": "43 East 19th Street, New York, NY",
+      "timestamp": "00:49:30",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "LatLong locations table",
+        "Kinoafisha"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+father+restaurant+scene",
+      "i18n": {
+        "es": {
+          "name": "Craft",
+          "scene": "Andy come con su padre.",
+          "production_note": "Listada por varias guías de locaciones como la cena con su padre."
+        },
+        "en": {
+          "name": "Craft",
+          "scene": "Andy eats with her father.",
+          "production_note": "Listed by several location guides as the dinner with her father."
+        }
+      }
+    },
+    {
+      "id": "coffee-shop-union-square",
+      "category": "restaurant",
+      "city": "New York",
+      "lat": 40.736299,
+      "lng": -73.990348,
+      "address": "29 Union Square West, New York, NY",
+      "timestamp": "00:54:30",
+      "coffee": 0,
+      "brands": [
+        "Marc Jacobs"
+      ],
+      "confidence": "approx",
+      "sources": [
+        "ED2010 fan location guide"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Coffee+Shop+Union+Square",
+      "i18n": {
+        "es": {
+          "name": "The Coffee Shop",
+          "scene": "Sitio citado por guías de fans para una reunión nocturna con Nate y amistades.",
+          "production_note": "Esta ubicación proviene de guías de landmarks/fan tours, no de la ficha de producción principal."
+        },
+        "en": {
+          "name": "The Coffee Shop",
+          "scene": "Spot cited by fan guides for a late-night meet-up with Nate and friends.",
+          "production_note": "This location comes from fan/landmark guides, not the main production sheet."
+        }
+      }
+    },
+    {
+      "id": "james-holt-loft",
+      "category": "fashion",
+      "city": "New York",
+      "lat": 40.723301,
+      "lng": -73.998228,
+      "address": "56 Crosby Street, SoHo, New York, NY",
+      "timestamp": "00:58:10",
+      "coffee": 0,
+      "brands": [
+        "Marc Jacobs",
+        "Valentino",
+        "Calvin Klein"
+      ],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes",
+        "real estate / filming guides"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+James+Holt+loft",
+      "i18n": {
+        "es": {
+          "name": "Loft / estudio de James Holt",
+          "scene": "Andy entra al mundo fashion y se cruza con Christian Thompson.",
+          "production_note": "Wikipedia menciona que Holt's studio es un loft usado por un diseñador real."
+        },
+        "en": {
+          "name": "James Holt Loft / Studio",
+          "scene": "Andy enters the fashion world and meets Christian Thompson.",
+          "production_note": "Wikipedia mentions Holt's studio is a loft used by a real designer."
+        }
+      }
+    },
+    {
+      "id": "calvin-klein-showroom",
+      "category": "fashion",
+      "city": "New York",
+      "lat": 40.7612,
+      "lng": -73.9726,
+      "address": "Midtown East / Madison Avenue area, New York, NY",
+      "timestamp": "escena eliminada",
+      "coffee": 0,
+      "brands": [
+        "Calvin Klein"
+      ],
+      "confidence": "approx",
+      "sources": [
+        "Wikipedia production notes"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Calvin+Klein+showroom+deleted+scene",
+      "i18n": {
+        "es": {
+          "name": "Calvin Klein showroom (escena eliminada)",
+          "scene": "Showroom mencionado en notas de producción y escenas eliminadas.",
+          "production_note": "Wikipedia indica que el showroom de Calvin Klein se usó en escenas eliminadas, sin dirección precisa."
+        },
+        "en": {
+          "name": "Calvin Klein Showroom (deleted scene)",
+          "scene": "Showroom referenced in production notes and deleted scenes.",
+          "production_note": "Wikipedia notes the Calvin Klein showroom appears in deleted scenes, without a precise address."
+        }
+      }
+    },
+    {
+      "id": "miranda-townhouse",
+      "category": "apartment",
+      "city": "New York",
+      "lat": 40.769963,
+      "lng": -73.964117,
+      "address": "129 East 73rd Street, Upper East Side, New York, NY",
+      "timestamp": "01:07:10",
+      "coffee": 1,
+      "brands": [
+        "Hermès"
+      ],
+      "confidence": "exact",
+      "sources": [
+        "filming guides / design press"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+the+book+Miranda+townhouse",
+      "i18n": {
+        "es": {
+          "name": "Townhouse de Miranda",
+          "scene": "Andy entrega 'the book' y el dry cleaning en la casa de Miranda.",
+          "production_note": "Dirección ampliamente citada en guías de filming locations."
+        },
+        "en": {
+          "name": "Miranda's Townhouse",
+          "scene": "Andy delivers 'the book' and dry cleaning to Miranda's home.",
+          "production_note": "Address widely cited in filming location guides."
+        }
+      }
+    },
+    {
+      "id": "natural-history-exterior",
+      "category": "event",
+      "city": "New York",
+      "lat": 40.781324,
+      "lng": -73.973988,
+      "address": "American Museum of Natural History, Central Park West, New York, NY",
+      "timestamp": "01:11:40",
+      "coffee": 0,
+      "brands": [
+        "Valentino",
+        "Chanel"
+      ],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+benefit+scene",
+      "i18n": {
+        "es": {
+          "name": "Museum benefit exterior",
+          "scene": "Exterior del evento benéfico donde Andy reemplaza a Emily.",
+          "production_note": "Wikipedia dice que el exterior del benefit se hizo en el AMNH."
+        },
+        "en": {
+          "name": "Museum Benefit Exterior",
+          "scene": "Exterior of the benefit event where Andy replaces Emily.",
+          "production_note": "Wikipedia says the benefit exterior was filmed at the AMNH."
+        }
+      }
+    },
+    {
+      "id": "foley-square-interior",
+      "category": "event",
+      "city": "New York",
+      "lat": 40.71462,
+      "lng": -74.002678,
+      "address": "Foley Square courthouse lobby area, Manhattan, New York, NY",
+      "timestamp": "01:12:20",
+      "coffee": 0,
+      "brands": [
+        "Valentino",
+        "Chanel"
+      ],
+      "confidence": "approx",
+      "sources": [
+        "Wikipedia production notes"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+benefit+interior",
+      "i18n": {
+        "es": {
+          "name": "Museum benefit interior (doble de locación)",
+          "scene": "Interior usado para el benefit del museo.",
+          "production_note": "Wikipedia especifica que el interior fue el lobby de uno de los courthouses de Foley Square."
+        },
+        "en": {
+          "name": "Museum Benefit Interior (location double)",
+          "scene": "Interior used for the museum benefit.",
+          "production_note": "Wikipedia specifies the interior was the lobby of a Foley Square courthouse."
+        }
+      }
+    },
+    {
+      "id": "st-regis",
+      "category": "hotel",
+      "city": "New York",
+      "lat": 40.761398,
+      "lng": -73.974663,
+      "address": "2 East 55th Street, New York, NY",
+      "timestamp": "01:22:00",
+      "coffee": 1,
+      "brands": [
+        "Prada"
+      ],
+      "confidence": "exact",
+      "sources": [
+        "IMDb filming locations",
+        "LatLong locations table",
+        "Kinoafisha"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Miranda+hotel+scene",
+      "i18n": {
+        "es": {
+          "name": "The St. Regis New York",
+          "scene": "Escena vulnerable de Miranda sobre su matrimonio.",
+          "production_note": "IMDb ubica allí la tearful Miranda Priestly scene."
+        },
+        "en": {
+          "name": "The St. Regis New York",
+          "scene": "Miranda's vulnerable scene about her marriage.",
+          "production_note": "IMDb places the tearful Miranda Priestly scene here."
+        }
+      }
+    },
+    {
+      "id": "philadelphia-hotel",
+      "category": "hotel",
+      "city": "New York",
+      "lat": 40.757604,
+      "lng": -73.989071,
+      "address": "145 West 44th Street area, Times Square, New York, NY",
+      "timestamp": "01:27:20",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "approx",
+      "sources": [
+        "IMDb filming locations",
+        "Kinoafisha"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Christian+hotel+scene",
+      "i18n": {
+        "es": {
+          "name": "Philadelphia Hotel (doble del hotel de París)",
+          "scene": "Andy despierta en la habitación de Christian 'en París' (filmado en NYC).",
+          "production_note": "IMDb lista Philadelphia Hotel, Times Square, para esa escena."
+        },
+        "en": {
+          "name": "Philadelphia Hotel (double for the Paris hotel)",
+          "scene": "Andy wakes up in Christian's hotel room 'in Paris' (shot in NYC).",
+          "production_note": "IMDb lists the Philadelphia Hotel, Times Square, for that scene."
+        }
+      }
+    },
+    {
+      "id": "spring-station",
+      "category": "transit",
+      "city": "New York",
+      "lat": 40.722301,
+      "lng": -73.997141,
+      "address": "Spring Street Station, Manhattan, New York, NY",
+      "timestamp": "00:13:15",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+subway+scene",
+      "i18n": {
+        "es": {
+          "name": "Spring Street Station",
+          "scene": "Andy toma el subway rumbo al trabajo.",
+          "production_note": "Wikipedia identifica Spring Street como estación de origen."
+        },
+        "en": {
+          "name": "Spring Street Station",
+          "scene": "Andy takes the subway to work.",
+          "production_note": "Wikipedia identifies Spring Street as the origin station."
+        }
+      }
+    },
+    {
+      "id": "51st-station",
+      "category": "transit",
+      "city": "New York",
+      "lat": 40.757107,
+      "lng": -73.97192,
+      "address": "51 Street Station, Manhattan, New York, NY",
+      "timestamp": "00:13:45",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "Wikipedia production notes"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+51st+street+station",
+      "i18n": {
+        "es": {
+          "name": "51 Street Station",
+          "scene": "Andy baja del subway cerca de Runway.",
+          "production_note": "Wikipedia identifica 51st Street como estación de llegada."
+        },
+        "en": {
+          "name": "51st Street Station",
+          "scene": "Andy gets off the subway near Runway.",
+          "production_note": "Wikipedia identifies 51st Street as the arrival station."
+        }
+      }
+    },
+    {
+      "id": "gapstow-bridge",
+      "category": "park",
+      "city": "New York",
+      "lat": 40.764356,
+      "lng": -73.974692,
+      "address": "Central Park, Manhattan, New York, NY",
+      "timestamp": "00:53:20",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "approx",
+      "sources": [
+        "fan map / curated point"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Central+Park",
+      "i18n": {
+        "es": {
+          "name": "Gapstow Bridge",
+          "scene": "Punto visual icónico de Central Park vinculado a caminatas y vida personal.",
+          "production_note": "Asignación curada para el mapa; útil como punto de recorrido cinemático."
+        },
+        "en": {
+          "name": "Gapstow Bridge",
+          "scene": "Iconic Central Park visual tied to walks and personal life.",
+          "production_note": "Curated assignment for the map; useful as a cinematic route point."
+        }
+      }
+    },
+    {
+      "id": "fifth-avenue",
+      "category": "street",
+      "city": "New York",
+      "lat": 40.758,
+      "lng": -73.9787,
+      "address": "Fifth Avenue corridor, Midtown Manhattan, New York, NY",
+      "timestamp": "00:40:15",
+      "coffee": 1,
+      "brands": [
+        "Prada",
+        "Chanel",
+        "Fendi",
+        "Gucci"
+      ],
+      "confidence": "approx",
+      "sources": [
+        "curated montage point"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+fashion+montage+fifth+avenue",
+      "i18n": {
+        "es": {
+          "name": "Fifth Avenue makeover montage",
+          "scene": "Montaje de transformación fashion de Andy.",
+          "production_note": "Punto curado para representar el montage en Midtown, no una confirmación de frame exacto."
+        },
+        "en": {
+          "name": "Fifth Avenue Makeover Montage",
+          "scene": "Andy's fashion transformation montage.",
+          "production_note": "Curated point representing the Midtown montage, not a confirmed exact frame."
+        }
+      }
+    },
+    {
+      "id": "madison-avenue",
+      "category": "street",
+      "city": "New York",
+      "lat": 40.76364,
+      "lng": -73.97298,
+      "address": "Madison Avenue corridor, Midtown / Upper East Side, New York, NY",
+      "timestamp": "00:39:30",
+      "coffee": 1,
+      "brands": [
+        "Jimmy Choo",
+        "Donna Karan",
+        "Valentino",
+        "Chanel"
+      ],
+      "confidence": "approx",
+      "sources": [
+        "curated montage point"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+makeover+montage",
+      "i18n": {
+        "es": {
+          "name": "Madison Avenue boutiques montage",
+          "scene": "Montaje de looks de Andy y tránsito por boutiques.",
+          "production_note": "Punto agregado como representación geográfica del montage fashion."
+        },
+        "en": {
+          "name": "Madison Avenue Boutiques Montage",
+          "scene": "Montage of Andy's looks and boutique walks.",
+          "production_note": "Point added as a geographic representation of the fashion montage."
+        }
+      }
+    },
+    {
+      "id": "bryant-park",
+      "category": "street",
+      "city": "New York",
+      "lat": 40.753597,
+      "lng": -73.983233,
+      "address": "Bryant Park, Manhattan, New York, NY",
+      "timestamp": "00:41:00",
+      "coffee": 0,
+      "brands": [
+        "Prada",
+        "Chanel"
+      ],
+      "confidence": "approx",
+      "sources": [
+        "curated montage point"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Midtown+montage",
+      "i18n": {
+        "es": {
+          "name": "Bryant Park / Midtown montage point",
+          "scene": "Punto visual de Midtown para el recorrido de oficina/moda.",
+          "production_note": "Punto de ambiente para reforzar el recorrido cinemático en Manhattan."
+        },
+        "en": {
+          "name": "Bryant Park / Midtown Montage Point",
+          "scene": "Midtown visual point for the office/fashion run.",
+          "production_note": "Ambient point to reinforce the cinematic route in Manhattan."
+        }
+      }
+    },
+    {
+      "id": "west-13th-9th",
+      "category": "street",
+      "city": "New York",
+      "lat": 40.740181,
+      "lng": -74.00566,
+      "address": "9th Avenue & West 13th Street, Manhattan, New York, NY",
+      "timestamp": "00:44:20",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "approx",
+      "sources": [
+        "fan location spotting"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+9th+Avenue+13th+Street",
+      "i18n": {
+        "es": {
+          "name": "9th Ave & West 13th St",
+          "scene": "Locación callejera reportada por spotters/fans.",
+          "production_note": "No es una locación principal de fichas oficiales; se mantiene marcada como aproximada."
+        },
+        "en": {
+          "name": "9th Ave & West 13th St",
+          "scene": "Street location reported by spotters/fans.",
+          "production_note": "Not a primary production-sheet location; kept as approximate."
+        }
+      }
+    },
+    {
+      "id": "palais-galliera",
+      "category": "paris",
+      "city": "Paris",
+      "lat": 48.865772,
+      "lng": 2.296498,
+      "address": "10 Avenue Pierre 1er de Serbie, 75116 Paris, France",
+      "timestamp": "01:24:30",
+      "coffee": 1,
+      "brands": [
+        "Prada",
+        "Valentino",
+        "Chanel",
+        "Hermès"
+      ],
+      "confidence": "exact",
+      "sources": [
+        "IMDb filming locations",
+        "LatLong locations table",
+        "Kinoafisha"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+Paris+Fashion+Week",
+      "i18n": {
+        "es": {
+          "name": "Palais Galliera",
+          "scene": "Exterior asociado a Paris Fashion Week.",
+          "production_note": "IMDb ubica el exterior de París aquí."
+        },
+        "en": {
+          "name": "Palais Galliera",
+          "scene": "Exterior associated with Paris Fashion Week.",
+          "production_note": "IMDb places the Paris exterior here."
+        }
+      }
+    },
+    {
+      "id": "concorde-fountain",
+      "category": "paris",
+      "city": "Paris",
+      "lat": 48.86602,
+      "lng": 2.321506,
+      "address": "Place de la Concorde, 75008 Paris, France",
+      "timestamp": "01:42:15",
+      "coffee": 0,
+      "brands": [],
+      "confidence": "exact",
+      "sources": [
+        "IMDb filming locations",
+        "LatLong locations table"
+      ],
+      "image_url": "",
+      "clip_url": "https://www.youtube.com/results?search_query=The+Devil+Wears+Prada+throws+phone+fountain",
+      "i18n": {
+        "es": {
+          "name": "Fontaine des Fleuves, Place de la Concorde",
+          "scene": "Andy lanza el teléfono al agua al final de su arco en París.",
+          "production_note": "IMDb identifica explícitamente la fuente del cierre en París."
+        },
+        "en": {
+          "name": "Fontaine des Fleuves, Place de la Concorde",
+          "scene": "Andy throws her phone into the water at the end of her Paris arc.",
+          "production_note": "IMDb explicitly identifies the closing fountain in Paris."
+        }
+      }
+    }
+  ],
+  "coffee_events": [
+    {
+      "ts": "00:12:00",
+      "location_id": "runway-hq",
+      "i18n": {
+        "es": {
+          "label": "Primer encargo de café en Runway"
+        },
+        "en": {
+          "label": "First coffee run at Runway"
+        }
+      }
+    },
+    {
+      "ts": "00:15:10",
+      "location_id": "runway-hq",
+      "i18n": {
+        "es": {
+          "label": "Llegada de Miranda, café listo"
+        },
+        "en": {
+          "label": "Miranda arrives, coffee ready"
+        }
+      }
+    },
+    {
+      "ts": "00:18:30",
+      "location_id": "runway-cafeteria",
+      "i18n": {
+        "es": {
+          "label": "Café en la rutina interna de Runway"
+        },
+        "en": {
+          "label": "Coffee in Runway's internal routine"
+        }
+      }
+    },
+    {
+      "ts": "00:24:00",
+      "location_id": "runway-office-corridors",
+      "i18n": {
+        "es": {
+          "label": "Montaje de tareas / café en oficina"
+        },
+        "en": {
+          "label": "Task montage / coffee in the office"
+        }
+      }
+    },
+    {
+      "ts": "00:31:30",
+      "location_id": "smith-wollensky",
+      "i18n": {
+        "es": {
+          "label": "Lunch run + exigencias de Miranda"
+        },
+        "en": {
+          "label": "Lunch run + Miranda's demands"
+        }
+      }
+    },
+    {
+      "ts": "00:39:30",
+      "location_id": "madison-avenue",
+      "i18n": {
+        "es": {
+          "label": "Montaje de transformación con recado de café"
+        },
+        "en": {
+          "label": "Makeover montage with a coffee errand"
+        }
+      }
+    },
+    {
+      "ts": "00:40:15",
+      "location_id": "fifth-avenue",
+      "i18n": {
+        "es": {
+          "label": "Otro beat del montage en Midtown"
+        },
+        "en": {
+          "label": "Another beat of the Midtown montage"
+        }
+      }
+    },
+    {
+      "ts": "00:55:00",
+      "location_id": "silvercup-studios",
+      "i18n": {
+        "es": {
+          "label": "Jornada intensa en sets/oficina"
+        },
+        "en": {
+          "label": "Intense day on sets/office"
+        }
+      }
+    },
+    {
+      "ts": "01:02:00",
+      "location_id": "silvercup-studios",
+      "i18n": {
+        "es": {
+          "label": "Preparativos previos a París"
+        },
+        "en": {
+          "label": "Preparations before Paris"
+        }
+      }
+    },
+    {
+      "ts": "01:07:10",
+      "location_id": "miranda-townhouse",
+      "i18n": {
+        "es": {
+          "label": "Rutina Miranda en su townhouse"
+        },
+        "en": {
+          "label": "Miranda's routine at her townhouse"
+        }
+      }
+    },
+    {
+      "ts": "01:22:00",
+      "location_id": "st-regis",
+      "i18n": {
+        "es": {
+          "label": "Hotel de Miranda"
+        },
+        "en": {
+          "label": "Miranda's hotel"
+        }
+      }
+    },
+    {
+      "ts": "01:24:30",
+      "location_id": "palais-galliera",
+      "i18n": {
+        "es": {
+          "label": "Fashion Week en París"
+        },
+        "en": {
+          "label": "Paris Fashion Week"
+        }
+      }
+    }
+  ],
+  "brands": [
+    "Prada",
+    "Chanel",
+    "Calvin Klein",
+    "Valentino",
+    "Donna Karan",
+    "Marc Jacobs",
+    "Dolce & Gabbana",
+    "Hermès",
+    "Jimmy Choo",
+    "Manolo Blahnik",
+    "Fendi",
+    "Gucci"
+  ]
+}
