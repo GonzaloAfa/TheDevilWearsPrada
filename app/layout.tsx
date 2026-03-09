@@ -2,10 +2,10 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { LangHtmlUpdater } from '../components/LangHtmlUpdater';
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  ...(configuredSiteUrl ? { metadataBase: new URL(configuredSiteUrl) } : {}),
   icons: {
     icon: [{ url: '/heel.svg', type: 'image/svg+xml' }],
     shortcut: ['/heel.svg'],

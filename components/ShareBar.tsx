@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useUiText } from '../lib/i18n';
 
 declare global {
@@ -14,11 +14,35 @@ type ShareBarProps = {
   title: string;
 };
 
+function resolveShareUrl(url: string) {
+  if (typeof window === 'undefined') {
+    return url;
+  }
+
+  const currentOrigin = window.location.origin;
+
+  try {
+    const parsed = new URL(url, currentOrigin);
+    const parsedHost = parsed.hostname;
+    const isLocalUrl =
+      parsedHost === 'localhost' || parsedHost === '127.0.0.1' || parsedHost === '0.0.0.0';
+
+    if (isLocalUrl || parsed.origin !== currentOrigin) {
+      return `${currentOrigin}${parsed.pathname}${parsed.search}${parsed.hash}`;
+    }
+
+    return parsed.toString();
+  } catch {
+    return url;
+  }
+}
+
 export function ShareBar({ url, title }: ShareBarProps) {
   const labels = useUiText().share;
   const [copied, setCopied] = useState(false);
+  const shareUrl = useMemo(() => resolveShareUrl(url), [url]);
 
-  const encodedUrl = encodeURIComponent(url);
+  const encodedUrl = encodeURIComponent(shareUrl);
   const encodedText = encodeURIComponent(title);
 
   const track = (method: string) => {
@@ -26,13 +50,13 @@ export function ShareBar({ url, title }: ShareBarProps) {
     window.gtag('event', 'share', {
       method,
       content_type: 'page',
-      item_id: url
+      item_id: shareUrl
     });
   };
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
       track('copy');
       setTimeout(() => setCopied(false), 1400);

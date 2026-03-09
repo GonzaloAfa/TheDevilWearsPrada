@@ -10,6 +10,7 @@ import { CATEGORY_META } from '../../lib/categories';
 import { cityDisplayName, cityHint } from '../../lib/locationUi';
 import { SiteHeader } from '../../components/SiteHeader';
 import { getCategoryLabel, getLocationI18n, normalizeLang, LOCALES, loadMessages, asUiText } from '../../lib/i18n';
+import { getRequestSiteUrl } from '../../lib/siteUrl';
 
 export const dynamicParams = false;
 
@@ -20,7 +21,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const lang = normalizeLang(params.lang);
   const ui = asUiText(await loadMessages(lang));
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
   const title = ui.meta.home.title;
   const description = ui.meta.home.description;
   const imageUrl = `${baseUrl}/${lang}/opengraph-image`;
@@ -61,7 +62,7 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: { lang: Lang } }) {
   const lang = normalizeLang(params.lang);
   const ui = asUiText(await loadMessages(lang));
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
   const topLocations = DATA.locations.slice(0, 6);
   const shareUrl = `${baseUrl}/${lang}`;
   const mapPath = `/${lang}/map`;

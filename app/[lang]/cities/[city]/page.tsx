@@ -17,6 +17,7 @@ import {
   loadMessages,
   asUiText
 } from '../../../../lib/i18n';
+import { getRequestSiteUrl } from '../../../../lib/siteUrl';
 
 const CITY_MAP = {
   nyc: { name: 'New York' },
@@ -42,7 +43,7 @@ export async function generateMetadata({
   const cityInfo = CITY_MAP[params.city];
   const ui = asUiText(await loadMessages(lang));
   const cityLabel = cityDisplayName(cityInfo.name, lang);
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
   const title = ui.meta.city.title.replace('{city}', cityLabel);
   const description = ui.meta.city.description.replace('{city}', cityLabel);
   const languages = Object.fromEntries(
@@ -62,7 +63,7 @@ export default async function Page({ params }: { params: { lang: Lang; city: Cit
   const lang = normalizeLang(params.lang);
   const ui = asUiText(await loadMessages(lang));
   const cityInfo = CITY_MAP[params.city];
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
   const cityLabel = cityDisplayName(cityInfo.name, lang);
   const locations = DATA.locations.filter((loc) => loc.city === cityInfo.name);
 

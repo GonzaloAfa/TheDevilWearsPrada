@@ -105,8 +105,11 @@ export function MapPage({ lang, data }: { lang: Lang; data: Dataset }) {
   const adSlotSidebar = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
   const adSlotInline = process.env.NEXT_PUBLIC_ADSENSE_SLOT_INLINE;
   const shareUrl = useMemo(() => {
-    const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-    return `${base}${pathname || ''}`;
+    if (typeof window !== 'undefined') {
+      return window.location.href;
+    }
+
+    return pathname || '';
   }, [pathname]);
 
   return (

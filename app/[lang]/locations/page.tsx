@@ -9,6 +9,7 @@ import { cityDisplayName, cityHint } from '../../../lib/locationUi';
 import { SeoContext } from '../../../components/SeoContext';
 import { SiteHeader } from '../../../components/SiteHeader';
 import { getCategoryLabel, getLocationI18n, normalizeLang, LOCALES, loadMessages, asUiText } from '../../../lib/i18n';
+import { getRequestSiteUrl } from '../../../lib/siteUrl';
 
 export const dynamicParams = false;
 
@@ -19,7 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const lang = normalizeLang(params.lang);
   const ui = asUiText(await loadMessages(lang));
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
   const title = ui.meta.locations.title;
   const description = ui.meta.locations.description;
   const imageUrl = `${baseUrl}/og.svg`;

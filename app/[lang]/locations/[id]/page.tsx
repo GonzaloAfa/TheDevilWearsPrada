@@ -10,6 +10,7 @@ import { LocationImage } from '../../../../components/LocationImage';
 import { SeoContext } from '../../../../components/SeoContext';
 import { SiteHeader } from '../../../../components/SiteHeader';
 import { getLocationI18n, normalizeLang, LOCALES, loadMessages, asUiText } from '../../../../lib/i18n';
+import { getRequestSiteUrl } from '../../../../lib/siteUrl';
 
 export const dynamicParams = false;
 
@@ -25,7 +26,7 @@ export async function generateMetadata({
   const lang = normalizeLang(params.lang);
   const loc = DATA.locations.find((l) => l.id === params.id);
   const ui = asUiText(await loadMessages(lang));
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
   const imageUrl = `${baseUrl}/og.svg`;
 
   if (!loc) {
@@ -62,7 +63,7 @@ export default async function Page({ params }: { params: { lang: Lang; id: strin
   const lang = normalizeLang(params.lang);
   const ui = asUiText(await loadMessages(lang));
   const loc = DATA.locations.find((l) => l.id === params.id);
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
 
   if (!loc) {
     return (

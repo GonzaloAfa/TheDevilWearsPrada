@@ -1,9 +1,12 @@
 import type { MetadataRoute } from 'next';
 import { DATA } from '../data';
 import { LOCALES } from '../lib/i18n';
+import { getRequestSiteUrl } from '../lib/siteUrl';
+
+export const dynamic = 'force-dynamic';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
   const now = new Date();
   const routes: string[] = [];
 

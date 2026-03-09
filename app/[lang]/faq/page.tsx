@@ -5,6 +5,7 @@ import { Footer } from '../../../components/Footer';
 import { SeoContext } from '../../../components/SeoContext';
 import { SiteHeader } from '../../../components/SiteHeader';
 import { normalizeLang, LOCALES, loadMessages, asUiText } from '../../../lib/i18n';
+import { getRequestSiteUrl } from '../../../lib/siteUrl';
 
 export const dynamicParams = false;
 
@@ -15,7 +16,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const lang = normalizeLang(params.lang);
   const ui = asUiText(await loadMessages(lang));
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
   const title = ui.meta.faq.title;
   const description = ui.meta.faq.description;
   const languages = Object.fromEntries(
@@ -34,7 +35,7 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: { lang: Lang } }) {
   const lang = normalizeLang(params.lang);
   const ui = asUiText(await loadMessages(lang));
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = getRequestSiteUrl();
   const faqLd = faqJsonLd(baseUrl, lang, ui.landing.faq);
 
   return (
