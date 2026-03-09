@@ -5,7 +5,8 @@ const TIMESTAMP_LABELS: Record<Lang, { na: string; various: string; deleted: str
   en: { na: 'N/A', various: 'various', deleted: 'deleted scene' },
   pt: { na: 'S/D', various: 'vários', deleted: 'cena deletada' },
   fr: { na: 'N/D', various: 'divers', deleted: 'scène supprimée' },
-  de: { na: 'k. A.', various: 'verschiedene', deleted: 'gestrichene Szene' }
+  de: { na: 'k. A.', various: 'verschiedene', deleted: 'gestrichene Szene' },
+  cl: { na: 'N/D', various: 'varios', deleted: 'escena eliminada' }
 };
 
 export function formatTimestampValue(timestamp: string | undefined, lang: Lang) {

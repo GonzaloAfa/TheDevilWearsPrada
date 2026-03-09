@@ -64,7 +64,7 @@ export default async function Page({ params }: { params: { lang: Lang } }) {
 
   const movieLd = movieJsonLd(baseUrl, lang, {
     name: ui.filmTitle,
-    alternateName: lang === 'es' ? 'The Devil Wears Prada' : 'El Diablo se viste a la moda',
+    alternateName: lang === 'es' || lang === 'cl' ? 'The Devil Wears Prada' : 'El Diablo se viste a la moda',
     description: ui.meta.home.description
   });
   const faqLd = faqJsonLd(baseUrl, lang, ui.landing.faq);

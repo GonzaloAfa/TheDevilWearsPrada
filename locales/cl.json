@@ -1,0 +1,191 @@
+{
+  "filmTitle": "El Diablo se viste a la moda",
+  "title": "El Diablo se viste a la moda\nMapa de locaciones",
+  "subtitle": "Mapa interactivo de locaciones y escenas de la peli, clarito y al tiro",
+  "introTitle": "Sobre la película y el mapa",
+  "introBody": [
+    "Recorre Nueva York y París a través de las locaciones más icónicas de El Diablo se viste a la moda.",
+    "Explora escenas, marcas y momentos clave con un mapa pensado para fans del film, bacán y sin tanto webeo."
+  ],
+  "stats": {
+    "pins": "Pins a la vista",
+    "coffee": "Cafés de Miranda",
+    "exact": "Exactas",
+    "approx": "Aprox"
+  },
+  "searchPlaceholder": "Buscar locación, escena, marca o dirección (al tiro)",
+  "buttons": {
+    "tour": "🧭 Tour",
+    "stop": "⏸ Parar no más",
+    "fit": "🗺 Ver todo",
+    "nyc": "NYC",
+    "paris": "París"
+  },
+  "sections": {
+    "categories": "Categorías",
+    "timeline": "Timeline de cafés",
+    "pins": "Pins"
+  },
+  "empty": "No hay resultados, cachai. Prueba con otra palabra.",
+  "notesTitle": "Notas del dataset (pa' cachar)",
+  "notes": [
+    "Las locaciones exactas salen de fichas de producción o tablas repetidas por varias fuentes, no inventadas.",
+    "Las locaciones “aprox” representan montajes, áreas o puntos útiles para el relato cinematográfico, no más.",
+    "El contador de cafés es una lectura curada para destacar un recurso narrativo de la película."
+  ],
+  "popup": {
+    "timestamp": "Tiempo",
+    "city": "Ciudad",
+    "address": "Dirección",
+    "confidence": "Qué tan seguro",
+    "coffee": "Café",
+    "exact": "exacta",
+    "approx": "aprox",
+    "noBrands": "Sin marcas, po",
+    "maps": "Abrir en Maps al tiro",
+    "clip": "Buscar el clipcito"
+  },
+  "languageSwitch": "CL",
+  "languageLabel": "Idioma",
+  "map": {
+    "panelTitle": "Panel del mapa",
+    "panelCollapse": "Ocultar panel",
+    "panelExpand": "Mostrar panel",
+    "shareTitle": "Comparte este mapa, compadre",
+    "shareText": "Mapa de locaciones de El Diablo se viste a la moda"
+  },
+  "share": {
+    "title": "Compartir",
+    "copy": "Copiar link",
+    "copied": "Link copiado, listo"
+  },
+  "footer": {
+    "donateText": "Si te gusta el mapa, nos puedes donar un cafecito, se agradece caleta.",
+    "donateCta": "☕ Donar un cafecito"
+  },
+  "landing": {
+    "heroTitle": "Explora las locaciones de El Diablo se viste a la moda",
+    "heroSubtitle": "Mapa cinematográfico con escenas, timestamps y contexto de producción. También conocido como The Devil Wears Prada. Todo ordenadito, al tiro.",
+    "ctaPrimary": "Ver mapa",
+    "ctaSecondary": "Ver locaciones",
+    "previewAlt": "Imagen icónica del tacón de El Diablo se viste a la moda",
+    "highlightsTitle": "Qué pillai acá",
+    "highlights": [
+      {
+        "icon": "🗺️",
+        "title": "Locaciones reales",
+        "description": "Direcciones exactas y aproximadas con notas de producción, sin cuento."
+      },
+      {
+        "icon": "🎬",
+        "title": "Momentos clave",
+        "description": "Escenas, timestamps y narrativa conectada al mapa, filete."
+      },
+      {
+        "icon": "🗽",
+        "title": "Nueva York y París",
+        "description": "Dos ciudades esenciales para la estética del film, sí o sí."
+      }
+    ],
+    "topLocationsTitle": "Locaciones destacadas",
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Las locaciones son reales?",
+        "a": "Sí po. El mapa mezcla direcciones confirmadas y aproximadas con fuentes de producción, sin chamullo."
+      },
+      {
+        "q": "¿Dónde se filmó el HQ de Runway?",
+        "a": "En Midtown Manhattan, con exteriores del 1221 Avenue of the Americas. Ahí mismo."
+      },
+      {
+        "q": "¿Hay escenas en París?",
+        "a": "Sí, de todas maneras. El mapa incluye puntos clave de Paris Fashion Week y el final de la película."
+      },
+      {
+        "q": "¿El mapa incluye direcciones exactas?",
+        "a": "Sí, cuando están confirmadas en fuentes de producción. Lo demás se marca como aprox, no más."
+      },
+      {
+        "q": "¿Por qué hay locaciones “aprox”?",
+        "a": "Porque algunas escenas se filmaron en sets o montajes y solo se puede ubicar una zona representativa, po."
+      },
+      {
+        "q": "¿Puedo visitar todas las locaciones?",
+        "a": "Las locaciones exteriores son visitables al tiro. Algunas interiores son sets o privadas, así que ojo."
+      },
+      {
+        "q": "¿Dónde está la escena del beneficio del museo?",
+        "a": "El exterior fue en el American Museum of Natural History y el interior se filmó en Foley Square."
+      },
+      {
+        "q": "¿Qué significa el timeline de cafés?",
+        "a": "Es una lectura narrativa de los momentos en que el café marca el ritmo de la historia. Puro ritmo, po."
+      },
+      {
+        "q": "¿El mapa se actualizará con nuevas fuentes?",
+        "a": "Sí. Vamos agregando referencias y corrigiendo datos cuando aparecen fuentes más precisas, al tiro."
+      }
+    ]
+  },
+  "seoContext": {
+    "locations": {
+      "title": "Mapa de la película",
+      "body": "Este listado es parte del mapa cinematográfico de El Diablo se viste a la moda (The Devil Wears Prada). Puedes explorar escenas, direcciones y contexto de producción, todo ordenadito.",
+      "cta": "Ir al mapa"
+    },
+    "locationDetail": {
+      "title": "Locación en el mapa",
+      "body": "Esta locación pertenece al mapa de El Diablo se viste a la moda (The Devil Wears Prada). Revisa el mapa completo para ver escenas conectadas, sin perderte.",
+      "cta": "Ver mapa completo"
+    },
+    "city": {
+      "title": "Ciudad en el mapa",
+      "body": "Estas locaciones se conectan al mapa de El Diablo se viste a la moda. Explora el recorrido completo en el mapa, bacán.",
+      "cta": "Explorar mapa"
+    },
+    "faq": {
+      "title": "Sobre el mapa de la película",
+      "body": "Esta FAQ responde preguntas sobre el mapa de El Diablo se viste a la moda y cómo fue construido, clarito.",
+      "cta": "Ver mapa"
+    }
+  },
+  "labels": {
+    "viewAllFaqs": "Ver todas las preguntas",
+    "locationsTitle": "Locaciones",
+    "locationsDescription": "Todas las locaciones de la película en un solo listado, sin perderte.",
+    "cityTitle": "Locaciones en {city}",
+    "cityDescription": "Puntos clave del film en {city}.",
+    "notFoundTitle": "Locación no encontrada, pucha",
+    "backToList": "Volver al listado",
+    "sceneLabel": "Escena",
+    "productionLabel": "Notas de producción",
+    "mapLocationLabel": "Ubicación en el mapa",
+    "breadcrumbHome": "Inicio",
+    "breadcrumbLocations": "Locaciones",
+    "breadcrumbCities": "Ciudades",
+    "triviaLabel": "Datos freak"
+  },
+  "meta": {
+    "home": {
+      "title": "El Diablo se viste a la moda — Mapa Cinematográfico",
+      "description": "Explora locaciones, escenas y momentos clave de El Diablo se viste a la moda (The Devil Wears Prada) en un mapa interactivo, bacán."
+    },
+    "map": {
+      "title": "Mapa de locaciones — El Diablo se viste a la moda",
+      "description": "Explora el mapa interactivo con escenas y locaciones de El Diablo se viste a la moda (The Devil Wears Prada), al tiro."
+    },
+    "locations": {
+      "title": "Locaciones — El Diablo se viste a la moda",
+      "description": "Listado completo de locaciones y escenas de El Diablo se viste a la moda (The Devil Wears Prada), sin enredos."
+    },
+    "faq": {
+      "title": "FAQ — El Diablo se viste a la moda",
+      "description": "Preguntas frecuentes sobre el mapa y la película El Diablo se viste a la moda (The Devil Wears Prada), clarito."
+    },
+    "city": {
+      "title": "Locaciones en {city} — El Diablo se viste a la moda",
+      "description": "Recorrido por las locaciones de El Diablo se viste a la moda (The Devil Wears Prada) en {city}, de una."
+    }
+  }
+}

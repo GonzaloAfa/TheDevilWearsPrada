@@ -1,6 +1,6 @@
 import type { Lang } from '../types';
 
-export const LOCALES: Lang[] = ['es', 'en', 'pt', 'fr', 'de'];
+export const LOCALES: Lang[] = ['es', 'en', 'pt', 'fr', 'de', 'cl'];
 
 export const FALLBACK_CHAIN: Lang[] = ['es', 'en'];
 
@@ -9,7 +9,8 @@ export const LOCALE_META: Record<Lang, { label: string; flag: string; name: stri
   en: { label: 'EN', flag: '🇺🇸', name: 'English' },
   pt: { label: 'PT', flag: '🇧🇷', name: 'Português' },
   fr: { label: 'FR', flag: '🇫🇷', name: 'Français' },
-  de: { label: 'DE', flag: '🇩🇪', name: 'Deutsch' }
+  de: { label: 'DE', flag: '🇩🇪', name: 'Deutsch' },
+  cl: { label: 'CL', flag: '🇨🇱', name: 'Chileno' }
 };
 
 export function normalizeLang(value: string): Lang {
