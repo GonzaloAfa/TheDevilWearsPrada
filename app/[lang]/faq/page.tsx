@@ -13,10 +13,10 @@ export async function generateMetadata({
   const lang = params.lang === 'en' ? 'en' : 'es';
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const title = lang === 'es'
-    ? 'FAQ — The Devil Wears Prada'
+    ? 'FAQ — El Diablo se viste a la moda'
     : 'FAQ — The Devil Wears Prada';
   const description = lang === 'es'
-    ? 'Preguntas frecuentes sobre el mapa y la película.'
+    ? 'Preguntas frecuentes sobre el mapa y la película El Diablo se viste a la moda (The Devil Wears Prada).'
     : 'Frequently asked questions about the map and the film.';
   return {
     title,

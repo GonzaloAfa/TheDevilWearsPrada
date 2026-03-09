@@ -60,7 +60,7 @@ export type UiText = {
     ctaSecondary: string;
     previewAlt: string;
     highlightsTitle: string;
-    highlights: { title: string; description: string }[];
+    highlights: { icon: string; title: string; description: string }[];
     topLocationsTitle: string;
     faqTitle: string;
     faq: { q: string; a: string }[];
@@ -69,11 +69,11 @@ export type UiText = {
 
 export const UI_TEXT: Record<Lang, UiText> = {
   es: {
-    title: 'The Devil Wears Prada\nCinematic Map v2',
+    title: 'El Diablo se viste a la moda\nCinematic Map v2',
     subtitle: 'Mapa interactivo de locaciones y escenas de la película',
     introTitle: 'Sobre la película y el mapa',
     introBody: [
-      'Recorre Nueva York y París a través de las locaciones más icónicas de The Devil Wears Prada.',
+      'Recorre Nueva York y París a través de las locaciones más icónicas de El Diablo se viste a la moda.',
       'Explora escenas, marcas y momentos clave con un mapa pensado para fans del film.'
     ],
     stats: {
@@ -121,7 +121,7 @@ export const UI_TEXT: Record<Lang, UiText> = {
       panelCollapse: 'Ocultar panel',
       panelExpand: 'Mostrar panel',
       shareTitle: 'Comparte este mapa',
-      shareText: 'Mapa de locaciones de The Devil Wears Prada'
+      shareText: 'Mapa de locaciones de El Diablo se viste a la moda'
     },
     share: {
       title: 'Compartir',
@@ -129,23 +129,26 @@ export const UI_TEXT: Record<Lang, UiText> = {
       copied: 'Link copiado'
     },
     landing: {
-      heroTitle: 'Explora las locaciones de The Devil Wears Prada',
+      heroTitle: 'Explora las locaciones de El Diablo se viste a la moda',
       heroSubtitle:
-        'Mapa cinematográfico con escenas, timestamps y contexto de producción para fans de la película.',
+        'Mapa cinematográfico con escenas, timestamps y contexto de producción. También conocido como The Devil Wears Prada.',
       ctaPrimary: 'Ver mapa',
       ctaSecondary: 'Ver locaciones',
-      previewAlt: 'Preview del mapa de locaciones de The Devil Wears Prada',
+      previewAlt: 'Preview del mapa de locaciones de El Diablo se viste a la moda',
       highlightsTitle: 'Qué encontrarás',
       highlights: [
         {
+          icon: '🗺️',
           title: 'Locaciones reales',
           description: 'Direcciones exactas y aproximadas con notas de producción.'
         },
         {
+          icon: '🎬',
           title: 'Momentos clave',
           description: 'Escenas, timestamps y narrativa conectada al mapa.'
         },
         {
+          icon: '🗽',
           title: 'Nueva York y París',
           description: 'Dos ciudades esenciales para la estética del film.'
         }
@@ -238,14 +241,17 @@ export const UI_TEXT: Record<Lang, UiText> = {
       highlightsTitle: 'What you will find',
       highlights: [
         {
+          icon: '🗺️',
           title: 'Real-world locations',
           description: 'Exact and approximate addresses with production notes.'
         },
         {
+          icon: '🎬',
           title: 'Key moments',
           description: 'Scenes, timestamps, and narrative context tied to the map.'
         },
         {
+          icon: '🗽',
           title: 'New York and Paris',
           description: 'Two cities essential to the film’s visual identity.'
         }

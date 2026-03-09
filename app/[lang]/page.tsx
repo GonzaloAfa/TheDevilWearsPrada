@@ -17,10 +17,10 @@ export async function generateMetadata({
   const ui = UI_TEXT[lang];
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const title = lang === 'es'
-    ? 'The Devil Wears Prada — Mapa Cinematográfico'
+    ? 'El Diablo se viste a la moda — Mapa Cinematográfico'
     : 'The Devil Wears Prada — Cinematic Map';
   const description = lang === 'es'
-    ? 'Explora locaciones, escenas y momentos clave de The Devil Wears Prada en un mapa interactivo.'
+    ? 'Explora locaciones, escenas y momentos clave de El Diablo se viste a la moda (The Devil Wears Prada) en un mapa interactivo.'
     : 'Explore locations, scenes, and key moments from The Devil Wears Prada in an interactive map.';
   const imageUrl = `${baseUrl}/og.svg`;
 
@@ -103,7 +103,10 @@ export default function Page({ params }: { params: { lang: Lang } }) {
           <div className="highlights">
             {ui.landing.highlights.map((item) => (
               <div key={item.title} className="highlight-card">
-                <div className="name">{item.title}</div>
+                <div className="highlight-title">
+                  <span className="highlight-emoji">{item.icon}</span>
+                  <span>{item.title}</span>
+                </div>
                 <div className="meta">{item.description}</div>
               </div>
             ))}

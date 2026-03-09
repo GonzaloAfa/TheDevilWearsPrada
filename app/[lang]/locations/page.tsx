@@ -14,10 +14,10 @@ export async function generateMetadata({
   const lang = params.lang === 'en' ? 'en' : 'es';
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const title = lang === 'es'
-    ? 'Locaciones — The Devil Wears Prada'
+    ? 'Locaciones — El Diablo se viste a la moda'
     : 'Locations — The Devil Wears Prada';
   const description = lang === 'es'
-    ? 'Listado completo de locaciones y escenas de The Devil Wears Prada.'
+    ? 'Listado completo de locaciones y escenas de El Diablo se viste a la moda (The Devil Wears Prada).'
     : 'Complete list of locations and scenes from The Devil Wears Prada.';
   const imageUrl = `${baseUrl}/og.svg`;
   return {

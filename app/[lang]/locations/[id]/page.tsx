@@ -28,7 +28,10 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${loc.i18n[lang].name} — The Devil Wears Prada`;
+  const title =
+    lang === 'es'
+      ? `${loc.i18n[lang].name} — El Diablo se viste a la moda`
+      : `${loc.i18n[lang].name} — The Devil Wears Prada`;
   const description = loc.i18n[lang].scene;
 
   return {

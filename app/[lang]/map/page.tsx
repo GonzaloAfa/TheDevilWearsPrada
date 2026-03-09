@@ -16,10 +16,10 @@ export async function generateMetadata({
   const ui = UI_TEXT[lang];
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const title = lang === 'es'
-    ? 'Mapa de locaciones — The Devil Wears Prada'
+    ? 'Mapa de locaciones — El Diablo se viste a la moda'
     : 'Locations Map — The Devil Wears Prada';
   const description = lang === 'es'
-    ? 'Explora el mapa interactivo con escenas y locaciones de The Devil Wears Prada.'
+    ? 'Explora el mapa interactivo con escenas y locaciones de El Diablo se viste a la moda (The Devil Wears Prada).'
     : 'Explore the interactive map with scenes and locations from The Devil Wears Prada.';
   const imageUrl = `${baseUrl}/og.svg`;
 

@@ -28,11 +28,11 @@ export async function generateMetadata({
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const title =
     lang === 'es'
-      ? `Locaciones en ${cityInfo.labelEs} — The Devil Wears Prada`
+      ? `Locaciones en ${cityInfo.labelEs} — El Diablo se viste a la moda`
       : `Locations in ${cityInfo.labelEn} — The Devil Wears Prada`;
   const description =
     lang === 'es'
-      ? `Recorrido por las locaciones de la película en ${cityInfo.labelEs}.`
+      ? `Recorrido por las locaciones de El Diablo se viste a la moda (The Devil Wears Prada) en ${cityInfo.labelEs}.`
       : `A tour of the film’s locations in ${cityInfo.labelEn}.`;
   return {
     title,
