@@ -6,6 +6,7 @@ import type { Lang } from '../../../../lib/types';
 import { placeJsonLd, breadcrumbJsonLd } from '../../../../lib/seo';
 import { ShareBar } from '../../../../components/ShareBar';
 import { Footer } from '../../../../components/Footer';
+import { LocationMiniMap } from '../../../../components/LocationMiniMap';
 
 export const dynamicParams = false;
 
@@ -118,6 +119,13 @@ export default function Page({ params }: { params: { lang: Lang; id: string } })
             {ui.popup.timestamp}
           </div>
           <div className="meta">{loc.timestamp}</div>
+        </div>
+
+        <div className="section">
+          <div className="name" style={{ marginBottom: 12 }}>
+            {lang === 'es' ? 'Ubicación en el mapa' : 'Map location'}
+          </div>
+          <LocationMiniMap lat={loc.lat} lng={loc.lng} label={loc.i18n[lang].name} />
         </div>
 
         <div className="section">
