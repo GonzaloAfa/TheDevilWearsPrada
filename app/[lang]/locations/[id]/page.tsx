@@ -5,6 +5,7 @@ import { UI_TEXT } from '../../../../lib/uiText';
 import type { Lang } from '../../../../lib/types';
 import { placeJsonLd, breadcrumbJsonLd } from '../../../../lib/seo';
 import { ShareBar } from '../../../../components/ShareBar';
+import { Footer } from '../../../../components/Footer';
 
 export const dynamicParams = false;
 
@@ -128,6 +129,8 @@ export default function Page({ params }: { params: { lang: Lang; id: string } })
             {lang === 'es' ? 'Volver al listado' : 'Back to list'}
           </Link>
         </div>
+
+        <Footer lang={lang} />
       </div>
 
       <script

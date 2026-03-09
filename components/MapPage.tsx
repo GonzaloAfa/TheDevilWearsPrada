@@ -9,6 +9,7 @@ import { CATEGORY_META } from '../lib/categories';
 import { MapClient, type MapClientHandle } from './MapClient';
 import { AdSlot } from './AdSlot';
 import { ShareBar } from './ShareBar';
+import { Footer } from './Footer';
 
 const ALL_CATEGORIES = Object.keys(CATEGORY_META) as CategoryKey[];
 
@@ -297,6 +298,8 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
             </div>
           ))}
         </div>
+
+        <Footer lang={lang} />
         </div>
       </aside>
 

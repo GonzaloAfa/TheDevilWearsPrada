@@ -53,6 +53,10 @@ export type UiText = {
     copy: string;
     copied: string;
   };
+  footer: {
+    donateText: string;
+    donateCta: string;
+  };
   landing: {
     heroTitle: string;
     heroSubtitle: string;
@@ -127,6 +131,10 @@ export const UI_TEXT: Record<Lang, UiText> = {
       title: 'Compartir',
       copy: 'Copiar link',
       copied: 'Link copiado'
+    },
+    footer: {
+      donateText: 'Si te gusta el mapa, nos puedes donar un café.',
+      donateCta: 'Donar un café'
     },
     landing: {
       heroTitle: 'Explora las locaciones de El Diablo se viste a la moda',
@@ -230,6 +238,10 @@ export const UI_TEXT: Record<Lang, UiText> = {
       title: 'Share',
       copy: 'Copy link',
       copied: 'Link copied'
+    },
+    footer: {
+      donateText: 'If you like the map, you can buy us a coffee.',
+      donateCta: 'Buy a coffee'
     },
     landing: {
       heroTitle: 'Explore the locations of The Devil Wears Prada',

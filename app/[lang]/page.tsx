@@ -5,6 +5,7 @@ import { UI_TEXT } from '../../lib/uiText';
 import type { Lang } from '../../lib/types';
 import { movieJsonLd, faqJsonLd } from '../../lib/seo';
 import { ShareBar } from '../../components/ShareBar';
+import { Footer } from '../../components/Footer';
 
 export const dynamicParams = false;
 
@@ -144,6 +145,8 @@ export default function Page({ params }: { params: { lang: Lang } }) {
             </Link>
           </div>
         </div>
+
+        <Footer lang={lang} />
       </div>
 
       <div className="sticky-cta">

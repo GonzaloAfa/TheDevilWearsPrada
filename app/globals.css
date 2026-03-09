@@ -417,6 +417,24 @@ a {
   padding-bottom: 6px;
 }
 
+.footer {
+  margin-top: 28px;
+  padding: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: #ffe4ea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .share-bar {
   display: flex;
   gap: 10px;

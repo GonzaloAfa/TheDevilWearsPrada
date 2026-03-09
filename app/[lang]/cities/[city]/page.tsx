@@ -4,6 +4,7 @@ import { DATA } from '../../../../data';
 import { UI_TEXT } from '../../../../lib/uiText';
 import type { Lang } from '../../../../lib/types';
 import { breadcrumbJsonLd } from '../../../../lib/seo';
+import { Footer } from '../../../../components/Footer';
 
 const CITY_MAP = {
   nyc: { name: 'New York', labelEs: 'Nueva York', labelEn: 'New York' },
@@ -93,6 +94,8 @@ export default function Page({ params }: { params: { lang: Lang; city: CityKey }
             {ui.landing.ctaPrimary}
           </Link>
         </div>
+
+        <Footer lang={lang} />
       </div>
 
       <script

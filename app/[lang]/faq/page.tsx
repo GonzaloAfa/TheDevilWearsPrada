@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { UI_TEXT } from '../../../lib/uiText';
 import type { Lang } from '../../../lib/types';
 import { faqJsonLd } from '../../../lib/seo';
+import { Footer } from '../../../components/Footer';
 
 export const dynamicParams = false;
 
@@ -49,6 +50,8 @@ export default function Page({ params }: { params: { lang: Lang } }) {
             </div>
           ))}
         </div>
+
+        <Footer lang={lang} />
       </div>
 
       <script

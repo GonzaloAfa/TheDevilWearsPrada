@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { DATA } from '../../../data';
 import { UI_TEXT } from '../../../lib/uiText';
 import type { Lang } from '../../../lib/types';
+import { Footer } from '../../../components/Footer';
 
 export const dynamicParams = false;
 
@@ -77,6 +78,8 @@ export default function Page({ params }: { params: { lang: Lang } }) {
             {ui.landing.ctaPrimary}
           </Link>
         </div>
+
+        <Footer lang={lang} />
       </div>
     </div>
   );
