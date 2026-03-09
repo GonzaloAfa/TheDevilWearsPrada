@@ -5,6 +5,7 @@ import { UI_TEXT } from '../../lib/uiText';
 import type { Lang } from '../../lib/types';
 
 export const dynamicParams = false;
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params
