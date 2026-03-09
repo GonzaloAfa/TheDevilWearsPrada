@@ -175,6 +175,30 @@ export const UI_TEXT: Record<Lang, UiText> = {
         {
           q: '¿Hay escenas en París?',
           a: 'Sí. El mapa incluye puntos clave de Paris Fashion Week y el final de la película.'
+        },
+        {
+          q: '¿El mapa incluye direcciones exactas?',
+          a: 'Sí, cuando están confirmadas en fuentes de producción. Lo demás se marca como aproximado.'
+        },
+        {
+          q: '¿Por qué hay locaciones “aprox”?',
+          a: 'Porque algunas escenas se filmaron en sets o montajes y solo se puede ubicar una zona representativa.'
+        },
+        {
+          q: '¿Puedo visitar todas las locaciones?',
+          a: 'Las locaciones exteriores son visitables. Algunas interiores son sets o privados.'
+        },
+        {
+          q: '¿Dónde está la escena del beneficio del museo?',
+          a: 'El exterior fue en el American Museum of Natural History y el interior se filmó en Foley Square.'
+        },
+        {
+          q: '¿Qué significa el timeline de cafés?',
+          a: 'Es una lectura narrativa de los momentos en que el café marca el ritmo de la historia.'
+        },
+        {
+          q: '¿El mapa se actualizará con nuevas fuentes?',
+          a: 'Sí. Vamos agregando referencias y corrigiendo datos cuando aparecen fuentes más precisas.'
         }
       ]
     }
@@ -282,6 +306,30 @@ export const UI_TEXT: Record<Lang, UiText> = {
         {
           q: 'Are there scenes in Paris?',
           a: 'Yes. The map includes key Paris Fashion Week and finale locations.'
+        },
+        {
+          q: 'Does the map include exact addresses?',
+          a: 'Yes, when they are confirmed by production sources. Otherwise they are marked as approximate.'
+        },
+        {
+          q: 'Why are some locations “approx”?',
+          a: 'Some scenes were shot on sets or montages, so only a representative area can be mapped.'
+        },
+        {
+          q: 'Can I visit all the locations?',
+          a: 'Exterior locations are visitable. Some interiors are sets or private spaces.'
+        },
+        {
+          q: 'Where was the museum benefit scene filmed?',
+          a: 'The exterior was at the American Museum of Natural History, and the interior was shot in Foley Square.'
+        },
+        {
+          q: 'What does the coffee timeline mean?',
+          a: 'It is a narrative reading of moments where coffee sets the pace of the story.'
+        },
+        {
+          q: 'Will the map be updated with new sources?',
+          a: 'Yes. We add references and correct details when more precise sources appear.'
         }
       ]
     }
