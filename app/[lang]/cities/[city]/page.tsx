@@ -5,6 +5,8 @@ import { UI_TEXT } from '../../../../lib/uiText';
 import type { Lang } from '../../../../lib/types';
 import { breadcrumbJsonLd } from '../../../../lib/seo';
 import { Footer } from '../../../../components/Footer';
+import { CATEGORY_META } from '../../../../lib/categories';
+import { cityDisplayName, cityHint } from '../../../../lib/locationUi';
 
 const CITY_MAP = {
   nyc: { name: 'New York', labelEs: 'Nueva York', labelEn: 'New York' },
@@ -83,7 +85,16 @@ export default function Page({ params }: { params: { lang: Lang; city: CityKey }
                 className="location-card"
               >
                 <div className="name">{loc.i18n[lang].name}</div>
+                <div className="meta">
+                  📍 {cityDisplayName(loc.city, lang)}{' '}
+                  {cityHint(loc.city, lang) ? `· ${cityHint(loc.city, lang)}` : ''}
+                </div>
                 <div className="meta">{loc.i18n[lang].scene}</div>
+                <div style={{ marginTop: 8 }}>
+                  <span className="pill">
+                    {CATEGORY_META[loc.category].icon} {CATEGORY_META[loc.category].label[lang]}
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
