@@ -69,6 +69,12 @@ export type UiText = {
     faqTitle: string;
     faq: { q: string; a: string }[];
   };
+  seoContext: {
+    locations: { title: string; body: string; cta: string };
+    locationDetail: { title: string; body: string; cta: string };
+    city: { title: string; body: string; cta: string };
+    faq: { title: string; body: string; cta: string };
+  };
 };
 
 export const UI_TEXT: Record<Lang, UiText> = {
@@ -202,6 +208,33 @@ export const UI_TEXT: Record<Lang, UiText> = {
         }
       ]
     }
+    ,
+    seoContext: {
+      locations: {
+        title: 'Mapa de la película',
+        body:
+          'Este listado es parte del mapa cinematográfico de El Diablo se viste a la moda (The Devil Wears Prada). Puedes explorar escenas, direcciones y contexto de producción.',
+        cta: 'Ir al mapa'
+      },
+      locationDetail: {
+        title: 'Locación en el mapa',
+        body:
+          'Esta locación pertenece al mapa de El Diablo se viste a la moda (The Devil Wears Prada). Recorre el mapa completo para ver escenas conectadas.',
+        cta: 'Ver mapa completo'
+      },
+      city: {
+        title: 'Ciudad en el mapa',
+        body:
+          'Estas locaciones están conectadas al mapa de El Diablo se viste a la moda (The Devil Wears Prada). Explora el recorrido completo en el mapa.',
+        cta: 'Explorar mapa'
+      },
+      faq: {
+        title: 'Sobre el mapa de la película',
+        body:
+          'Esta sección responde dudas sobre el mapa de El Diablo se viste a la moda (The Devil Wears Prada) y cómo se construyó.',
+        cta: 'Ver mapa'
+      }
+    }
   },
   en: {
     title: 'The Devil Wears Prada\nCinematic Map v2',
@@ -332,6 +365,33 @@ export const UI_TEXT: Record<Lang, UiText> = {
           a: 'Yes. We add references and correct details when more precise sources appear.'
         }
       ]
+    }
+    ,
+    seoContext: {
+      locations: {
+        title: 'Film map context',
+        body:
+          'This list is part of the cinematic map for The Devil Wears Prada (El Diablo se viste a la moda). Explore scenes, addresses, and production context.',
+        cta: 'Go to map'
+      },
+      locationDetail: {
+        title: 'Location on the map',
+        body:
+          'This location belongs to the map of The Devil Wears Prada (El Diablo se viste a la moda). See the full map for connected scenes.',
+        cta: 'View full map'
+      },
+      city: {
+        title: 'City on the map',
+        body:
+          'These locations connect to the map of The Devil Wears Prada. Explore the full route on the map.',
+        cta: 'Explore map'
+      },
+      faq: {
+        title: 'About the film map',
+        body:
+          'This FAQ answers questions about the map of The Devil Wears Prada and how it was built.',
+        cta: 'View map'
+      }
     }
   }
 };

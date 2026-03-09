@@ -7,6 +7,7 @@ import { breadcrumbJsonLd } from '../../../../lib/seo';
 import { Footer } from '../../../../components/Footer';
 import { CATEGORY_META } from '../../../../lib/categories';
 import { cityDisplayName, cityHint } from '../../../../lib/locationUi';
+import { SeoContext } from '../../../../components/SeoContext';
 
 const CITY_MAP = {
   nyc: { name: 'New York', labelEs: 'Nueva York', labelEn: 'New York' },
@@ -75,6 +76,8 @@ export default function Page({ params }: { params: { lang: Lang; city: CityKey }
               : `Key film points in ${cityInfo.labelEn}.`}
           </p>
         </div>
+
+        <SeoContext lang={lang} variant="city" />
 
         <div className="section">
           <div className="location-grid">

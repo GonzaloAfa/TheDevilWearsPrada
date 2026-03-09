@@ -3,6 +3,7 @@ import { UI_TEXT } from '../../../lib/uiText';
 import type { Lang } from '../../../lib/types';
 import { faqJsonLd } from '../../../lib/seo';
 import { Footer } from '../../../components/Footer';
+import { SeoContext } from '../../../components/SeoContext';
 
 export const dynamicParams = false;
 
@@ -50,6 +51,8 @@ export default function Page({ params }: { params: { lang: Lang } }) {
             </div>
           ))}
         </div>
+
+        <SeoContext lang={lang} variant="faq" />
 
         <Footer lang={lang} />
       </div>

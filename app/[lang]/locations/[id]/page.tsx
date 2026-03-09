@@ -7,6 +7,7 @@ import { placeJsonLd, breadcrumbJsonLd } from '../../../../lib/seo';
 import { ShareBar } from '../../../../components/ShareBar';
 import { Footer } from '../../../../components/Footer';
 import { LocationMiniMap } from '../../../../components/LocationMiniMap';
+import { SeoContext } from '../../../../components/SeoContext';
 
 export const dynamicParams = false;
 
@@ -107,6 +108,8 @@ export default function Page({ params }: { params: { lang: Lang; id: string } })
             </a>
           </div>
         </div>
+
+        <SeoContext lang={lang} variant="locationDetail" />
 
         <div className="section">
           <div className="name">{lang === 'es' ? 'Escena' : 'Scene'}</div>

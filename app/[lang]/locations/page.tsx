@@ -6,6 +6,7 @@ import type { Lang } from '../../../lib/types';
 import { Footer } from '../../../components/Footer';
 import { CATEGORY_META } from '../../../lib/categories';
 import { cityDisplayName, cityHint } from '../../../lib/locationUi';
+import { SeoContext } from '../../../components/SeoContext';
 
 export const dynamicParams = false;
 
@@ -58,6 +59,8 @@ export default function Page({ params }: { params: { lang: Lang } }) {
               : 'All film locations in one list.'}
           </p>
         </div>
+
+        <SeoContext lang={lang} variant="locations" />
 
         <div className="section">
           <div className="location-grid">
