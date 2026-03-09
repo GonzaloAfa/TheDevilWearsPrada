@@ -8,10 +8,10 @@ export function cityDisplayName(city: string, lang: Lang) {
 
 export function cityHint(city: string, lang: Lang) {
   if (city === 'New York') {
-    return lang === 'es' ? '🗽 Estatua de la Libertad' : '🗽 Statue of Liberty';
+    return lang === 'es' ? '🗺️ Mapa' : '🗺️ Map';
   }
   if (city === 'Paris') {
-    return lang === 'es' ? '🗼 Torre Eiffel' : '🗼 Eiffel Tower';
+    return lang === 'es' ? '🗺️ Mapa' : '🗺️ Map';
   }
-  return '';
+  return lang === 'es' ? '🗺️ Mapa' : '🗺️ Map';
 }
