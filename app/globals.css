@@ -461,6 +461,21 @@ a {
   text-decoration: none;
 }
 
+.share-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+.share-button.icon-only {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .sticky-cta {
   display: none;
   position: fixed;
