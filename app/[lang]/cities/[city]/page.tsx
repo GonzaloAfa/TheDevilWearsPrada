@@ -8,6 +8,7 @@ import { Footer } from '../../../../components/Footer';
 import { CATEGORY_META } from '../../../../lib/categories';
 import { cityDisplayName, cityHint } from '../../../../lib/locationUi';
 import { SeoContext } from '../../../../components/SeoContext';
+import { SiteHeader } from '../../../../components/SiteHeader';
 
 const CITY_MAP = {
   nyc: { name: 'New York', labelEs: 'Nueva York', labelEn: 'New York' },
@@ -66,6 +67,7 @@ export default function Page({ params }: { params: { lang: Lang; city: CityKey }
   return (
     <div className="landing">
       <div className="container">
+        <SiteHeader lang={lang} showLanguageSwitch switchHref={`/${lang === 'es' ? 'en' : 'es'}/cities/${params.city}`} />
         <div className="section">
           <h1>
             {lang === 'es' ? `Locaciones en ${cityInfo.labelEs}` : `Locations in ${cityInfo.labelEn}`}

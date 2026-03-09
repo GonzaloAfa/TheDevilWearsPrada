@@ -8,6 +8,7 @@ import { ShareBar } from '../../../../components/ShareBar';
 import { Footer } from '../../../../components/Footer';
 import { LocationMiniMap } from '../../../../components/LocationMiniMap';
 import { SeoContext } from '../../../../components/SeoContext';
+import { SiteHeader } from '../../../../components/SiteHeader';
 
 export const dynamicParams = false;
 
@@ -89,6 +90,7 @@ export default function Page({ params }: { params: { lang: Lang; id: string } })
   return (
     <div className="landing">
       <div className="container">
+        <SiteHeader lang={lang} showLanguageSwitch switchHref={`/${lang === 'es' ? 'en' : 'es'}/locations/${loc.id}`} />
         <div className="section">
           <h1>{loc.i18n[lang].name}</h1>
           <p className="meta">{loc.address}</p>

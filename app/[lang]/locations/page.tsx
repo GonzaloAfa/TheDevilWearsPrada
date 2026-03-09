@@ -7,6 +7,7 @@ import { Footer } from '../../../components/Footer';
 import { CATEGORY_META } from '../../../lib/categories';
 import { cityDisplayName, cityHint } from '../../../lib/locationUi';
 import { SeoContext } from '../../../components/SeoContext';
+import { SiteHeader } from '../../../components/SiteHeader';
 
 export const dynamicParams = false;
 
@@ -51,6 +52,7 @@ export default function Page({ params }: { params: { lang: Lang } }) {
   return (
     <div className="landing">
       <div className="container">
+        <SiteHeader lang={lang} showLanguageSwitch switchHref={`/${lang === 'es' ? 'en' : 'es'}/locations`} />
         <div className="section">
           <h1>{lang === 'es' ? 'Locaciones' : 'Locations'}</h1>
           <p className="meta">

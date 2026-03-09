@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d73f60"/>
+      <stop offset="100%" stop-color="#6e1b34"/>
+    </linearGradient>
+    <linearGradient id="shoe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4d6d"/>
+      <stop offset="100%" stop-color="#b3122a"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bg)"/>
+  <path d="M26 74c18-6 28-12 38-22 8-8 16-10 26-8 9 2 14 7 14 12 0 6-5 10-12 12l-26 8c-7 2-14 6-20 10-6 4-14 6-20 5-7-1-12-5-12-10 0-3 4-6 12-7z" fill="url(#shoe)"/>
+  <path d="M88 76l10 22c1 3-1 6-4 6h-6c-2 0-3-1-4-3l-6-16 10-3z" fill="#8a0f22"/>
+  <circle cx="98" cy="68" r="4" fill="#ffd1db"/>
+</svg>

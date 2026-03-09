@@ -444,6 +444,32 @@ a {
   font-weight: 600;
 }
 
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.site-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-header-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.site-header-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
 .share-bar {
   display: flex;
   gap: 10px;

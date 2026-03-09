@@ -4,6 +4,7 @@ import type { Lang } from '../../../lib/types';
 import { faqJsonLd } from '../../../lib/seo';
 import { Footer } from '../../../components/Footer';
 import { SeoContext } from '../../../components/SeoContext';
+import { SiteHeader } from '../../../components/SiteHeader';
 
 export const dynamicParams = false;
 
@@ -42,6 +43,7 @@ export default function Page({ params }: { params: { lang: Lang } }) {
   return (
     <div className="landing">
       <div className="container">
+        <SiteHeader lang={lang} showLanguageSwitch switchHref={`/${lang === 'es' ? 'en' : 'es'}/faq`} />
         <div className="section">
           <h1>{ui.landing.faqTitle}</h1>
           {ui.landing.faq.map((item) => (

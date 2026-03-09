@@ -1,6 +1,7 @@
 import type { Lang } from './types';
 
 export type UiText = {
+  filmTitle: string;
   title: string;
   subtitle: string;
   introTitle: string;
@@ -79,6 +80,7 @@ export type UiText = {
 
 export const UI_TEXT: Record<Lang, UiText> = {
   es: {
+    filmTitle: 'El Diablo se viste a la moda',
     title: 'El Diablo se viste a la moda\nMapa de locaciones',
     subtitle: 'Mapa interactivo de locaciones y escenas de la película',
     introTitle: 'Sobre la película y el mapa',
@@ -237,6 +239,7 @@ export const UI_TEXT: Record<Lang, UiText> = {
     }
   },
   en: {
+    filmTitle: 'The Devil Wears Prada',
     title: 'The Devil Wears Prada\nLocations map',
     subtitle: 'Interactive map of the film’s locations and scenes',
     introTitle: 'About the film and the map',

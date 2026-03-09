@@ -10,6 +10,7 @@ import { MapClient, type MapClientHandle } from './MapClient';
 import { AdSlot } from './AdSlot';
 import { ShareBar } from './ShareBar';
 import { Footer } from './Footer';
+import { SiteHeader } from './SiteHeader';
 
 const ALL_CATEGORIES = Object.keys(CATEGORY_META) as CategoryKey[];
 
@@ -125,8 +126,8 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
           </button>
         </div>
         <div className="sidebar-content">
-        <div className="header">
-          <div className="badge">👠</div>
+        <div className="header" style={{ flexDirection: 'column', alignItems: 'stretch' }}>
+          <SiteHeader lang={lang} showLanguageSwitch switchHref={languagePath} />
           <div>
             <h1>{ui.title.split('\n').map((line, idx) => (
               <span key={idx}>
@@ -135,12 +136,6 @@ export function MapPage({ lang, data, ui }: { lang: Lang; data: Dataset; ui: UiT
               </span>
             ))}</h1>
             <div className="sub">{ui.subtitle}</div>
-          </div>
-          <div style={{ marginLeft: 'auto', textAlign: 'right' }}>
-            <div className="small">{ui.languageLabel}</div>
-            <Link href={languagePath} className="chip" style={{ display: 'inline-flex', marginTop: 6 }}>
-              {ui.languageSwitch}
-            </Link>
           </div>
         </div>
 

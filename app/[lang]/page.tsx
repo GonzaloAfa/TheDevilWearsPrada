@@ -8,6 +8,7 @@ import { ShareBar } from '../../components/ShareBar';
 import { Footer } from '../../components/Footer';
 import { CATEGORY_META } from '../../lib/categories';
 import { cityDisplayName, cityHint } from '../../lib/locationUi';
+import { SiteHeader } from '../../components/SiteHeader';
 
 export const dynamicParams = false;
 
@@ -73,11 +74,7 @@ export default function Page({ params }: { params: { lang: Lang } }) {
   return (
     <div className="landing">
       <div className="container">
-        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 16 }}>
-          <Link href={languagePath} className="chip">
-            {ui.languageSwitch}
-          </Link>
-        </div>
+        <SiteHeader lang={lang} showLanguageSwitch switchHref={languagePath} />
         <div className="hero">
           <div>
             <h1>{ui.landing.heroTitle}</h1>
