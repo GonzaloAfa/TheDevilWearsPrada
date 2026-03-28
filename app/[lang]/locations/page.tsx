@@ -10,6 +10,7 @@ import { SeoContext } from '../../../components/SeoContext';
 import { SiteHeader } from '../../../components/SiteHeader';
 import { getCategoryLabel, getLocationI18n, normalizeLang, LOCALES, loadMessages, asUiText } from '../../../lib/i18n';
 import { getRequestSiteUrl } from '../../../lib/siteUrl';
+import { buildAlternates } from '../../../lib/seo-alternates';
 
 export const dynamicParams = false;
 
@@ -24,14 +25,12 @@ export async function generateMetadata({
   const title = ui.meta.locations.title;
   const description = ui.meta.locations.description;
   const imageUrl = `${baseUrl}/og.svg`;
-  const languages = Object.fromEntries(
-    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}/locations`])
-  );
+  const { canonical, languages } = buildAlternates(baseUrl, lang, 'locations');
   return {
     title,
     description,
     alternates: {
-      canonical: `${baseUrl}/${lang}/locations`,
+      canonical,
       languages
     },
     openGraph: {

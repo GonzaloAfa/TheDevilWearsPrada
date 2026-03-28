@@ -11,6 +11,7 @@ import { cityDisplayName, cityHint } from '../../lib/locationUi';
 import { SiteHeader } from '../../components/SiteHeader';
 import { getCategoryLabel, getLocationI18n, normalizeLang, LOCALES, loadMessages, asUiText } from '../../lib/i18n';
 import { getRequestSiteUrl } from '../../lib/siteUrl';
+import { buildAlternates } from '../../lib/seo-alternates';
 
 export const dynamicParams = false;
 
@@ -25,15 +26,13 @@ export async function generateMetadata({
   const title = ui.meta.home.title;
   const description = ui.meta.home.description;
   const imageUrl = `${baseUrl}/${lang}/opengraph-image`;
-  const languages = Object.fromEntries(
-    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}`])
-  );
+  const { canonical, languages } = buildAlternates(baseUrl, lang);
 
   return {
     title,
     description,
     alternates: {
-      canonical: `${baseUrl}/${lang}`,
+      canonical,
       languages
     },
     openGraph: {

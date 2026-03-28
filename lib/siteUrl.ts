@@ -1,6 +1,6 @@
 import { headers } from 'next/headers';
 
-const FALLBACK_URL = 'http://localhost:3000';
+const FALLBACK_URL = 'https://thedevilwearspradamap.afachile.cl';
 const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '0.0.0.0']);
 
 function trimTrailingSlash(value: string) {

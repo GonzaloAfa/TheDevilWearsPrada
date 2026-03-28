@@ -7,6 +7,11 @@ import { LOCALES, normalizeLang, loadMessages } from '../../lib/i18n';
 
 export const generateStaticParams = async () => LOCALES.map((lang) => ({ lang }));
 
+function htmlLang(locale: string): string {
+  if (locale === 'cl') return 'es-CL';
+  return locale;
+}
+
 export default async function LangLayout({
   children,
   params
@@ -21,36 +26,38 @@ export default async function LangLayout({
   const gaId = process.env.NEXT_PUBLIC_GA4_ID || 'G-Q1033JG9JM';
 
   return (
-    <>
-      {adsenseClient ? (
-        <Script
-          id="adsense"
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
-          crossOrigin="anonymous"
-        />
-      ) : null}
-      {gaId ? (
-        <>
+    <html lang={htmlLang(locale)}>
+      <body>
+        {adsenseClient ? (
           <Script
-            id="ga4-lib"
+            id="adsense"
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+            crossOrigin="anonymous"
           />
-          <Script id="ga4-init">
-            {`window.dataLayer = window.dataLayer || [];
+        ) : null}
+        {gaId ? (
+          <>
+            <Script
+              id="ga4-lib"
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            />
+            <Script id="ga4-init">
+              {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 
 gtag('js', new Date());
 
 gtag('config', '${gaId}', { send_page_view: false });`}
-          </Script>
-        </>
-      ) : null}
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        {children}
-      </NextIntlClientProvider>
-      <Analytics />
-    </>
+            </Script>
+          </>
+        ) : null}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+        <Analytics />
+      </body>
+    </html>
   );
 }

@@ -6,6 +6,7 @@ import { SeoContext } from '../../../components/SeoContext';
 import { SiteHeader } from '../../../components/SiteHeader';
 import { normalizeLang, LOCALES, loadMessages, asUiText } from '../../../lib/i18n';
 import { getRequestSiteUrl } from '../../../lib/siteUrl';
+import { buildAlternates } from '../../../lib/seo-alternates';
 
 export const dynamicParams = false;
 
@@ -19,14 +20,12 @@ export async function generateMetadata({
   const baseUrl = getRequestSiteUrl();
   const title = ui.meta.faq.title;
   const description = ui.meta.faq.description;
-  const languages = Object.fromEntries(
-    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}/faq`])
-  );
+  const { canonical, languages } = buildAlternates(baseUrl, lang, 'faq');
   return {
     title,
     description,
     alternates: {
-      canonical: `${baseUrl}/${lang}/faq`,
+      canonical,
       languages
     }
   };

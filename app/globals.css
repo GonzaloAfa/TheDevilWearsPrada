@@ -544,9 +544,34 @@ a {
   color: var(--muted);
   font-size: 0.85rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
   justify-content: center;
+}
+
+.footer-nav a {
+  color: #ffe4ea;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-donate {
+  display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer a {

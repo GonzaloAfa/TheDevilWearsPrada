@@ -4,6 +4,7 @@ import { MapPage } from '../../../components/MapPage';
 import type { Lang } from '../../../lib/types';
 import { normalizeLang, LOCALES, loadMessages, asUiText } from '../../../lib/i18n';
 import { getRequestSiteUrl } from '../../../lib/siteUrl';
+import { buildAlternates } from '../../../lib/seo-alternates';
 
 export const dynamicParams = false;
 
@@ -18,15 +19,13 @@ export async function generateMetadata({
   const title = ui.meta.map.title;
   const description = ui.meta.map.description;
   const imageUrl = `${baseUrl}/og.svg`;
-  const languages = Object.fromEntries(
-    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}/map`])
-  );
+  const { canonical, languages } = buildAlternates(baseUrl, lang, 'map');
 
   return {
     title,
     description,
     alternates: {
-      canonical: `${baseUrl}/${lang}/map`,
+      canonical,
       languages
     },
     openGraph: {

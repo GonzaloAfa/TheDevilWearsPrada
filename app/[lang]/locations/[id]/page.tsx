@@ -11,6 +11,7 @@ import { SeoContext } from '../../../../components/SeoContext';
 import { SiteHeader } from '../../../../components/SiteHeader';
 import { getLocationI18n, normalizeLang, LOCALES, loadMessages, asUiText } from '../../../../lib/i18n';
 import { getRequestSiteUrl } from '../../../../lib/siteUrl';
+import { buildAlternates } from '../../../../lib/seo-alternates';
 
 export const dynamicParams = false;
 
@@ -38,15 +39,13 @@ export async function generateMetadata({
   const t = getLocationI18n(loc, lang);
   const title = `${t.name} — ${ui.filmTitle}`;
   const description = t.scene;
-  const languages = Object.fromEntries(
-    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}/locations/${loc.id}`])
-  );
+  const { canonical, languages } = buildAlternates(baseUrl, lang, `locations/${loc.id}`);
 
   return {
     title,
     description,
     alternates: {
-      canonical: `${baseUrl}/${lang}/locations/${loc.id}`,
+      canonical,
       languages
     },
     openGraph: {

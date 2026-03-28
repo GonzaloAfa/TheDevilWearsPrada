@@ -18,6 +18,7 @@ import {
   asUiText
 } from '../../../../lib/i18n';
 import { getRequestSiteUrl } from '../../../../lib/siteUrl';
+import { buildAlternates } from '../../../../lib/seo-alternates';
 
 const CITY_MAP = {
   nyc: { name: 'New York' },
@@ -46,14 +47,12 @@ export async function generateMetadata({
   const baseUrl = getRequestSiteUrl();
   const title = ui.meta.city.title.replace('{city}', cityLabel);
   const description = ui.meta.city.description.replace('{city}', cityLabel);
-  const languages = Object.fromEntries(
-    LOCALES.map((locale) => [locale, `${baseUrl}/${locale}/cities/${params.city}`])
-  );
+  const { canonical, languages } = buildAlternates(baseUrl, lang, `cities/${params.city}`);
   return {
     title,
     description,
     alternates: {
-      canonical: `${baseUrl}/${lang}/cities/${params.city}`,
+      canonical,
       languages
     }
   };
