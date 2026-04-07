@@ -5,16 +5,7 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/es',
-        permanent: true
-      }
-    ];
-  }
+  output: 'export',
 };
 
 export default withNextIntl(nextConfig);
